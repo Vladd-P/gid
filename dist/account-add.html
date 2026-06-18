@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Аккаунт - добавить объявление</title>
+		<link rel="icon" href="data:," />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/tom-select.bootstrap4.min.css" />
+		<link rel="stylesheet" href="css/fancybox.css" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+
+	<body class="account-page">
+		<div class="top-block">
+			<header class="page-header container-fluid">
+				<a class="page-header__logo" href="/">
+					<img src="img/logo.svg" alt="" />
+				</a>
+				<div class="page-header__categories dropdown d-none d-lg-flex">
+					<button class="button-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+						<svg width="20" height="20">
+							<use href="img/icons/sprite.svg#categories-all"></use>
+						</svg>Категории
+					</button>
+					<div class="dropdown-menu">
+						<div class="menu-limiter">
+							<div class="dropdown-item submenu">Аппаратная косметология<svg class="dropdown-arrow" width="16" height="16">
+									<use href="img/icons/sprite.svg#arrow-menu"></use>
+								</svg>
+							</div>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Маникюр</a>
+								<a class="dropdown-item" href="#">Маникюр</a>
+								<a class="dropdown-item" href="#">Маникюр</a>
+								<a class="dropdown-item" href="#">Маникюр</a>
+								<a class="dropdown-item" href="#">Маникюр</a>
+							</div>
+							<a class="dropdown-item" href="#">Дерматология и косметологи</a>
+							<a class="dropdown-item" href="#">Диетология, спорт, тренировки</a>
+							<a class="dropdown-item" href="#">Инъекционная косметология</a>
+							<a class="dropdown-item" href="#">Лазерная хирургия</a>
+							<a class="dropdown-item" href="#">Макияж и татуаж</a>
+							<a class="dropdown-item" href="#">Маникюр</a>
+							<a class="dropdown-item" href="#">Мануальная терапия</a>
+							<a class="dropdown-item" href="#">Массаж</a>
+							<a class="dropdown-item" href="#">Педикюр</a>
+							<a class="dropdown-item" href="#">Пилинг и уход за лицом</a>
+							<a class="dropdown-item" href="#">Пирсинг</a>
+							<a class="dropdown-item" href="#">Пластическая хирургия</a>
+							<a class="dropdown-item" href="#">Прическа и уход за волосами</a>
+							<a class="dropdown-item" href="#">Стоматологические услуги</a>
+							<a class="dropdown-item" href="#">Трихология</a>
+							<a class="dropdown-item" href="#">Эпиляция и шугаринг</a>
+							<a class="dropdown-item" href="#">Татуировки и тату-мастера</a>
+						</div>
+					</div>
+				</div>
+				<div class="page-header__search selecting-value d-none d-md-block">
+					<div class="page-header__search-body">
+						<input class="selecting-value__view" type="search" placeholder="Наберите для примера Иванов" />
+						<button type="submit">
+							<img src="img/search.svg" alt="" />
+						</button>
+					</div>
+					<div class="dropdown">
+						<button class="dropdown-toggle d-none" type="button" data-toggle="dropdown" aria-expanded="false"></button>
+						<div class="dropdown-menu">
+							<div class="dropdown-item" data-selecting-value="Иванов">Иванов</div>
+						</div>
+					</div>
+				</div>
+				<button class="page-header__add button-bordered-blue d-none d-xl-flex">
+					<svg width="20" height="20">
+						<use href="img/icons/sprite.svg#add-page-header"></use>
+					</svg>Добавить
+				</button>
+				<div class="page-header__icons page-header__icons--account">
+					<button class="d-none d-lg-flex">
+						<svg width="24" height="24">
+							<use href="img/icons/sprite.svg#favorites-account"></use>
+						</svg>
+						<mark>5</mark>
+					</button>
+					<button class="d-none d-lg-flex">
+						<svg width="24" height="24">
+							<use href="img/icons/sprite.svg#comment"></use>
+						</svg>
+						<mark>3</mark>
+					</button>
+					<button class="empty">
+						<svg width="24" height="24">
+							<use href="img/icons/sprite.svg#cart"></use>
+						</svg>
+						<mark>0</mark>
+					</button>
+				</div>
+				<div class="page-header__account-menu dropdown">
+					<button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+						<img src="img/av-no.svg" alt="" />
+					</button>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a class="dropdown-item active" href="#">
+							<svg width="24" height="24">
+								<use href="img/icons/sprite.svg#acc-heder-menu-prof"></use>
+							</svg>Мой профиль
+						</a>
+						<a class="dropdown-item" href="#">
+							<svg width="24" height="24">
+								<use href="img/icons/sprite.svg#acc-heder-menu-req"></use>
+							</svg>Мои заявки
+						</a>
+						<a class="dropdown-item" href="#">
+							<svg width="24" height="24">
+								<use href="img/icons/sprite.svg#acc-heder-menu-notice"></use>
+							</svg>Уведомления
+						</a>
+						<a class="dropdown-item" href="#">
+							<svg width="24" height="24">
+								<use href="img/icons/sprite.svg#acc-heder-menu-places"></use>
+							</svg>Мои площадки
+						</a>
+						<a class="dropdown-item" href="#">
+							<svg width="24" height="24">
+								<use href="img/icons/sprite.svg#acc-heder-menu-stat"></use>
+							</svg>Статистика
+						</a>
+						<div class="block-liner"></div>
+						<a class="button-gray" href="#">Выйти</a>
+					</div>
+				</div>
+				<button class="c-hamburger c-hamburger--htx">
+					<span></span>
+				</button>
+			</header>
+		</div>
+		<section class="account container-fluid">
+			<aside class="account-aside menu-mobile">
+				<svg class="menu-motile__close" width="24" height="24">
+					<use href="img/icons/sprite.svg#close"></use>
+				</svg>
+				<div class="account-aside__header">
+					<img class="account-aside__av" src="img/av-no-aside.svg" alt="" />
+					<div class="account-aside__name">Евгений Федулов</div>
+					<div class="rating-line">
+						<div class="stars">
+							<svg width="18" height="18">
+								<use href="img/icons/sprite.svg#star-rating"></use>
+							</svg>
+							<svg width="18" height="18">
+								<use href="img/icons/sprite.svg#star-rating"></use>
+							</svg>
+							<svg width="18" height="18">
+								<use href="img/icons/sprite.svg#star-rating"></use>
+							</svg>
+							<svg width="18" height="18">
+								<use href="img/icons/sprite.svg#star-rating"></use>
+							</svg>
+							<svg width="18" height="18">
+								<use href="img/icons/sprite.svg#star-rating"></use>
+							</svg>
+						</div>
+						<mark>5.0</mark>
+					</div>
+				</div>
+				<a class="account-aside__item" href="account-profile.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-1"></use>
+					</svg>Мой профиль
+				</a>
+				<div class="block-liner"></div>
+				<a class="account-aside__item active" href="account-add.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-3"></use>
+					</svg>Добавить объявление
+				</a>
+				<a class="account-aside__item" href="account-ads.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-4"></use>
+					</svg>Мои объявления<mark>5</mark>
+				</a>
+				<div class="block-liner"></div>
+				<a class="account-aside__item" href="account-favorites.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-5"></use>
+					</svg>Избранное
+				</a>
+				<a class="account-aside__item" href="account-packets.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-7"></use>
+					</svg>Мои пакеты
+				</a>
+				<a class="account-aside__item" href="account-payments.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-8"></use>
+					</svg>История платежей
+				</a>
+				<a class="account-aside__item" href="account-recently.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-9"></use>
+					</svg>Недавно просмотренные
+				</a>
+				<div class="block-liner"></div>
+				<a class="account-aside__item" href="account-credits.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-10"></use>
+					</svg>Мои кредиты
+				</a>
+				<a class="account-aside__item" href="account-banners.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-11"></use>
+					</svg>Мои баннеры
+				</a>
+				<a class="account-aside__item" href="account-services.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-12"></use>
+					</svg>Платные услуги
+				</a>
+				<div class="block-liner"></div>
+				<a class="account-aside__item" href="account-profile.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-1"></use>
+					</svg>Выйти
+				</a>
+			</aside>
+			<main>
+				<h1>Добавить объявление</h1>
+				<div class="account-main account-main--block">
+					<div class="column maw-600">
+						<div class="title-20">Категория</div>
+						<div class="form-group">
+							<label>Выбор категории</label>
+							<select class="select-styled">
+								<option>Стоматологические услуги</option>
+								<option>Любые услуги </option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Выбор подкатегории</label>
+							<select class="select-styled" data-placeholder="Выберите подкатегорию">
+								<option value="" selected="selected" disabled="disabled"></option>
+								<option>Диагностика</option>
+								<option>Имплантация зубов </option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Выбор подкатегории</label>
+							<select class="select-styled" data-placeholder="Выберите подкатегорию">
+								<option value="" selected="selected" disabled="disabled"></option>
+								<option>Диагностика</option>
+								<option>Имплантация зубов </option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Выбор подкатегории</label>
+							<select class="select-styled" data-placeholder="Выберите подкатегорию">
+								<option value="" selected="selected" disabled="disabled"></option>
+								<option>Диагностика</option>
+								<option>Имплантация зубов </option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Выбор подкатегории</label>
+							<select class="select-styled" data-placeholder="Выберите подкатегорию">
+								<option value="" selected="selected" disabled="disabled"></option>
+								<option>Диагностика</option>
+								<option>Имплантация зубов </option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="account-main account-main--block">
+					<div class="column">
+						<div class="title-20">Название</div>
+						<div class="form-group-h">
+							<label>Название объявления</label>
+							<input class="form-control" placeholder="Название" />
+						</div>
+						<div class="form-group-h">
+							<label>Вид объявления</label>
+							<select class="select-styled">
+								<option>Продаю своё</option>
+								<option>Продаю чужое</option>
+							</select>
+						</div>
+						<div class="form-group-h">
+							<label>Кто принимает</label>
+							<select class="select-styled">
+								<option>врач</option>
+								<option>акушер</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="account-main account-main--block">
+					<div class="column">
+						<div class="title-20">План </div>
+						<div class="form-group-h form-group-h--3">
+							<div class="subtitle">План </div>
+							<select class="select-styled" data-placeholder="Выберите">
+								<option value="" selected="selected" disabled="disabled"></option>
+								<option>item 1</option>
+								<option>item 2</option>
+							</select>
+							<a class="fsz-14 color-grey2" href="#"> Открыть описание пакетов</a>
+						</div>
+					</div>
+				</div>
+				<div class="account-main account-main--block">
+					<div class="column">
+						<div class="title-20">Об услуге</div>
+						<div class="acc-add-option">
+							<div class="subtitle">Тип услуги</div>
+							<div class="tags-select">
+								<label>
+									<input type="checkbox" checked="checked" />В клинике
+								</label>
+								<label>
+									<input type="checkbox" />Онлайн
+								</label>
+								<label>
+									<input type="checkbox" />На дому
+								</label>
+							</div>
+						</div>
+						<div class="acc-add-option">
+							<div class="subtitle">С кем работает</div>
+							<div class="tags-select">
+								<label>
+									<input type="checkbox" />С мужчиной
+								</label>
+								<label>
+									<input type="checkbox" checked="checked" />С женщиной
+								</label>
+							</div>
+						</div>
+						<div class="acc-add-option">
+							<div class="subtitle">С кем работает</div>
+							<div class="tags-select">
+								<label>
+									<input type="checkbox" checked="checked" />Мужчина
+								</label>
+								<label>
+									<input type="checkbox" />Женщина
+								</label>
+							</div>
+						</div>
+						<div class="acc-add-option">
+							<div class="subtitle">Опыт работы</div>
+							<div class="tags-select">
+								<label>
+									<input type="checkbox" />1 год
+								</label>
+								<label>
+									<input type="checkbox" checked="checked" />2 года
+								</label>
+								<label>
+									<input type="checkbox" />3 года
+								</label>
+							</div>
+						</div>
+						<div class="acc-add-option acc-add-option--checkboxes">
+							<div class="subtitle">Виды услуг</div>
+							<div class="acc-add-option__checkboxes">
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>LPG-массаж лица
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>LPG-массаж тела
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>RF-липолиз
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>RF-лифтинг вокруг глаз
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>RF-лифтинг лица
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>RF-лифтинг тела
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>SMAS-лифтинг
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Атравматичная чистка лица
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Броссаж (брашинг)
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Дарсонвализация
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Дезинкрустация
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Дермабразия лица
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Кавитация
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Карбоксиотерапия
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Криолиполиз
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Криосауна
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Криотерапия лица
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Лазерная блефаропластика
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Лазерное омоложение
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Лазерный липолиз
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Лазерный фототермолиз Фраксель (Fraxel)
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Микроигольчатый RF-лифтинг
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Микротоковая терапия
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Миостимуляция
+								</label>
+								<a class="acc-add-option__checkboxes-all button-gray-color-primary" href="#">Показать все</a>
+							</div>
+						</div>
+						<div class="acc-add-option acc-add-option--checkboxes">
+							<div class="subtitle">Лечение заболеваний</div>
+							<div class="acc-add-option__checkboxes">
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Акне (угри)
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Актинический кератоз
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Актиномикоз
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Ассиметрия груди
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Астеатоз
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Атерома
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Болезнь Лане
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Бородавка
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Бромгидроз (неприятный запах пота)
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Веснушки
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Витилиго
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Возрастные изменения кожи
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Вросший волос
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Выпадение волос (алопеция)
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Герпетиформный дерматит Дюринга
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Гипергидроз
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Гиперпигментация кожи
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Гипертрихоз
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Гирсутизм
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Гравитационный птоз лица
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Дерматит
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Дерматофиброма (фиброма кожи)
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Микротоковая терапия
+								</label>
+								<label class="checkbox-styled">
+									<input type="checkbox" />
+									<figure>
+										<svg width="14" height="14">
+											<use href="img/icons/sprite.svg#checkbox"></use>
+										</svg>
+									</figure>Диффузная алопеция
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="account-main account-main--block">
+					<div class="column">
+						<div class="title-20">Дополнительные параметры</div>
+						<div class="tags-select">
+							<label>
+								<input type="checkbox" checked="checked" />Парковка
+							</label>
+							<label>
+								<input type="checkbox" />Учебные материалы
+							</label>
+							<label>
+								<input type="checkbox" />Место ожидания детей
+							</label>
+							<label>
+								<input type="checkbox" />Оплата наличными
+							</label>
+							<label>
+								<input type="checkbox" />Оплата картой
+							</label>
+							<label>
+								<input type="checkbox" />Оплата онлайн
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="account-main account-main--block">
+					<div class="column">
+						<div class="title-20">Местоположение</div>
+						<div class="column">
+							<div class="form-group">
+								<label>Адрес</label>
+								<input class="form-control" placeholder="Начните вводить адрес, а потом выберите из списка" />
+								<div class="acc-add-annotation color-grey3 mt-1">Если вы хотите указать более точные координаты на карте, вы можете ввести страну, штат/регион, город и адрес и через запятые выполнить поиск, а затем перетащить маркер в нужное место на карте</div>
+							</div>
+							<div class="maw-300 form-group">
+								<label>Регион </label>
+								<select class="select-styled" data-placeholder="Выберите регион">
+									<option value="" selected="selected" disabled="disabled"></option>
+									<option>region 1</option>
+									<option>region 2 </option>
+								</select>
+							</div>
+							<div class="maw-300 form-group">
+								<label>Населённый пункт </label>
+								<select class="select-styled" data-placeholder="Выберите населенный пункт">
+									<option value="" selected="selected" disabled="disabled"></option>
+									<option>city 1</option>
+									<option>city 2 </option>
+								</select>
+							</div>
+						</div>
+						<div id="acc-add-map"></div>
+					</div>
+				</div>
+				<div class="account-main account-main--block">
+					<div class="column">
+						<div>
+							<div class="title-20 mb-2">Фотографии</div>
+							<div class="acc-add-annotation color-grey2">Первое фото будет отображаться в результатах поиска, выберите наиболее удачное. Вы можете загрузить до 20 фотографий в формате JPG или PNG. Максимальный размер фото — 25mb.</div>
+						</div>
+						<label class="acc-add-photos">
+							<input type="file" />
+							<figure>
+								<svg width="32" height="32">
+									<use href="img/icons/sprite.svg#acc-add-photo"></use>
+								</svg>
+							</figure>
+							<div class="fw-500">Загрузите фото или перетащите сюда файлы</div>
+							<div class="acc-add-annotation color-grey3">Пожалуйста, загрузите максимум 12 фотографий, размер одного изображения: 10 МБ.</div>
+						</label>
+						<div>
+							<div class="title-20 mt-sm-2 mb-2">Видео</div>
+							<div class="acc-add-annotation color-grey2">Можно добавить ссылку на видеоролик в Youtube, Rutube или Vimeo</div>
+						</div>
+						<div class="form-group-url">
+							<figure>
+								<svg width="20" height="20">
+									<use href="img/icons/sprite.svg#link"></use>
+								</svg>
+							</figure>
+							<input type="url" placeholder="Например https://www.youtube.com/watch…" />
+						</div>
+					</div>
+				</div>
+				<div class="acc-add-description account-main account-main--block">
+					<div class="column">
+						<div class="acc-add-description__header">
+							<div class="title-20">Описание</div>
+							<div class="flags ml-auto">
+								<label>
+									<input type="radio" name="acc-add-lang" />
+									<img src="img/flag-ge.svg" alt="" />
+								</label>
+								<label>
+									<input type="radio" name="acc-add-lang" />
+									<img src="img/flag-uk.svg" alt="" />
+								</label>
+								<label>
+									<input type="radio" name="acc-add-lang" checked="checked" />
+									<img src="img/flag-ru.svg" alt="" />
+								</label>
+							</div>
+						</div>
+						<div>
+							<textarea class="form-control" placeholder="Описание"></textarea>
+							<div class="acc-add-description__counter">Символов 0 из 6500</div>
+						</div>
+					</div>
+				</div>
+				<div class="acc-add-description account-main account-main--block">
+					<div class="column">
+						<div class="title-20">Цена</div>
+						<div class="form-group-cost">
+							<label>Укажите цену</label>
+							<div class="form-group-cost__body">
+								<input type="number" />
+								<select class="select-styled">
+									<option>$</option>
+									<option>₾</option>
+									<option>€</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="acc-add-description account-main account-main--block">
+					<div class="column">
+						<div class="title-20">Контактная информация</div>
+						<div class="acc-add-contact">
+							<div class="color-grey2">Телефон</div>
+							<div class="column">
+								<input class="form-control" type="tel" placeholder="+7 (___)-___-__-__" />
+								<div>
+									<label class="checkbox-styled">
+										<input type="checkbox" />
+										<figure>
+											<svg width="14" height="14">
+												<use href="img/icons/sprite.svg#checkbox"></use>
+											</svg>
+										</figure>Доступен в WhatsApp
+									</label>
+									<label class="checkbox-styled">
+										<input type="checkbox" />
+										<figure>
+											<svg width="14" height="14">
+												<use href="img/icons/sprite.svg#checkbox"></use>
+											</svg>
+										</figure>Доступен в Telegram
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="acc-add-contact">
+							<div>Способ связи</div>
+							<div>
+								<label class="radio-styled">
+									<input type="radio" name="acc-add-contact-link" />Звонки и сообщения
+								</label>
+								<label class="radio-styled">
+									<input type="radio" name="acc-add-contact-link" />Только сообщения
+								</label>
+								<label class="radio-styled">
+									<input type="radio" name="acc-add-contact-link" />Только звонки
+								</label>
+							</div>
+						</div>
+						<div class="acc-add-contact acc-add-contact--big">
+							<div>Авторизация</div>
+							<div class="column">
+								<div class="form-group">
+									<label>E-mail</label>
+									<input class="form-control" type="email" placeholder="Введите ваш e-mail" />
+								</div>
+								<div class="form-group">
+									<label>Пароль</label>
+									<input class="form-control" type="password" placeholder="Введите пароль" />
+								</div>
+								<div class="acc-add-contact__remember">
+									<label class="checkbox-styled">
+										<input type="checkbox" />
+										<figure>
+											<svg width="14" height="14">
+												<use href="img/icons/sprite.svg#checkbox"></use>
+											</svg>
+										</figure>Запомнить пароль
+									</label>
+									<a class="link-blue fsz-14 fw-500" href="#">Забыли пароль?</a>
+								</div>
+								<input class="button-primary button-big" type="submit" value="Войти" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="acc-add-packages account-main account-main--block">
+					<div class="column">
+						<div class="acc-add-packages__header">
+							<div class="title-20">Хотите продать быстрее? Добавьте пакет услуг:</div>
+							<p>Ваше объявление будет чаще попадать на верхние строчки в поиске и рекомендациях.</p>
+						</div>
+						<div class="acc-add-packages__views">
+							<div class="acc-add-packages__period">
+								<label>
+									<input type="radio" name="acc-add-period" checked="checked" />На 1 день
+								</label>
+								<label>
+									<input type="radio" name="acc-add-period" />На 7 дней
+								</label>
+							</div>
+							<div class="acc-add-packages__views-options">
+								<label class="radio-styled">
+									<input type="radio" name="acc-add-views" checked="checked" />
+									<div class="fw-600">Х2 просмотров</div>
+									<span>19</span>
+								</label>
+								<label class="radio-styled">
+									<input type="radio" name="acc-add-views" />
+									<div class="fw-600">Х5 просмотров</div>
+									<span>19</span>
+								</label>
+								<label class="radio-styled">
+									<input type="radio" name="acc-add-views" />
+									<div class="fw-600">Х9 просмотров</div>
+									<span>19</span>
+								</label>
+								<label class="radio-styled">
+									<input type="radio" name="acc-add-views" />
+									<div class="fw-600">Без продвижения</div>
+									<span>0</span>
+								</label>
+							</div>
+						</div>
+						<div>
+							<div class="title-20">Заметный внешний вид</div>
+							<label class="acc-add-packages-appearance checkbox-switch-styled">
+								<input type="checkbox" />
+								<figure></figure>
+								<img class="acc-add-packages-appearance__ico" src="img/packages-appearance-1.svg" alt="" />
+								<div class="acc-add-packages-appearance__about">
+									<div class="fw-600">Выделить цену цветом <span class="color-grey3">на 7 дней</span>
+									</div>
+									<div class="color-grey1 fsz-14">Привлечёт внимание к цене объявления</div>
+								</div>
+								<div class="acc-add-packages-appearance__number">39</div>
+							</label>
+							<label class="acc-add-packages-appearance checkbox-switch-styled">
+								<input type="checkbox" />
+								<figure></figure>
+								<img class="acc-add-packages-appearance__ico" src="img/packages-appearance-2.svg" alt="" />
+								<div class="acc-add-packages-appearance__about">
+									<div class="fw-600">Премиум-объявление <span class="color-grey3">на 7 дней</span>
+									</div>
+									<div class="color-grey1 fsz-14">Большая карточка в результатах поиска</div>
+								</div>
+								<div class="acc-add-packages-appearance__number">39 </div>
+							</label>
+						</div>
+						<a class="acc-add-packages__skip button-gray-color-primary button-big" href="#">Продолжить без услуг</a>
+					</div>
+				</div>
+				<a class="acc-add-next button-primary button-big" href="#">Добавить объявление</a>
+			</main>
+		</section>
+		<footer class="page-footer">
+			<div class="container-fluid">
+				<div class="page-footer__menu page-footer__item">
+					<div class="page-footer__menu-section">
+						<div class="subtitle">Навигация</div>
+						<a href="#">Главная</a>
+						<a href="#">Поиск услуг по категориям</a>
+						<a href="#">Поиск по карте</a>
+						<a href="#">Поиск в радиусе</a>
+						<a href="#">Недавно добавленные</a>
+						<a href="#">Недавно просмотренные</a>
+					</div>
+					<div class="page-footer__menu-section">
+						<div class="subtitle">Информация</div>
+						<a href="#">Новости</a>
+						<a href="#">Поддержка</a>
+						<a href="#">Отзывы</a>
+						<a href="#">Оферта и правила</a>
+						<a href="#">Документы специалистов</a>
+						<a href="#">Вопросы и ответы (FAQ)</a>
+					</div>
+					<div class="page-footer__menu-section">
+						<div class="subtitle">Разделы</div>
+						<a href="#">Врачи и мастера</a>
+						<a href="#">Клиники и салоны</a>
+						<a href="#">Услуги красоты</a>
+						<a href="#">Мероприятия</a>
+						<a href="#">Карта косметики</a>
+						<a href="#">Карта оборудования</a>
+					</div>
+					<div class="page-footer__menu-section">
+						<div class="subtitle">Личный кабинет</div>
+						<a href="#">Избранное</a>
+						<a href="#">Мои сообщения</a>
+						<a href="#">Мой профиль</a>
+						<a href="#">Сохранённые поиски</a>
+						<a href="#">Запросы специалистам</a>
+						<a href="#">Инструкция по кабинету</a>
+					</div>
+					<div class="page-footer__subscribe">
+						<p>Подпишитесь на последние новости в телеграм канале</p>
+						<a class="page-footer__subscribe-agree button-primary" href="#"> Подписаться<svg width="16" height="16">
+								<use href="img/icons/sprite.svg#button-subscribe-footer"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="page-footer__app page-footer__item">
+					<div class="sots">
+						<a href="#">
+							<img src="img/ico-sots-footer-vk.svg" alt="" />
+						</a>
+						<a href="#">
+							<img src="img/ico-sots-footer-tg.svg" alt="" />
+						</a>
+						<a href="#">
+							<img src="img/ico-sots-footer-rutube.svg" alt="" />
+						</a>
+					</div>
+					<div class="page-footer__app-list">
+						<a href="#">
+							<img src="img/top.webp" alt="" />
+						</a>
+						<div class="dropdown">
+							<div class="page-footer__app-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Русский<svg class="dropdown-arrow" width="16" height="16">
+									<use href="img/icons/sprite.svg#arrow-menu"></use>
+								</svg>
+							</div>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Русский</a>
+								<a class="dropdown-item" href="#">Нерусский</a>
+							</div>
+						</div>
+						<a class="page-footer__app-btn" href="#">
+							<img src="img/app-rustore.svg" alt="" />
+						</a>
+						<a class="page-footer__app-btn" href="#">
+							<img src="img/app-google.svg" alt="" />
+						</a>
+						<a class="page-footer__app-btn" href="#">
+							<img src="img/app-huawei.svg" alt="" />
+						</a>
+						<a class="page-footer__app-btn" href="#">
+							<img src="img/app-apple.svg" alt="" />
+						</a>
+					</div>
+				</div>
+				<div class="page-footer__rights page-footer__item">
+					<span>(с) ООО «ПрофМедГрупп» 2025 г. Все права защищены</span>
+					<div class="page-footer__rights-menu">
+						<a href="#">О проекте</a>
+						<a href="#">Правила</a>
+						<a href="#">Политика конфиденциальности</a>
+						<a href="#">Контакты</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="menu-bottom">
+			<a href="#">
+				<figure>
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#menu-bottom-1"></use>
+					</svg>
+				</figure>Главная
+			</a>
+			<a href="#">
+				<figure>
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#menu-bottom-2"></use>
+					</svg>
+				</figure>Избранное
+			</a>
+			<a href="#">
+				<figure>
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#menu-bottom-3"></use>
+					</svg>
+				</figure>Объявления
+			</a>
+			<a href="#">
+				<figure>
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#menu-bottom-4"></use>
+					</svg>
+					<mark>5</mark>
+				</figure>Сообщения
+			</a>
+			<a href="#">
+				<figure>
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#menu-bottom-5"></use>
+					</svg>
+				</figure>Профиль
+			</a>
+		</div>
+		<div class="mdl" id="modal-feedback">
+			<button data-fancybox-close="data-fancybox-close">
+				<svg width="24" height="24">
+					<use href="img/icons/sprite.svg#close"></use>
+				</svg>
+			</button>
+			<div class="title-20">Не нашли ответ? Напишите нам!</div>
+			<div class="form-group">
+				<label>Выберите тему обращения</label>
+				<select class="select-styled">
+					<option>Технические проблемы</option>
+					<option>Гуманитарные проблемы</option>
+				</select>
+			</div>
+			<input class="form-control" placeholder="Введите имя" />
+			<input class="form-control" type="email" placeholder="e-mail" />
+			<textarea class="form-control" placeholder="Вопрос"></textarea>
+			<input class="button-primary button-big" type="submit" value="Отправить" />
+		</div>
+		<script src="js/jquery.min.js" defer="defer"></script>
+		<script src="js/bootstrap.bundle.min.js" defer="defer"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+		<script>ymaps.ready(() => {
+
+
+	const map = new ymaps.Map('acc-add-map', {
+		center: [55.7862, 37.6325], // координаты "Москва, Изумрудная улица, 189"
+		zoom: 16
+	});
+
+
+	const svg = `
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="20" r="8" fill="white"/>
+<path d="M24 4C19.7841 3.99979 15.7385 5.66352 12.7425 8.62958C9.74646 11.5956 8.04216 15.6243 8 19.84C8 30.8 22.1 43 22.7 43.52C23.0623 43.8299 23.5233 44.0001 24 44.0001C24.4767 44.0001 24.9377 43.8299 25.3 43.52C26 43 40 30.8 40 19.84C39.9578 15.6243 38.2535 11.5956 35.2575 8.62958C32.2615 5.66352 28.2159 3.99979 24 4ZM24 26C22.6155 26 21.2622 25.5895 20.111 24.8203C18.9599 24.0511 18.0627 22.9579 17.5328 21.6788C17.003 20.3997 16.8644 18.9922 17.1345 17.6344C17.4046 16.2765 18.0713 15.0292 19.0503 14.0503C20.0292 13.0713 21.2765 12.4046 22.6344 12.1345C23.9922 11.8644 25.3997 12.003 26.6788 12.5328C27.9579 13.0627 29.0511 13.9599 29.8203 15.111C30.5895 16.2622 31 17.6155 31 19C31 20.8565 30.2625 22.637 28.9497 23.9497C27.637 25.2625 25.8565 26 24 26V26Z" fill="#814FF5"/>
+<path d="M24 4C19.7841 3.99979 15.7385 5.66352 12.7425 8.62958C9.74646 11.5956 8.04216 15.6243 8 19.84C8 30.8 22.1 43 22.7 43.52C23.0623 43.8299 23.5233 44.0001 24 44.0001C24.4767 44.0001 24.9377 43.8299 25.3 43.52C26 43 40 30.8 40 19.84C39.9578 15.6243 38.2535 11.5956 35.2575 8.62958C32.2615 5.66352 28.2159 3.99979 24 4ZM24 26C22.6155 26 21.2622 25.5895 20.111 24.8203C18.9599 24.0511 18.0627 22.9579 17.5328 21.6788C17.003 20.3997 16.8644 18.9922 17.1345 17.6344C17.4046 16.2765 18.0713 15.0292 19.0503 14.0503C20.0292 13.0713 21.2765 12.4046 22.6344 12.1345C23.9922 11.8644 25.3997 12.003 26.6788 12.5328C27.9579 13.0627 29.0511 13.9599 29.8203 15.111C30.5895 16.2622 31 17.6155 31 19C31 20.8565 30.2625 22.637 28.9497 23.9497C27.637 25.2625 25.8565 26 24 26V26Z" fill="#4652FF"/>
+</svg>
+`;
+
+
+	const placemark = new ymaps.Placemark([55.7862, 37.6325], {}, {
+		iconLayout: 'default#image',
+		iconImageHref: 'data:image/svg+xml;utf8,' + encodeURIComponent(svg),
+		iconImageSize: [48, 48],
+		iconImageOffset: [-24, -48]
+	});
+
+
+	map.geoObjects.add(placemark);
+});</script>
+		<script src="js/tom-select.complete.min.js" defer="defer"></script>
+		<script src="js/fancybox.umd.js" defer="defer"></script>
+		<script src="js/main.js" defer="defer"></script>
+	</body>
+
+</html>

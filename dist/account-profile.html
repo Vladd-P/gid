@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Аккаунт - профиль</title>
+		<link rel="icon" href="data:," />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/tom-select.bootstrap4.min.css" />
+		<link rel="stylesheet" href="css/fancybox.css" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+
+	<body class="account-page">
+		<div class="top-block">
+			<header class="page-header container-fluid">
+				<a class="page-header__logo" href="/">
+					<img src="img/logo.svg" alt="" />
+				</a>
+				<div class="page-header__categories dropdown d-none d-lg-flex">
+					<button class="button-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+						<svg width="20" height="20">
+							<use href="img/icons/sprite.svg#categories-all"></use>
+						</svg>Категории
+					</button>
+					<div class="dropdown-menu">
+						<div class="menu-limiter">
+							<div class="dropdown-item submenu">Аппаратная косметология<svg class="dropdown-arrow" width="16" height="16">
+									<use href="img/icons/sprite.svg#arrow-menu"></use>
+								</svg>
+							</div>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Маникюр</a>
+								<a class="dropdown-item" href="#">Маникюр</a>
+								<a class="dropdown-item" href="#">Маникюр</a>
+								<a class="dropdown-item" href="#">Маникюр</a>
+								<a class="dropdown-item" href="#">Маникюр</a>
+							</div>
+							<a class="dropdown-item" href="#">Дерматология и косметологи</a>
+							<a class="dropdown-item" href="#">Диетология, спорт, тренировки</a>
+							<a class="dropdown-item" href="#">Инъекционная косметология</a>
+							<a class="dropdown-item" href="#">Лазерная хирургия</a>
+							<a class="dropdown-item" href="#">Макияж и татуаж</a>
+							<a class="dropdown-item" href="#">Маникюр</a>
+							<a class="dropdown-item" href="#">Мануальная терапия</a>
+							<a class="dropdown-item" href="#">Массаж</a>
+							<a class="dropdown-item" href="#">Педикюр</a>
+							<a class="dropdown-item" href="#">Пилинг и уход за лицом</a>
+							<a class="dropdown-item" href="#">Пирсинг</a>
+							<a class="dropdown-item" href="#">Пластическая хирургия</a>
+							<a class="dropdown-item" href="#">Прическа и уход за волосами</a>
+							<a class="dropdown-item" href="#">Стоматологические услуги</a>
+							<a class="dropdown-item" href="#">Трихология</a>
+							<a class="dropdown-item" href="#">Эпиляция и шугаринг</a>
+							<a class="dropdown-item" href="#">Татуировки и тату-мастера</a>
+						</div>
+					</div>
+				</div>
+				<div class="page-header__search selecting-value d-none d-md-block">
+					<div class="page-header__search-body">
+						<input class="selecting-value__view" type="search" placeholder="Наберите для примера Иванов" />
+						<button type="submit">
+							<img src="img/search.svg" alt="" />
+						</button>
+					</div>
+					<div class="dropdown">
+						<button class="dropdown-toggle d-none" type="button" data-toggle="dropdown" aria-expanded="false"></button>
+						<div class="dropdown-menu">
+							<div class="dropdown-item" data-selecting-value="Иванов">Иванов</div>
+						</div>
+					</div>
+				</div>
+				<button class="page-header__add button-bordered-blue d-none d-xl-flex">
+					<svg width="20" height="20">
+						<use href="img/icons/sprite.svg#add-page-header"></use>
+					</svg>Добавить
+				</button>
+				<div class="page-header__icons page-header__icons--account">
+					<button class="d-none d-lg-flex">
+						<svg width="24" height="24">
+							<use href="img/icons/sprite.svg#favorites-account"></use>
+						</svg>
+						<mark>5</mark>
+					</button>
+					<button class="d-none d-lg-flex">
+						<svg width="24" height="24">
+							<use href="img/icons/sprite.svg#comment"></use>
+						</svg>
+						<mark>3</mark>
+					</button>
+					<button class="empty">
+						<svg width="24" height="24">
+							<use href="img/icons/sprite.svg#cart"></use>
+						</svg>
+						<mark>0</mark>
+					</button>
+				</div>
+				<div class="page-header__account-menu dropdown">
+					<button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+						<img src="img/av-no.svg" alt="" />
+					</button>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a class="dropdown-item active" href="#">
+							<svg width="24" height="24">
+								<use href="img/icons/sprite.svg#acc-heder-menu-prof"></use>
+							</svg>Мой профиль
+						</a>
+						<a class="dropdown-item" href="#">
+							<svg width="24" height="24">
+								<use href="img/icons/sprite.svg#acc-heder-menu-req"></use>
+							</svg>Мои заявки
+						</a>
+						<a class="dropdown-item" href="#">
+							<svg width="24" height="24">
+								<use href="img/icons/sprite.svg#acc-heder-menu-notice"></use>
+							</svg>Уведомления
+						</a>
+						<a class="dropdown-item" href="#">
+							<svg width="24" height="24">
+								<use href="img/icons/sprite.svg#acc-heder-menu-places"></use>
+							</svg>Мои площадки
+						</a>
+						<a class="dropdown-item" href="#">
+							<svg width="24" height="24">
+								<use href="img/icons/sprite.svg#acc-heder-menu-stat"></use>
+							</svg>Статистика
+						</a>
+						<div class="block-liner"></div>
+						<a class="button-gray" href="#">Выйти</a>
+					</div>
+				</div>
+				<button class="c-hamburger c-hamburger--htx">
+					<span></span>
+				</button>
+			</header>
+		</div>
+		<section class="account container-fluid">
+			<aside class="account-aside menu-mobile">
+				<svg class="menu-motile__close" width="24" height="24">
+					<use href="img/icons/sprite.svg#close"></use>
+				</svg>
+				<div class="account-aside__header">
+					<img class="account-aside__av" src="img/av-no-aside.svg" alt="" />
+					<div class="account-aside__name">Евгений Федулов</div>
+					<div class="rating-line">
+						<div class="stars">
+							<svg width="18" height="18">
+								<use href="img/icons/sprite.svg#star-rating"></use>
+							</svg>
+							<svg width="18" height="18">
+								<use href="img/icons/sprite.svg#star-rating"></use>
+							</svg>
+							<svg width="18" height="18">
+								<use href="img/icons/sprite.svg#star-rating"></use>
+							</svg>
+							<svg width="18" height="18">
+								<use href="img/icons/sprite.svg#star-rating"></use>
+							</svg>
+							<svg width="18" height="18">
+								<use href="img/icons/sprite.svg#star-rating"></use>
+							</svg>
+						</div>
+						<mark>5.0</mark>
+					</div>
+				</div>
+				<a class="account-aside__item active" href="account-profile.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-1"></use>
+					</svg>Мой профиль
+				</a>
+				<div class="block-liner"></div>
+				<a class="account-aside__item" href="account-add.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-3"></use>
+					</svg>Добавить объявление
+				</a>
+				<a class="account-aside__item" href="account-ads.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-4"></use>
+					</svg>Мои объявления<mark>5</mark>
+				</a>
+				<div class="block-liner"></div>
+				<a class="account-aside__item" href="account-favorites.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-5"></use>
+					</svg>Избранное
+				</a>
+				<a class="account-aside__item" href="account-packets.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-7"></use>
+					</svg>Мои пакеты
+				</a>
+				<a class="account-aside__item" href="account-payments.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-8"></use>
+					</svg>История платежей
+				</a>
+				<a class="account-aside__item" href="account-recently.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-9"></use>
+					</svg>Недавно просмотренные
+				</a>
+				<div class="block-liner"></div>
+				<a class="account-aside__item" href="account-credits.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-10"></use>
+					</svg>Мои кредиты
+				</a>
+				<a class="account-aside__item" href="account-banners.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-11"></use>
+					</svg>Мои баннеры
+				</a>
+				<a class="account-aside__item" href="account-services.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-12"></use>
+					</svg>Платные услуги
+				</a>
+				<div class="block-liner"></div>
+				<a class="account-aside__item" href="account-profile.html">
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#acc-aside-1"></use>
+					</svg>Выйти
+				</a>
+			</aside>
+			<main>
+				<h1>Мой профиль</h1>
+				<div class="account-main">
+					<div class="tabs-common">
+						<button class="active" data-tabs="acc-profile" data-tab-target="acc-profile-1">Настройки профиля</button>
+						<button data-tabs="acc-profile" data-tab-target="acc-profile-2">Настройки учетной записи</button>
+					</div>
+					<div class="active" id="acc-profile-1" data-tabs-content="acc-profile">
+						<div class="acc-profile">
+							<div class="column">
+								<div class="acc-profile__user">
+									<figure class="acc-profile__av">
+										<img src="img/acc-profile-av.webp" alt="" />
+										<button class="acc-profile__av-edit">
+											<svg width="16" height="16">
+												<use href="img/icons/sprite.svg#edit"></use>
+											</svg>
+										</button>
+									</figure>
+									<div>
+										<div class="title-20">Евгений Федулов</div>
+										<div class="color-grey3">Частное лицо</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>E-mail</label>
+									<input class="form-control" type="email" placeholder="Введите E-mail" />
+								</div>
+								<div>
+									<label class="checkbox-switch-styled">Показывать свой электронный адрес
+										<input type="checkbox" />
+										<figure></figure>
+									</label>
+									<label class="checkbox-switch-styled">Подписаться на рассылку
+										<input type="checkbox" checked="checked" />
+										<figure></figure>
+									</label>
+								</div>
+							</div>
+							<div class="column">
+								<div class="form-group">
+									<label>Индивидуальная страница</label>
+									<div class="input-link">
+										<input class="form-control" type="url" placeholder="Введите адрес страницы" />
+										<a class="link-blue" href="">
+											<svg width="24" height="24">
+												<use href="img/icons/sprite.svg#arrow-link"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>Предпочтительный язык</label>
+									<select class="select-styled">
+										<option>Русский</option>
+										<option>Нерусский</option>
+									</select>
+								</div>
+							</div>
+							<div class="column">
+								<input class="button-primary" type="submit" value="Сохранить изменения" />
+							</div>
+						</div>
+						<div class="block-liner block-liner--big"></div>
+						<div class="acc-profile">
+							<div class="column">
+								<div class="fsz-20 fw-600">Сменить пароль</div>
+								<div class="form-group">
+									<label>Текущий пароль</label>
+									<input class="form-control" type="password" />
+								</div>
+								<div class="form-group">
+									<label>Новый пароль</label>
+									<input class="form-control" type="password" />
+								</div>
+								<div class="form-group">
+									<label>Повторите пароль</label>
+									<input class="form-control" type="password" />
+								</div>
+								<div class="column">
+									<input class="button-primary" type="submit" value="Изменить пароль" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="acc-profile-2" data-tabs-content="acc-profile">
+						<div class="acc-profile">
+							<div class="column">
+								<div class="form-group">
+									<label>Имя</label>
+									<input class="form-control" placeholder="Введите имя" />
+								</div>
+								<div class="form-group">
+									<label>Телефон</label>
+									<input class="form-control" type="tel" placeholder="+7 (___)-___-__-__" />
+								</div>
+								<div>
+									<label class="checkbox-styled">
+										<input type="checkbox" />
+										<figure>
+											<svg width="14" height="14">
+												<use href="img/icons/sprite.svg#checkbox"></use>
+											</svg>
+										</figure>Доступен в WhatsApp
+									</label>
+									<label class="checkbox-styled">
+										<input type="checkbox" />
+										<figure>
+											<svg width="14" height="14">
+												<use href="img/icons/sprite.svg#checkbox"></use>
+											</svg>
+										</figure>Доступен в Telegram
+									</label>
+								</div>
+							</div>
+							<div class="column">
+								<div class="acc-profile__2-cols">
+									<div class="form-group">
+										<label>Пол</label>
+										<select class="select-styled">
+											<option>Мужской</option>
+											<option>Женский</option>
+										</select>
+										<mark>Не будет отображаться в профиле</mark>
+									</div>
+									<div class="form-group">
+										<label>Дата рождения</label>
+										<input class="form-control" type="date" />
+									</div>
+								</div>
+							</div>
+							<div class="column">
+								<input class="button-primary w-100" type="submit" value="Сохранить" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</section>
+		<footer class="page-footer">
+			<div class="container-fluid">
+				<div class="page-footer__menu page-footer__item">
+					<div class="page-footer__menu-section">
+						<div class="subtitle">Навигация</div>
+						<a href="#">Главная</a>
+						<a href="#">Поиск услуг по категориям</a>
+						<a href="#">Поиск по карте</a>
+						<a href="#">Поиск в радиусе</a>
+						<a href="#">Недавно добавленные</a>
+						<a href="#">Недавно просмотренные</a>
+					</div>
+					<div class="page-footer__menu-section">
+						<div class="subtitle">Информация</div>
+						<a href="#">Новости</a>
+						<a href="#">Поддержка</a>
+						<a href="#">Отзывы</a>
+						<a href="#">Оферта и правила</a>
+						<a href="#">Документы специалистов</a>
+						<a href="#">Вопросы и ответы (FAQ)</a>
+					</div>
+					<div class="page-footer__menu-section">
+						<div class="subtitle">Разделы</div>
+						<a href="#">Врачи и мастера</a>
+						<a href="#">Клиники и салоны</a>
+						<a href="#">Услуги красоты</a>
+						<a href="#">Мероприятия</a>
+						<a href="#">Карта косметики</a>
+						<a href="#">Карта оборудования</a>
+					</div>
+					<div class="page-footer__menu-section">
+						<div class="subtitle">Личный кабинет</div>
+						<a href="#">Избранное</a>
+						<a href="#">Мои сообщения</a>
+						<a href="#">Мой профиль</a>
+						<a href="#">Сохранённые поиски</a>
+						<a href="#">Запросы специалистам</a>
+						<a href="#">Инструкция по кабинету</a>
+					</div>
+					<div class="page-footer__subscribe">
+						<p>Подпишитесь на последние новости в телеграм канале</p>
+						<a class="page-footer__subscribe-agree button-primary" href="#"> Подписаться<svg width="16" height="16">
+								<use href="img/icons/sprite.svg#button-subscribe-footer"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="page-footer__app page-footer__item">
+					<div class="sots">
+						<a href="#">
+							<img src="img/ico-sots-footer-vk.svg" alt="" />
+						</a>
+						<a href="#">
+							<img src="img/ico-sots-footer-tg.svg" alt="" />
+						</a>
+						<a href="#">
+							<img src="img/ico-sots-footer-rutube.svg" alt="" />
+						</a>
+					</div>
+					<div class="page-footer__app-list">
+						<a href="#">
+							<img src="img/top.webp" alt="" />
+						</a>
+						<div class="dropdown">
+							<div class="page-footer__app-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Русский<svg class="dropdown-arrow" width="16" height="16">
+									<use href="img/icons/sprite.svg#arrow-menu"></use>
+								</svg>
+							</div>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Русский</a>
+								<a class="dropdown-item" href="#">Нерусский</a>
+							</div>
+						</div>
+						<a class="page-footer__app-btn" href="#">
+							<img src="img/app-rustore.svg" alt="" />
+						</a>
+						<a class="page-footer__app-btn" href="#">
+							<img src="img/app-google.svg" alt="" />
+						</a>
+						<a class="page-footer__app-btn" href="#">
+							<img src="img/app-huawei.svg" alt="" />
+						</a>
+						<a class="page-footer__app-btn" href="#">
+							<img src="img/app-apple.svg" alt="" />
+						</a>
+					</div>
+				</div>
+				<div class="page-footer__rights page-footer__item">
+					<span>(с) ООО «ПрофМедГрупп» 2025 г. Все права защищены</span>
+					<div class="page-footer__rights-menu">
+						<a href="#">О проекте</a>
+						<a href="#">Правила</a>
+						<a href="#">Политика конфиденциальности</a>
+						<a href="#">Контакты</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="menu-bottom">
+			<a href="#">
+				<figure>
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#menu-bottom-1"></use>
+					</svg>
+				</figure>Главная
+			</a>
+			<a href="#">
+				<figure>
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#menu-bottom-2"></use>
+					</svg>
+				</figure>Избранное
+			</a>
+			<a href="#">
+				<figure>
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#menu-bottom-3"></use>
+					</svg>
+				</figure>Объявления
+			</a>
+			<a href="#">
+				<figure>
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#menu-bottom-4"></use>
+					</svg>
+					<mark>5</mark>
+				</figure>Сообщения
+			</a>
+			<a href="#">
+				<figure>
+					<svg width="24" height="24">
+						<use href="img/icons/sprite.svg#menu-bottom-5"></use>
+					</svg>
+				</figure>Профиль
+			</a>
+		</div>
+		<div class="mdl" id="modal-feedback">
+			<button data-fancybox-close="data-fancybox-close">
+				<svg width="24" height="24">
+					<use href="img/icons/sprite.svg#close"></use>
+				</svg>
+			</button>
+			<div class="title-20">Не нашли ответ? Напишите нам!</div>
+			<div class="form-group">
+				<label>Выберите тему обращения</label>
+				<select class="select-styled">
+					<option>Технические проблемы</option>
+					<option>Гуманитарные проблемы</option>
+				</select>
+			</div>
+			<input class="form-control" placeholder="Введите имя" />
+			<input class="form-control" type="email" placeholder="e-mail" />
+			<textarea class="form-control" placeholder="Вопрос"></textarea>
+			<input class="button-primary button-big" type="submit" value="Отправить" />
+		</div>
+		<script src="js/jquery.min.js" defer="defer"></script>
+		<script src="js/bootstrap.bundle.min.js" defer="defer"></script>
+		<script src="js/tom-select.complete.min.js" defer="defer"></script>
+		<script src="js/inputmask.min.js" defer="defer"></script>
+		<script src="js/fancybox.umd.js" defer="defer"></script>
+		<script src="js/main.js" defer="defer"></script>
+	</body>
+
+</html>

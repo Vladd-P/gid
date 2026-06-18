@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Карточка клиники</title>
+		<link rel="icon" href="data:," />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="css/tom-select.bootstrap4.min.css" />
+		<link rel="stylesheet" href="css/fancybox.css" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+
+	<body>
+		<div class="top-block">
+			<div class="topline">
+				<div class="topline__body container-fluid">
+					<a class="topline__city" href="#">
+						<img src="img/ico-map-marker.svg" alt="" />Санкт-Петербург
+					</a>
+					<div class="topline__menu">
+						<a href="#">О нас</a>
+						<div class="dropdown">
+							<div class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Пациенту<svg class="dropdown-arrow" width="16" height="16">
+									<use href="img/icons/sprite.svg#arrow-menu"></use>
+								</svg>
+							</div>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Действие</a>
+								<a class="dropdown-item" href="#">Другое действие</a>
+								<a class="dropdown-item" href="#">Что-то еще здесь</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<div class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Врачу и клинике<svg class="dropdown-arrow" width="16" height="16">
+									<use href="img/icons/sprite.svg#arrow-menu"></use>
+								</svg>
+							</div>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Действие</a>
+								<a class="dropdown-item" href="#">Другое действие</a>
+								<a class="dropdown-item" href="#">Что-то еще здесь</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<div class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Партнерам<svg class="dropdown-arrow" width="16" height="16">
+									<use href="img/icons/sprite.svg#arrow-menu"></use>
+								</svg>
+							</div>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Действие</a>
+								<a class="dropdown-item" href="#">Другое действие</a>
+								<a class="dropdown-item" href="#">Что-то еще здесь</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<div class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Сервис<svg class="dropdown-arrow" width="16" height="16">
+									<use href="img/icons/sprite.svg#arrow-menu"></use>
+								</svg>
+							</div>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Действие</a>
+								<a class="dropdown-item" href="#">Другое действие</a>
+								<a class="dropdown-item" href="#">Что-то еще здесь</a>
+							</div>
+						</div>
+						<a href="#">Контакты</a>
+					</div>
+					<div class="topline__lang dropdown">
+						<div class="dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">RU<svg class="dropdown-arrow" width="16" height="16">
+								<use href="img/icons/sprite.svg#arrow-menu"></use>
+							</svg>
+						</div>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">RU</a>
+							<a class="dropdown-item" href="#">ENG</a>
+						</div>
+					</div>
+					<div class="sots">
+						<a href="#">
+							<img src="img/ico-sots-whatsapp.svg" alt="" />
+						</a>
+						<a href="#">
+							<img src="img/ico-sots-tg.svg" alt="" />
+						</a>
+						<a href="#">
+							<img src="img/ico-sots-vk.svg" alt="" />
+						</a>
+					</div>
+				</div>
+			</div>
+			<header class="page-header container-fluid">
+				<a class="page-header__logo" href="/">
+					<img src="img/logo.svg" alt="" />
+				</a>
+				<div class="page-header__categories dropdown d-none d-lg-flex">
+					<button class="button-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+						<svg width="20" height="20">
+							<use href="img/icons/sprite.svg#categories-all"></use>
+						</svg>Все категории
+					</button>
+					<div class="dropdown-menu">
+						<div class="menu-limiter">
+							<div class="dropdown-item submenu">Аппаратная косметология<svg class="dropdown-arrow" width="16" height="16">
+									<use href="img/icons/sprite.svg#arrow-menu"></use>
+								</svg>
+							</div>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Маникюр</a>
+								<a class="dropdown-item" href="#">Маникюр</a>
+								<a class="dropdown-item" href="#">Маникюр</a>
+								<a class="dropdown-item" href="#">Маникюр</a>
+								<a class="dropdown-item" href="#">Маникюр</a>
+							</div>
+							<a class="dropdown-item" href="#">Дерматология и косметологи</a>
+							<a class="dropdown-item" href="#">Диетология, спорт, тренировки</a>
+							<a class="dropdown-item" href="#">Инъекционная косметология</a>
+							<a class="dropdown-item" href="#">Лазерная хирургия</a>
+							<a class="dropdown-item" href="#">Макияж и татуаж</a>
+							<a class="dropdown-item" href="#">Маникюр</a>
+							<a class="dropdown-item" href="#">Мануальная терапия</a>
+							<a class="dropdown-item" href="#">Массаж</a>
+							<a class="dropdown-item" href="#">Педикюр</a>
+							<a class="dropdown-item" href="#">Пилинг и уход за лицом</a>
+							<a class="dropdown-item" href="#">Пирсинг</a>
+							<a class="dropdown-item" href="#">Пластическая хирургия</a>
+							<a class="dropdown-item" href="#">Прическа и уход за волосами</a>
+							<a class="dropdown-item" href="#">Стоматологические услуги</a>
+							<a class="dropdown-item" href="#">Трихология</a>
+							<a class="dropdown-item" href="#">Эпиляция и шугаринг</a>
+							<a class="dropdown-item" href="#">Татуировки и тату-мастера</a>
+						</div>
+					</div>
+				</div>
+				<div class="page-header__search selecting-value d-none d-md-block">
+					<div class="page-header__search-body">
+						<input class="selecting-value__view" type="search" placeholder="Наберите для примера Иванов" />
+						<button type="submit">
+							<img src="img/search.svg" alt="" />
+						</button>
+					</div>
+					<div class="dropdown">
+						<button class="dropdown-toggle d-none" type="button" data-toggle="dropdown" aria-expanded="false"></button>
+						<div class="dropdown-menu">
+							<div class="dropdown-item" data-selecting-value="Иванов">Иванов</div>
+						</div>
+					</div>
+				</div>
+				<div class="page-header__icons">
+					<button class="d-none d-lg-flex" data-fancybox="data-fancybox" data-src="#modal-login">
+						<svg width="24" height="24">
+							<use href="img/icons/sprite.svg#moon"></use>
+						</svg>
+					</button>
+					<button data-fancybox="data-fancybox" data-src="#modal-feedback">
+						<svg width="24" height="24">
+							<use href="img/icons/sprite.svg#favorites"></use>
+						</svg>
+						<mark>5</mark>
+					</button>
+				</div>
+				<a class="page-header__login button-gray" href="account-profile.html">
+					<svg width="20" height="20">
+						<use href="img/icons/sprite.svg#user"></use>
+					</svg>
+					<span>Личный кабинет</span>
+				</a>
+				<button class="c-hamburger c-hamburger--htx">
+					<span></span>
+				</button>
+			</header>
+			<nav class="page-nav menu-mobile container-fluid">
+				<svg class="menu-motile__close" width="24" height="24">
+					<use href="img/icons/sprite.svg#close"></use>
+				</svg>
+				<a class="d-lg-none" href="#">Личный кабинет</a>
+				<a class="d-lg-none" href="#">Избранное</a>
+				<a href="/">Главная</a>
+				<a href="map-search.html">Поиск на карте</a>
+				<a href="catalog-doctors.html">Врачи и мастера</a>
+				<a href="catalog-services.html">Услуги</a>
+				<a href="catalog-clinics.html">Клиники и салоны</a>
+				<a href="/">Лечение</a>
+				<a href="/">Мероприятия</a>
+				<a href="/">Производители</a>
+			</nav>
+		</div>
+		<section class="page-section container-fluid">
+			<ul class="brdcrumbs">
+				<li>
+					<a href="/">Главная</a>
+				</li>
+				<li>
+					<svg width="16" height="16">
+						<use href="img/icons/sprite.svg#arrow-brdcrumbs"></use>
+					</svg>
+					<a href="catalog-services.html">Услуги</a>
+				</li>
+				<li>
+					<svg width="16" height="16">
+						<use href="img/icons/sprite.svg#arrow-brdcrumbs"></use>
+					</svg>ПрофМедГрупп
+				</li>
+			</ul>
+			<div class="card-main">
+				<aside>
+					<div class="card-info card-aside-block">
+						<div class="aside-block__header">
+							<img class="card-info__clinic-av" src="img/card-clinic-av.webp" alt="" />
+							<div class="card-info__name">ПрофМедГрупп</div>
+							<div class="rating-line">
+								<div class="stars">
+									<svg width="16" height="16">
+										<use href="img/icons/sprite.svg#star-rating"></use>
+									</svg>
+									<svg width="16" height="16">
+										<use href="img/icons/sprite.svg#star-rating"></use>
+									</svg>
+									<svg width="16" height="16">
+										<use href="img/icons/sprite.svg#star-rating"></use>
+									</svg>
+									<svg width="16" height="16">
+										<use href="img/icons/sprite.svg#star-rating"></use>
+									</svg>
+									<svg width="16" height="16">
+										<use href="img/icons/sprite.svg#star-rating"></use>
+									</svg>
+								</div>
+								<mark>5.0</mark>
+								<a class="link-blue" href="#">25 отзывов</a>
+							</div>
+							<p class="card-info__numbers">1 объявление / 5 врачей</p>
+							<button class="card-info__comment button-gray-color-primary">Оставить отзыв</button>
+						</div>
+						<div class="card-info__address">
+							<span>Компания:</span>
+							<a class="link-blue" href="#">ООО «ПрофМедГрупп»</a>
+							<span>Регион:</span>
+							<p>Московская область и Москва</p>
+							<span>Адрес:</span>
+							<p>Лескова 8, кв. 218 </p>
+						</div>
+						<div class="card-info__controls">
+							<span class="button-gray button-40">
+								<svg width="16" height="16">
+									<use href="img/icons/sprite.svg#verified-ok"></use>
+								</svg>Телефон подтвержден
+							</span>
+							<span class="button-gray button-40">
+								<svg width="16" height="16">
+									<use href="img/icons/sprite.svg#verified-ok"></use>
+								</svg>Документы проверены
+							</span>
+							<div class="collapse-custom">
+								<div class="collapse-custom__content">
+									<button class="button-gray button-40 w-100">2 объявления пользователя</button>
+								</div>
+								<div class="collapse-custom__btn collapse-custom__btn--switch link-blue">
+									<span>Показать еще 2</span>
+									<span>Скрыть</span>
+								</div>
+							</div>
+						</div>
+						<div class="card-info__feedback">
+							<button class="button-primary">Показать номер</button>
+							<button class="button-bordered-blue">Написать </button>
+							<button class="button-gray w-100">Подписаться</button>
+						</div>
+						<div class="card-info__answer">
+							<svg width="16" height="16">
+								<use href="img/icons/sprite.svg#clock"></use>
+							</svg>Отвечает около часа
+						</div>
+						<div class="card-info__contacts">
+							<a href="mailto:medkrasotunov24.ru">medkrasotunov24.ru</a>
+							<div class="card-info__sots">
+								<a href="#">
+									<img src="img/ico-sots-whatsapp.svg" alt="" />
+								</a>
+								<a href="#">
+									<img src="img/ico-sots-tg.svg" alt="" />
+								</a>
+								<a href="#">
+									<img src="img/ico-sots-vk.svg" alt="" />
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="card-clinic-features card-aside-block">
+						<div class="aside-block__header">
+							<p class="color-grey2 m-0">Официальное название:</p>
+							<p class="m-0">ООО «Многопрофильная клиника Медпрайм»</p>
+						</div>
+						<ul class="card-clinic-features__list">
+							<li>
+								<svg width="24" height="24">
+									<use href="img/icons/sprite.svg#card-clinic-features-1"></use>
+								</svg>
+								<span>Гостевая парковка</span>
+							</li>
+							<li>
+								<svg width="24" height="24">
+									<use href="img/icons/sprite.svg#card-clinic-features-2"></use>
+								</svg>
+								<span>ДМС, наличные, банковская карта</span>
+							</li>
+							<li>
+								<svg width="24" height="24">
+									<use href="img/icons/sprite.svg#card-clinic-features-3"></use>
+								</svg>
+								<span>Дети и взрослые</span>
+							</li>
+							<li>
+								<svg width="24" height="24">
+									<use href="img/icons/sprite.svg#card-clinic-features-4"></use>
+								</svg>
+								<span>Официальный сайт</span>
+							</li>
+							<li>
+								<svg width="24" height="24">
+									<use href="img/icons/sprite.svg#card-clinic-features-5"></use>
+								</svg>
+								<span>Лицензия</span>
+							</li>
+						</ul>
+						<div class="card-aside-block__feedback">
+							<textarea placeholder="Сообщение"></textarea>
+							<input class="button-white" type="submit" value="Связаться с клиникой" />
+						</div>
+					</div>
+					<div class="card-clinic-address card-aside-block">
+						<div class="fw-600">Адрес клиники</div>
+						<div class="card-clinic-address__line">
+							<span>Регион:</span>
+							<span>Московская область и Москва</span>
+						</div>
+						<div class="card-clinic-address__line">
+							<span>Город:</span>
+							<span>Москва</span>
+						</div>
+						<div class="card-clinic-address__line">
+							<span>Адрес:</span>
+							<span> Изумрудная улица, <span class="text-nowrap">дом 189</span>
+							</span>
+						</div>
+						<div id="aside-map"></div>
+					</div>
+				</aside>
+				<main>
+					<div class="card-clinic card-block">
+						<div class="card-timeschedule">
+							<svg width="24" height="24">
+								<use href="img/icons/sprite.svg#calendar"></use>
+							</svg>
+							<div>
+								<p class="color-grey3 m-0">Режим приема:</p>
+								<p class="fw-500 m-0">пн-пт 8:00 – 21:00; сб 8:00 – 20:00; вс 10:00 – 19:00; </p>
+							</div>
+						</div>
+						<div class="subtitle">Специализация клиники:</div>
+						<div class="card-tags">
+							<span class="active">Дерматолог</span>
+							<span>Косметолог</span>
+							<span>Трихолог</span>
+							<span>Дермановенеролог</span>
+							<span>Косметолог-дерматолог </span>
+						</div>
+						<div class="card-clinic__slider">
+							<div class="subtitle">Фотографии клиники ПрофМедГрупп</div>
+							<div class="card-slider-wrapper">
+								<div class="card-slider swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img src="img/card-clinic-slide-1.webp" alt="" data-fancybox-img="data-fancybox-img" data-fancybox="card-clinic" data-src="img/card-clinic-slide-1.webp" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/card-clinic-slide-2.webp" alt="" data-fancybox-img="data-fancybox-img" data-fancybox="card-clinic" data-src="img/card-clinic-slide-2.webp" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/card-clinic-slide-3.webp" alt="" data-fancybox-img="data-fancybox-img" data-fancybox="card-clinic" data-src="img/card-clinic-slide-3.webp" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/card-clinic-slide-4.webp" alt="" data-fancybox-img="data-fancybox-img" data-fancybox="card-clinic" data-src="img/card-clinic-slide-4.webp" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/card-clinic-slide-5.webp" alt="" data-fancybox-img="data-fancybox-img" data-fancybox="card-clinic" data-src="img/card-clinic-slide-5.webp" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/card-clinic-slide-6.webp" alt="" data-fancybox-img="data-fancybox-img" data-fancybox="card-clinic" data-src="img/card-clinic-slide-6.webp" />
+										</div>
+										<div class="swiper-slide swiper-slide--more" data-slides="7">
+											<img src="img/card-clinic-slide-4.webp" alt="" data-fancybox-img="data-fancybox-img" data-fancybox="card-clinic" data-src="img/card-clinic-slide-4.webp" />
+											<span></span>
+										</div>
+										<div class="swiper-slide d-none">
+											<img src="img/card-clinic-slide-1.webp" alt="" data-fancybox-img="data-fancybox-img" data-fancybox="card-clinic" data-src="img/card-clinic-slide-1.webp" />
+										</div>
+										<div class="swiper-slide d-none">
+											<img src="img/card-clinic-slide-2.webp" alt="" data-fancybox-img="data-fancybox-img" data-fancybox="card-clinic" data-src="img/card-clinic-slide-2.webp" />
+										</div>
+										<div class="swiper-slide d-none">
+											<img src="img/card-clinic-slide-3.webp" alt="" data-fancybox-img="data-fancybox-img" data-fancybox="card-clinic" data-src="img/card-clinic-slide-3.webp" />
+										</div>
+									</div>
+								</div>
+								<button class="swiper-button-prev">
+									<svg width="20" height="20">
+										<use href="img/icons/sprite.svg#arrow-comments"></use>
+									</svg>
+								</button>
+								<button class="swiper-button-next">
+									<svg width="20" height="20">
+										<use href="img/icons/sprite.svg#arrow-comments"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div>
+							<div class="subtitle">Описание</div>
+							<div class="card-text-collapse collapse-custom">
+								<div class="collapse-custom__content"> Клиника «Медпрайм» города Москвы оснащена современным оборудованием, в числе которого ультразвуковые, эндоскопические аппараты. Налажено сотрудничество с ведущими лабораториями столицы, специализирующимися на проведении исследований. В клинике «Медпрайм» работают квалифицированные врачи наиболее востребованных специальностей. Медицинские услуги предоставляются физическим и юридическим лицам.</div>
+								<div class="collapse-custom__btn collapse-custom__btn--switch link-blue">
+									<span>Читать полностью</span>
+									<span>Скрыть </span>
+									<svg class="collapse-custom__caret" width="16" height="16">
+										<use href="img/icons/sprite.svg#arrow-collapse"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="block-liner m-0"></div>
+						<div>
+							<div class="subtitle">Услуги</div>
+							<div class="card-text-collapse collapse-custom">
+								<div class="collapse-custom__content"> В клинике «Медпрайм» ведут прием терапевты, кардиологи, неврологи, гастроэнтерологи, эндокринологи, гинекологи, урологи, хирурги, офтальмологи, отоларингологи, дерматовенерологи и др. В основные направления деятельности входит: диагностика (лабораторная, инструментальная, функциональная), вакцинация, реабилитация после перенесенных заболеваний и хирургических вмешательств, проведение профилактических осмотров и диспансеризации, организация медицинского обслуживания на предприятиях и в организациях, медицинское сопровождение спортсменов, </div>
+								<div class="collapse-custom__btn collapse-custom__btn--switch link-blue">
+									<span>Читать полностью</span>
+									<span>Скрыть </span>
+									<svg class="collapse-custom__caret" width="16" height="16">
+										<use href="img/icons/sprite.svg#arrow-collapse"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="card-clinic__route">
+							<div>
+								<div class="subtitle">Проезд</div>
+								<p>До клиники «Медпрайм» едут автобус №123, 196, 297, м1, м16н.</p>
+								<p>Ближайшая остановка – «1-ая городская больница»</p>
+							</div>
+							<div>
+								<div class="subtitle">Парковка</div>
+								<p>Имеется открытая бесплатная парковка для посетителей клиники.</p>
+								<p>Для допуска на парковку необходжимо предварительно позвонить клинику.</p>
+							</div>
+						</div>
+						<div class="card-clinic__swiper-sert">
+							<div class="subtitle">Лицензии и сертификаты клиник</div>
+							<div class="card-slider-wrapper">
+								<div class="cert-slider swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img src="img/card-clinic-sert-1.webp" alt="" data-fancybox-img="data-fancybox-img" data-fancybox="card-clinic-cert" data-src="img/card-clinic-sert-1.webp" />
+											<p>№ ЛО41-01162-50/00555048 от 20 февраля 2020</p>
+										</div>
+										<div class="swiper-slide">
+											<img src="img/card-clinic-sert-2.webp" alt="" data-fancybox-img="data-fancybox-img" data-fancybox="card-clinic-cert" data-src="img/card-clinic-sert-2.webp" />
+											<p>№ ЛО41-01162-50/00555048 от 20 февраля 2020</p>
+										</div>
+										<div class="swiper-slide">
+											<img src="img/card-clinic-sert-3.webp" alt="" data-fancybox-img="data-fancybox-img" data-fancybox="card-clinic-cert" data-src="img/card-clinic-sert-3.webp" />
+											<p>№ ЛО41-01162-50/00555048 от 20 февраля 2020</p>
+										</div>
+										<div class="swiper-slide">
+											<img src="img/card-clinic-sert-4.webp" alt="" data-fancybox-img="data-fancybox-img" data-fancybox="card-clinic-cert" data-src="img/card-clinic-sert-4.webp" />
+											<p>№ ЛО41-01162-50/00555048 от 20 февраля 2020</p>
+										</div>
+										<div class="swiper-slide">
+											<img src="img/card-clinic-sert-1.webp" alt="" data-fancybox-img="data-fancybox-img" data-fancybox="card-clinic-cert" data-src="img/card-clinic-sert-1.webp" />
+											<p>№ ЛО41-01162-50/00555048 от 20 февраля 2020</p>
+										</div>
+									</div>
+								</div>
+								<button class="swiper-button-prev">
+									<svg width="20" height="20">
+										<use href="img/icons/sprite.svg#arrow-comments"></use>
+									</svg>
+								</button>
+								<button class="swiper-button-next">
+									<svg width="20" height="20">
+										<use href="img/icons/sprite.svg#arrow-comments"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="tabs-common">
+						<button class="active" data-tabs="card-doctor-tabs" data-tab-target="card-doctor-tabs-services">Объявления</button>
+						<button data-tabs="card-doctor-tabs" data-tab-target="card-doctor-tabs-comments">Отзывы</button>
+					</div>
+					<div class="card-list-filter">
+						<select class="card-list-filter__select select-styled">
+							<option>Популярные</option>
+							<option>Непопулярные</option>
+						</select>
+						<a href="#">
+							<svg width="20" height="20">
+								<use href="img/icons/sprite.svg#map-marker"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="active" id="card-doctor-tabs-services" data-tabs-content="card-doctor-tabs">
+						<div class="card-list-service">
+							<figure class="card-list-service__img">
+								<a href="#">
+									<img src="img/card-list-service-1.webp" alt="" />
+								</a>
+								<label class="favorites">
+									<input type="checkbox" />
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12.558 19.9191C12.252 20.027 11.748 20.027 11.442 19.9191C8.832 19.0292 3 15.3169 3 9.02472C3 6.24719 5.241 4 8.004 4C9.642 4 11.091 4.79101 12 6.01348C12.909 4.79101 14.367 4 15.996 4C18.759 4 21 6.24719 21 9.02472C21 15.3169 15.168 19.0292 12.558 19.9191Z" fill="white" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</label>
+							</figure>
+							<div class="card-list-service__title">Комбинированная чистка лица лазером (глубокая)</div>
+							<div class="card-list-service__cost">5 900 ₽</div>
+							<div class="card-list-service__about">Аппаратная косметология, Московская область и Москва, Лескова 8, кв. 218</div>
+						</div>
+						<div class="card-list-service">
+							<figure class="card-list-service__img">
+								<a href="#">
+									<img src="img/card-list-service-2.webp" alt="" />
+								</a>
+								<label class="favorites">
+									<input type="checkbox" />
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12.558 19.9191C12.252 20.027 11.748 20.027 11.442 19.9191C8.832 19.0292 3 15.3169 3 9.02472C3 6.24719 5.241 4 8.004 4C9.642 4 11.091 4.79101 12 6.01348C12.909 4.79101 14.367 4 15.996 4C18.759 4 21 6.24719 21 9.02472C21 15.3169 15.168 19.0292 12.558 19.9191Z" fill="white" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</label>
+							</figure>
+							<div class="card-list-service__title">Биоревитализация препаратом Novacutan YBio (2 мл)</div>
+							<div class="card-list-service__cost">5 900 ₽</div>
+							<div class="card-list-service__about">Аппаратная косметология, Московская область и Москва, Лескова 8, кв. 218</div>
+						</div>
+					</div>
+					<div id="card-doctor-tabs-comments" data-tabs-content="card-doctor-tabs">
+						<div class="card-comment">
+							<div class="card-comment__header">
+								<img class="card-comment__av" src="img/card-comment.webp" alt="" />
+								<div>
+									<div class="fw-500">Дарья Медведева</div>
+									<ul class="card-comment__status">
+										<li>Сделка состоялась</li>
+										<li>Косметолог-эстетист</li>
+									</ul>
+								</div>
+								<div>
+									<div class="stars">
+										<svg width="20" height="20">
+											<use href="img/icons/sprite.svg#star"></use>
+										</svg>
+										<svg width="20" height="20">
+											<use href="img/icons/sprite.svg#star"></use>
+										</svg>
+										<svg width="20" height="20">
+											<use href="img/icons/sprite.svg#star"></use>
+										</svg>
+										<svg width="20" height="20">
+											<use href="img/icons/sprite.svg#star"></use>
+										</svg>
+										<svg width="20" height="20">
+											<use href="img/icons/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="color-grey2 fsz-14 mt-1">2 февраля 2025 г.</div>
+								</div>
+							</div>
+							<div class="collapse-custom">
+								<div class="collapse-custom__content">Кристина очень внимательный и заботливый мастер, очень располагает к себе, после процедуры обязательно напишет и спросит как чувствует себя кожа, проконсультирует. Мы делаем процедуру пилинга, так как после родов я стала как прыщавый подросток, Кристина каждый раз зовет меня забежать на маску, массаж, чтобы помочь мне справится с моей проблемой, и мы почти победили...</div>
+								<div class="collapse-custom__btn">
+									<span>Показать целиком</span>
+									<span>Скрыть</span>
+									<svg class="collapse-custom__caret" width="16" height="16">
+										<use href="img/icons/sprite.svg#arrow-collapse"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="card-comment">
+							<div class="card-comment__header">
+								<img class="card-comment__av" src="img/card-comment.webp" alt="" />
+								<div>
+									<div class="fw-500">Дарья Медведева</div>
+									<ul class="card-comment__status">
+										<li>Сделка состоялась</li>
+										<li>Косметолог-эстетист</li>
+									</ul>
+								</div>
+								<div>
+									<div class="stars">
+										<svg width="20" height="20">
+											<use href="img/icons/sprite.svg#star"></use>
+										</svg>
+										<svg width="20" height="20">
+											<use href="img/icons/sprite.svg#star"></use>
+										</svg>
+										<svg width="20" height="20">
+											<use href="img/icons/sprite.svg#star"></use>
+										</svg>
+										<svg width="20" height="20">
+											<use href="img/icons/sprite.svg#star"></use>
+										</svg>
+										<svg width="20" height="20">
+											<use href="img/icons/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="color-grey2 fsz-14 mt-1">2 февраля 2025 г.</div>
+								</div>
+							</div>
+							<div class="collapse-custom">
+								<div class="collapse-custom__content">Кристина очень внимательный и заботливый мастер, очень располагает к себе, после процедуры обязательно напишет и спросит как чувствует себя кожа, проконсультирует. Мы делаем процедуру пилинга, так как после родов я стала как прыщавый подросток, Кристина каждый раз зовет меня забежать на маску, массаж, чтобы помочь мне справится с моей проблемой, и мы почти победили...</div>
+								<div class="collapse-custom__btn">
+									<span>Показать целиком</span>
+									<span>Скрыть</span>
+									<svg class="collapse-custom__caret" width="16" height="16">
+										<use href="img/icons/sprite.svg#arrow-collapse"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="card-comment">
+							<div class="card-comment__header">
+								<img class="card-comment__av" src="img/card-comment.webp" alt="" />
+								<div>
+									<div class="fw-500">Дарья Медведева</div>
+									<ul class="card-comment__status">
+										<li>Сделка состоялась</li>
+										<li>Косметолог-эстетист</li>
+									</ul>
+								</div>
+								<div>
+									<div class="stars">
+										<svg width="20" height="20">
+											<use href="img/icons/sprite.svg#star"></use>
+										</svg>
+										<svg width="20" height="20">
+											<use href="img/icons/sprite.svg#star"></use>
+										</svg>
+										<svg width="20" height="20">
+											<use href="img/icons/sprite.svg#star"></use>
+										</svg>
+										<svg width="20" height="20">
+											<use href="img/icons/sprite.svg#star"></use>
+										</svg>
+										<svg width="20" height="20">
+											<use href="img/icons/sprite.svg#star"></use>
+										</svg>
+									</div>
+									<div class="color-grey2 fsz-14 mt-1">2 февраля 2025 г.</div>
+								</div>
+							</div>
+							<div class="collapse-custom">
+								<div class="collapse-custom__content">Кристина очень внимательный и заботливый мастер, очень располагает к себе, после процедуры обязательно напишет и спросит как чувствует себя кожа, проконсультирует. Мы делаем процедуру пилинга, так как после родов я стала как прыщавый подросток, Кристина каждый раз зовет меня забежать на маску, массаж, чтобы помочь мне справится с моей проблемой, и мы почти победили...</div>
+								<div class="collapse-custom__btn">
+									<span>Показать целиком</span>
+									<span>Скрыть</span>
+									<svg class="collapse-custom__caret" width="16" height="16">
+										<use href="img/icons/sprite.svg#arrow-collapse"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+		</section>
+		<section class="page-section">
+			<div class="container-fluid">
+				<div class="last-views">
+					<div class="last-views__title">Вы просматривали</div>
+					<div class="last-views__slider swiper">
+						<div class="swiper-wrapper">
+							<a class="swiper-slide" href="#">
+								<img src="img/last-views-1.webp" alt="" />
+							</a>
+							<a class="swiper-slide" href="#">
+								<img src="img/last-views-2.webp" alt="" />
+							</a>
+							<a class="swiper-slide" href="#">
+								<img src="img/last-views-3.webp" alt="" />
+							</a>
+							<a class="swiper-slide" href="#">
+								<img src="img/last-views-4.webp" alt="" />
+							</a>
+							<a class="swiper-slide" href="#">
+								<img src="img/last-views-5.webp" alt="" />
+							</a>
+							<a class="swiper-slide" href="#">
+								<img src="img/last-views-6.webp" alt="" />
+							</a>
+							<a class="swiper-slide" href="#">
+								<img src="img/last-views-7.webp" alt="" />
+							</a>
+							<a class="swiper-slide" href="#">
+								<img src="img/last-views-1.webp" alt="" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="subscribe-blue page-section">
+			<div class="container-fluid">
+				<div class="subscribe-blue__body">
+					<img src="img/subscribe-blue-tg.svg" alt="" />
+					<div>
+						<h3>Подпишитесь на нашу рассылку</h3>
+						<p>И узнавай о наших новинках, акциях и специальных предложениям первым. </p>
+					</div>
+					<div class="subscribe-blue__form">
+						<input type="email" placeholder="Введите свой e-mail" />
+						<button class="button-white" type="submit">Подписаться</button>
+						<small>Нажимая на кнопку, Вы даете согласие на обработку персональных данных.</small>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="page-footer">
+			<div class="container-fluid">
+				<div class="page-footer__menu page-footer__item">
+					<div class="page-footer__menu-section">
+						<div class="subtitle">Навигация</div>
+						<a href="#">Главная</a>
+						<a href="#">Поиск услуг по категориям</a>
+						<a href="#">Поиск по карте</a>
+						<a href="#">Поиск в радиусе</a>
+						<a href="#">Недавно добавленные</a>
+						<a href="#">Недавно просмотренные</a>
+					</div>
+					<div class="page-footer__menu-section">
+						<div class="subtitle">Информация</div>
+						<a href="#">Новости</a>
+						<a href="#">Поддержка</a>
+						<a href="#">Отзывы</a>
+						<a href="#">Оферта и правила</a>
+						<a href="#">Документы специалистов</a>
+						<a href="#">Вопросы и ответы (FAQ)</a>
+					</div>
+					<div class="page-footer__menu-section">
+						<div class="subtitle">Разделы</div>
+						<a href="#">Врачи и мастера</a>
+						<a href="#">Клиники и салоны</a>
+						<a href="#">Услуги красоты</a>
+						<a href="#">Мероприятия</a>
+						<a href="#">Карта косметики</a>
+						<a href="#">Карта оборудования</a>
+					</div>
+					<div class="page-footer__menu-section">
+						<div class="subtitle">Личный кабинет</div>
+						<a href="#">Избранное</a>
+						<a href="#">Мои сообщения</a>
+						<a href="#">Мой профиль</a>
+						<a href="#">Сохранённые поиски</a>
+						<a href="#">Запросы специалистам</a>
+						<a href="#">Инструкция по кабинету</a>
+					</div>
+					<div class="page-footer__subscribe">
+						<p>Подпишитесь на последние новости в телеграм канале</p>
+						<a class="page-footer__subscribe-agree button-primary" href="#"> Подписаться<svg width="16" height="16">
+								<use href="img/icons/sprite.svg#button-subscribe-footer"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="page-footer__app page-footer__item">
+					<div class="sots">
+						<a href="#">
+							<img src="img/ico-sots-footer-vk.svg" alt="" />
+						</a>
+						<a href="#">
+							<img src="img/ico-sots-footer-tg.svg" alt="" />
+						</a>
+						<a href="#">
+							<img src="img/ico-sots-footer-rutube.svg" alt="" />
+						</a>
+					</div>
+					<div class="page-footer__app-list">
+						<a href="#">
+							<img src="img/top.webp" alt="" />
+						</a>
+						<div class="dropdown">
+							<div class="page-footer__app-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Русский<svg class="dropdown-arrow" width="16" height="16">
+									<use href="img/icons/sprite.svg#arrow-menu"></use>
+								</svg>
+							</div>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Русский</a>
+								<a class="dropdown-item" href="#">Нерусский</a>
+							</div>
+						</div>
+						<a class="page-footer__app-btn" href="#">
+							<img src="img/app-rustore.svg" alt="" />
+						</a>
+						<a class="page-footer__app-btn" href="#">
+							<img src="img/app-google.svg" alt="" />
+						</a>
+						<a class="page-footer__app-btn" href="#">
+							<img src="img/app-huawei.svg" alt="" />
+						</a>
+						<a class="page-footer__app-btn" href="#">
+							<img src="img/app-apple.svg" alt="" />
+						</a>
+					</div>
+				</div>
+				<div class="page-footer__rights page-footer__item">
+					<span>(с) ООО «ПрофМедГрупп» 2025 г. Все права защищены</span>
+					<div class="page-footer__rights-menu">
+						<a href="#">О проекте</a>
+						<a href="#">Правила</a>
+						<a href="#">Политика конфиденциальности</a>
+						<a href="#">Контакты</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="mdl" id="modal-login">
+			<button data-fancybox-close="data-fancybox-close">
+				<svg width="24" height="24">
+					<use href="img/icons/sprite.svg#close"></use>
+				</svg>
+			</button>
+			<h2>Вход</h2>
+			<input class="form-control" placeholder="Телефон или почта" />
+			<input class="form-control" type="password" placeholder="Введите пароль" />
+			<div class="modal-login__remember">
+				<label class="checkbox-styled">
+					<input type="checkbox" />
+					<figure>
+						<svg width="14" height="14">
+							<use href="img/icons/sprite.svg#checkbox"></use>
+						</svg>
+					</figure>
+					<div class="fsz-16">Запомнить пароль</div>
+				</label>
+				<a class="link-blue" href="#">Забыли пароль?</a>
+			</div>
+			<input class="button-primary button-big" type="submit" value="Войти" />
+			<div class="modal-login__liner">
+				<span>или через социальные сети </span>
+			</div>
+			<div class="modal-login__sots">
+				<a href="#">
+					<img src="img/sots-vk.svg" alt="" />
+				</a>
+				<a href="#">
+					<img src="img/sots-ok.svg" alt="" />
+				</a>
+			</div>
+			<div class="modal-login__reg"> Нет аккаунта на AU.GE?<a class="link-blue" href="#modal-reg" data-fancybox-switch="data-fancybox-switch">Зарегистрироваться</a>
+			</div>
+		</div>
+		<div class="mdl" id="modal-reg">
+			<button data-fancybox-close="data-fancybox-close">
+				<svg width="24" height="24">
+					<use href="img/icons/sprite.svg#close"></use>
+				</svg>
+			</button>
+			<h2>Регистрация </h2>
+			<div class="modal-reg__type">
+				<p>Тип учетной записи</p>
+				<label class="radio-styled">
+					<input type="radio" name="modal-reg" checked="checked" />Частное лицо
+				</label>
+				<label class="radio-styled">
+					<input type="radio" name="modal-reg" />Компания
+				</label>
+				<label class="radio-styled">
+					<input type="radio" name="modal-reg" />Магазин
+				</label>
+			</div>
+			<div class="modal-reg__fields">
+				<nput class="form-control" placeholder="Телефон или почта"></nput>
+				<input class="form-control" type="password" placeholder="Введите пароль" />
+				<ul>
+					<li>минимум 8 символов</li>
+					<li>большая буква</li>
+					<li>маленькая буква</li>
+					<li>цифра</li>
+				</ul>
+				<input class="form-control" type="password" placeholder="Повторите пароль" />
+			</div>
+			<label class="modal-reg__politics checkbox-styled">
+				<input type="checkbox" />
+				<figure>
+					<svg width="14" height="14">
+						<use href="img/icons/sprite.svg#checkbox"></use>
+					</svg>
+				</figure>Я принимаю условия<a class="link-blue" href="#">Пользовательского соглашения</a>
+			</label>
+			<input class="button-primary button-big" type="submit" value="Зарегистрироваться" />
+		</div>
+		<div class="mdl" id="modal-feedback">
+			<button data-fancybox-close="data-fancybox-close">
+				<svg width="24" height="24">
+					<use href="img/icons/sprite.svg#close"></use>
+				</svg>
+			</button>
+			<div class="title-20">Не нашли ответ? Напишите нам!</div>
+			<div class="form-group">
+				<label>Выберите тему обращения</label>
+				<select class="select-styled">
+					<option>Технические проблемы</option>
+					<option>Гуманитарные проблемы</option>
+				</select>
+			</div>
+			<input class="form-control" placeholder="Введите имя" />
+			<input class="form-control" type="email" placeholder="e-mail" />
+			<textarea class="form-control" placeholder="Вопрос"></textarea>
+			<input class="button-primary button-big" type="submit" value="Отправить" />
+		</div>
+		<script src="js/jquery.min.js" defer="defer"></script>
+		<script src="js/bootstrap.bundle.min.js" defer="defer"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+		<script>ymaps.ready(() => {
+
+
+	const map = new ymaps.Map('aside-map', {
+		center: [55.7862, 37.6325], // координаты "Москва, Изумрудная улица, 189"
+		zoom: 16
+	});
+
+
+	const svg = `
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="20" r="8" fill="white"/>
+<path d="M24 4C19.7841 3.99979 15.7385 5.66352 12.7425 8.62958C9.74646 11.5956 8.04216 15.6243 8 19.84C8 30.8 22.1 43 22.7 43.52C23.0623 43.8299 23.5233 44.0001 24 44.0001C24.4767 44.0001 24.9377 43.8299 25.3 43.52C26 43 40 30.8 40 19.84C39.9578 15.6243 38.2535 11.5956 35.2575 8.62958C32.2615 5.66352 28.2159 3.99979 24 4ZM24 26C22.6155 26 21.2622 25.5895 20.111 24.8203C18.9599 24.0511 18.0627 22.9579 17.5328 21.6788C17.003 20.3997 16.8644 18.9922 17.1345 17.6344C17.4046 16.2765 18.0713 15.0292 19.0503 14.0503C20.0292 13.0713 21.2765 12.4046 22.6344 12.1345C23.9922 11.8644 25.3997 12.003 26.6788 12.5328C27.9579 13.0627 29.0511 13.9599 29.8203 15.111C30.5895 16.2622 31 17.6155 31 19C31 20.8565 30.2625 22.637 28.9497 23.9497C27.637 25.2625 25.8565 26 24 26V26Z" fill="#814FF5"/>
+<path d="M24 4C19.7841 3.99979 15.7385 5.66352 12.7425 8.62958C9.74646 11.5956 8.04216 15.6243 8 19.84C8 30.8 22.1 43 22.7 43.52C23.0623 43.8299 23.5233 44.0001 24 44.0001C24.4767 44.0001 24.9377 43.8299 25.3 43.52C26 43 40 30.8 40 19.84C39.9578 15.6243 38.2535 11.5956 35.2575 8.62958C32.2615 5.66352 28.2159 3.99979 24 4ZM24 26C22.6155 26 21.2622 25.5895 20.111 24.8203C18.9599 24.0511 18.0627 22.9579 17.5328 21.6788C17.003 20.3997 16.8644 18.9922 17.1345 17.6344C17.4046 16.2765 18.0713 15.0292 19.0503 14.0503C20.0292 13.0713 21.2765 12.4046 22.6344 12.1345C23.9922 11.8644 25.3997 12.003 26.6788 12.5328C27.9579 13.0627 29.0511 13.9599 29.8203 15.111C30.5895 16.2622 31 17.6155 31 19C31 20.8565 30.2625 22.637 28.9497 23.9497C27.637 25.2625 25.8565 26 24 26V26Z" fill="#4652FF"/>
+</svg>
+`;
+
+
+	const placemark = new ymaps.Placemark([55.7862, 37.6325], {}, {
+		iconLayout: 'default#image',
+		iconImageHref: 'data:image/svg+xml;utf8,' + encodeURIComponent(svg),
+		iconImageSize: [48, 48],
+		iconImageOffset: [-24, -48]
+	});
+
+
+	map.geoObjects.add(placemark);
+});</script>
+		<script src="js/swiper-bundle.min.js" defer="defer"></script>
+		<script src="js/tom-select.complete.min.js" defer="defer"></script>
+		<script src="js/fancybox.umd.js" defer="defer"></script>
+		<script src="js/main.js" defer="defer"></script>
+	</body>
+
+</html>
