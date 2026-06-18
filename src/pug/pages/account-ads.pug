@@ -1,0 +1,171 @@
+extends ../layouts/main
+
+block vars 
+	- var title = 'Аккаунт - мои объявления'
+	- var tomselect = true
+	- var account = true
+
+mixin acc-ads(options)
+	.acc-ads-item.removable-element 
+		label.d-none.d-md-block.checkbox-styled.checking-items__point
+			input(type="checkbox")
+			figure: +svg('checkbox', 14,14)
+		a.acc-ads-item__img(href="#"): img(src="img/" + options.img, alt="")
+		.acc-ads-item__about 
+			a.acc-ads-item__name.link-blue(href="#")= options.name
+			.color-grey3 Батуми
+			.subtitle 26 
+			.acc-ads-item__plan 
+				span План:
+				p Услуги (бесплатное)
+			a.link-blue.fw-600.fsz-14(href="#") Обновить пакет
+		.acc-ads-item__controls 
+			.acc-ads-item__controls-item 
+				+svg('eye-ads', 20,20)
+				|294
+			.acc-ads-item__controls-item 
+				+svg('favorites-ads', 20,20)
+				|88
+			.acc-ads-item__controls-item 
+				+svg('comment-ads', 20,20)
+				|0
+			.acc-ads-item__controls-item 
+				+svg('tel-ads', 20,20)
+				|0
+		.acc-ads-item__controls.d-none.d-md-flex
+			.dropdown
+				button.dropdown-toggle(type="button" data-toggle="dropdown" aria-expanded="false")
+					+svg('ellipsis', 20,20)
+				.dropdown-menu.dropdown-menu-right
+					.dropdown-item что-то сделать
+					.dropdown-item снять с публикации
+			button: +svg('edit-table', 20,20)
+			button.removable-element__button: +svg('remove', 20,20)
+		.acc-ads-item__manage 
+			.acc-ads-item__active 
+				.fw-500.fsz-14
+					span.color-green Активно 
+					|еще 48 дней
+				.acc-ads-item__active-progress: span(style="width: 35%")
+				.acc-ads-item__active-date 
+					span 27 мар 2024, 15:45
+					span 15 мая 2024
+			.acc-ads-item__buttons
+				button.acc-ads-item__up.button-bordered 
+					+svg('up',24,24)
+					|Поднять
+				button.button-primary Ускорить продажу
+				button.button-bordered.d-md-none(data-toggle="collapse" data-target="#" + options.idItem role="button" aria-expanded="false" aria-controls=options.idItem) Управление
+				.collapse(id=options.idItem)
+					.acc-ads-item__controls
+						.dropdown
+							button.dropdown-toggle(type="button" data-toggle="dropdown" aria-expanded="false")
+								+svg('ellipsis', 20,20)
+							.dropdown-menu.dropdown-menu-right
+								.dropdown-item что-то сделать
+								.dropdown-item снять с публикации
+						button: +svg('edit-table', 20,20)
+						button.removable-element__button: +svg('remove', 20,20)
+				
+
+
+block main
+	section.account.container-fluid
+		+account-aside('ads')
+
+		main 
+			h1 Мои объявления
+
+			.account-main
+				.tabs-common.m-0
+					button.active(data-tabs='acc-ads' data-tab-target='acc-ads-1') 
+						|Активные
+						mark 3
+					button(data-tabs='acc-ads' data-tab-target='acc-ads-2') Ждут оплаты
+					button(data-tabs='acc-ads' data-tab-target='acc-ads-3') На модерации			
+					button(data-tabs='acc-ads' data-tab-target='acc-ads-4') Отклоненные			
+					button(data-tabs='acc-ads' data-tab-target='acc-ads-5') 
+						|Архив		
+						mark.gray 2
+
+			#acc-ads-1.ads-category.active.checking-items(data-tabs-content='acc-ads')
+				.ads-category__controls 
+					label.checkbox-styled.d-none.d-md-block.checking-items__all
+						input(type="checkbox")
+						figure: +svg('checkbox', 14,14)
+						|Выбрать всё на странице
+					.acc-ads-sort
+						+svg('sort',16,16)(class='acc-ads-sort__ico')
+						select.select-styled
+							option По умолчанию
+							option По цене
+				
+
+				+acc-ads({img: 'catalog-services-1.webp', name: 'Лифтинг и чистка лица, косметолог',idItem: 'acc-ads-item-collapse-1'})
+				+acc-ads({img: 'catalog-services-2.webp', name: 'Косметолог: чистка лица, уходы и массаж лица',idItem: 'acc-ads-item-collapse-2'})
+				+acc-ads({img: 'catalog-services-3.webp', name: 'Лифтинг и чистка лица, косметолог',idItem: 'acc-ads-item-collapse-3'})
+
+			#acc-ads-2.ads-category.checking-items(data-tabs-content='acc-ads')
+				.ads-category__controls 
+					label.checkbox-styled.d-none.d-md-block.checking-items__all
+						input(type="checkbox")
+						figure: +svg('checkbox', 14,14)
+						|Выбрать всё на странице
+					.acc-ads-sort
+						+svg('sort',16,16)(class='acc-ads-sort__ico')
+						select.select-styled
+							option По умолчанию
+							option По цене
+				
+				+acc-ads({img: 'catalog-services-3.webp', name: 'Лифтинг и чистка лица, косметолог',idItem: 'acc-ads-item-collapse-3'})
+				+acc-ads({img: 'catalog-services-1.webp', name: 'Лифтинг и чистка лица, косметолог',idItem: 'acc-ads-item-collapse-1'})
+				+acc-ads({img: 'catalog-services-2.webp', name: 'Косметолог: чистка лица, уходы и массаж лица',idItem: 'acc-ads-item-collapse-2'})
+
+			#acc-ads-3.ads-category.checking-items(data-tabs-content='acc-ads')
+				.ads-category__controls 
+					label.checkbox-styled.d-none.d-md-block.checking-items__all
+						input(type="checkbox")
+						figure: +svg('checkbox', 14,14)
+						|Выбрать всё на странице
+					.acc-ads-sort
+						+svg('sort',16,16)(class='acc-ads-sort__ico')
+						select.select-styled
+							option По умолчанию
+							option По цене
+				
+				+acc-ads({img: 'catalog-services-3.webp', name: 'Лифтинг и чистка лица, косметолог',idItem: 'acc-ads-item-collapse-3'})
+				+acc-ads({img: 'catalog-services-1.webp', name: 'Лифтинг и чистка лица, косметолог',idItem: 'acc-ads-item-collapse-1'})
+
+			#acc-ads-4.ads-category.checking-items(data-tabs-content='acc-ads')
+				.ads-category__controls 
+					label.checkbox-styled.d-none.d-md-block.checking-items__all
+						input(type="checkbox")
+						figure: +svg('checkbox', 14,14)
+						|Выбрать всё на странице
+					.acc-ads-sort
+						+svg('sort',16,16)(class='acc-ads-sort__ico')
+						select.select-styled
+							option По умолчанию
+							option По цене
+				
+				+acc-ads({img: 'catalog-services-3.webp', name: 'Лифтинг и чистка лица, косметолог',idItem: 'acc-ads-item-collapse-3'})
+
+			#acc-ads-5.ads-category.checking-items(data-tabs-content='acc-ads')
+				.ads-category__controls 
+					label.checkbox-styled.d-none.d-md-block.checking-items__all
+						input(type="checkbox")
+						figure: +svg('checkbox', 14,14)
+						|Выбрать всё на странице
+					.acc-ads-sort
+						+svg('sort',16,16)(class='acc-ads-sort__ico')
+						select.select-styled
+							option По умолчанию
+							option По цене
+				
+				+acc-ads({img: 'catalog-services-1.webp', name: 'Лифтинг и чистка лица, косметолог',idItem: 'acc-ads-item-collapse-1'})
+				+acc-ads({img: 'catalog-services-2.webp', name: 'Косметолог: чистка лица, уходы и массаж лица',idItem: 'acc-ads-item-collapse-2'})
+				
+						
+
+
+

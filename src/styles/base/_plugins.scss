@@ -1,0 +1,186 @@
+@use '../includes/mixins' as *; 
+@use '../includes/variables' as *;
+
+// bootstrap
+.container-fluid {
+	max-width: 1430px;
+}
+
+.dropdown-toggle {
+	&::after {
+		display: none;
+	}
+}
+
+.dropdown-menu, .ts-dropdown {
+	border: 1px solid #F5F7FA; box-shadow: 0px 10px 30px 0px #3940531A; padding: 10px; border-radius: 12px; margin-top: 12px; min-width: 0; 
+
+	&::after {
+		content: ''; position: absolute; bottom: 0;left: 0;width: 100%;background: #fff;height: 10px;
+	}
+}
+
+.dropdown-item, .ts-dropdown .option {
+	display: flex; align-items: center; padding: 9px 15px; font-weight: 500; border-radius: 12px; transition: .3s; cursor: pointer;
+
+	&:hover, &:active, &:has(+ .dropdown-menu:hover) {
+		background: $colorGrey8; color: $colorBody;
+	}
+}
+
+.dropdown-arrow {
+	transition: .3s;
+
+	.show & {
+		transform: rotate(180deg);
+	}
+}
+
+.menu-limiter {
+	overflow: visible auto;
+}
+
+.submenu {
+	position: relative; cursor: pointer; 
+
+	.dropdown-arrow {
+		margin-left: auto; transform: rotate(-90deg);
+	}
+
+	& + .dropdown-menu {
+		display: block;opacity: 0; transition: .3s; top: 0;margin: 0; left: 102%; pointer-events: none; position: absolute;
+
+		&::before {
+			content: ''; position: absolute; left: -35px; top: 0; width: 35px;height: 100%;
+		}
+
+		&:hover {
+			opacity: 1; pointer-events: auto;
+		}
+	}
+
+	&:hover {
+		& + .dropdown-menu {
+			opacity: 1; pointer-events: auto;
+		}
+	}
+}
+
+.form-group {
+	margin: 0;
+
+	label {
+		margin-bottom: 6px; font-weight: 500;
+	}
+
+	mark {
+		font-size: rem(14); color: $colorGrey3; margin-top: 6px;display: block;
+	}
+}
+
+.form-control {
+	height: 50px; border-radius: 10px; border-color: $colorGrey6; color: $colorBody; padding: 0 15px 0 20px;
+
+	@include r575 {
+		height: 44px;
+	}
+}
+
+textarea.form-control {
+	padding-top: 8px;padding-bottom: 8px;
+}
+
+// tom-select
+.ts-wrapper {
+	width: 100%;
+}
+
+.ts-control {
+	height: 50px; border-radius: 10px; position: static; flex-wrap: nowrap; color: $colorBody;
+
+	&::after, .ts-wrapper.single &::after {
+		content: ''; width: 20px; height: 20px; transition: .3s; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 7.5L10 12.5L15 7.5' stroke='%23555463' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); border: none; margin: 0; position: absolute; top: 50%; right: 15px; transform: translateY(-50%);
+	}
+
+	input {
+		min-width: 0;
+
+		&::placeholder {
+			color: $colorGrey3;
+		}
+	}
+
+	&, .focus & {
+		box-shadow: none; border-color: $colorGrey6;
+	}
+
+	&:not(.rtl) {
+ 		padding: 5px 40px 5px 20px !important;
+	}
+
+	.dropdown-active &::after, .dropdown-active.ts-wrapper.single &::after {
+		  transform: rotate(180deg) translateY(50%); margin: 0;
+	}
+
+	.multi & {
+		overflow: hidden auto;
+	}
+
+	@include r767 {
+		height: 45px;
+	}
+}
+
+.ts-dropdown {
+	&::after {
+		display: none;
+	}
+}
+
+.select-styled-addr {
+	.fw-500 {
+		color: $colorBody;
+	}
+
+	small {
+		color: $colorGrey2; display: block;
+	}
+
+	.ts-option {
+		flex-direction: column; align-items: flex-start;
+	}
+}
+
+// swiper
+.swiper--right {
+	@include r1400 {
+		margin-right: -15px;
+	}
+}
+
+.swiper-button-prev, .swiper-button-next {
+	border-radius: 50%; margin: 0;
+
+	svg {
+		height: initial; width: initial;
+	}
+}
+
+.swiper-slide {
+	img:only-child {
+		display: block;
+	}
+}
+
+// fancybox
+[data-fancybox] {
+	cursor: pointer;
+}
+
+.fancybox__backdrop {
+	background: $colorBody;
+
+	.fancybox__container & {
+		 opacity: .5;
+	}
+}

@@ -1,0 +1,32 @@
+extends ../layouts/main
+
+block vars 
+	- var title = 'Статьи и новости'
+	- var swiper = true
+
+include ../mixins/_previews	
+
+block main
+	section.page-section.container-fluid
+		h1 Новости и статьи
+		.news-categories.swiper 
+			.swiper-wrapper 
+				a.swiper-slide(href="#") Новости
+				a.swiper-slide(href="#") Анонсы
+				a.swiper-slide(href="#") Дерматология
+				a.swiper-slide(href="#") Косметология
+				a.swiper-slide(href="#") Стоматология
+		.items-grid.items-grid--news
+			+news({class: '', img: 'main-news-1.webp', sticker: 'Новость', type: 'news', about: '21-23 мая 23-я Выставка оборудования и материалов для эстетической косметологии, парикмахерского сервиса'}) 
+			+news({class: '', img: 'main-news-2.webp', sticker: 'Статья', type: 'news', about: '22 – 24 апреля 2025 пройдет 26-ая Международная выставка-форум эстетической и аппаратной'}) 
+			+news({class: '', img: 'main-news-3.webp', sticker: 'Новость', type: 'news', about: '8-10 МАЯ 2025 г. 10.00-18.00 ВЫСТАВОЧНЫЙ ЦЕНТР TUYAP в Стамбуле-Турция Входит в ТОП-5'}) 
+			+news({class: '', img: 'main-news-4.webp', sticker: 'Новость', type: 'news', about: '8-10 МАЯ 2025 г. 10.00-18.00 ВЫСТАВОЧНЫЙ ЦЕНТР TUYAP в Стамбуле-Турция Входит в'})
+			+news({class: '', img: 'main-news-1.webp', sticker: 'Новость', type: 'news', about: '21-23 мая 23-я Выставка оборудования и материалов для эстетической косметологии, парикмахерского сервиса'}) 
+			+news({class: '', img: 'main-news-2.webp', sticker: 'Статья', type: 'news', about: '22 – 24 апреля 2025 пройдет 26-ая Международная выставка-форум эстетической и аппаратной'}) 
+			+news({class: '', img: 'main-news-3.webp', sticker: 'Новость', type: 'news', about: '8-10 МАЯ 2025 г. 10.00-18.00 ВЫСТАВОЧНЫЙ ЦЕНТР TUYAP в Стамбуле-Турция Входит в ТОП-5'}) 
+			+news({class: '', img: 'main-news-4.webp', sticker: 'Новость', type: 'news', about: '8-10 МАЯ 2025 г. 10.00-18.00 ВЫСТАВОЧНЫЙ ЦЕНТР TUYAP в Стамбуле-Турция Входит в'})
+			+news({class: '', img: 'main-news-3.webp', sticker: 'Новость', type: 'news', about: '8-10 МАЯ 2025 г. 10.00-18.00 ВЫСТАВОЧНЫЙ ЦЕНТР TUYAP в Стамбуле-Турция Входит в ТОП-5'}) 
+			+news({class: '', img: 'main-news-4.webp', sticker: 'Новость', type: 'news', about: '8-10 МАЯ 2025 г. 10.00-18.00 ВЫСТАВОЧНЫЙ ЦЕНТР TUYAP в Стамбуле-Турция Входит в'})
+
+
+		include ../components/_pgnt

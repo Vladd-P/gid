@@ -1,0 +1,16 @@
+@use '../includes/mixins' as *; 
+@use '../includes/variables' as *;
+
+.news-categories {
+	margin-bottom: 30px;
+
+	a {
+		@include flex-center;
+
+		font-size: rem(14); font-weight: 500; height: 36px; padding: 0 20px; border-radius: 8px; background: $colorGrey8; width: fit-content;
+	}
+
+	@include r991 {
+		margin-bottom: 20px;
+	}
+}

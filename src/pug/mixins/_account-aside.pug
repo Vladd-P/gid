@@ -1,0 +1,54 @@
+mixin account-aside(active)
+	aside.account-aside.menu-mobile
+		+svg('close', 24, 24)(class="menu-motile__close")
+		
+		.account-aside__header
+			img.account-aside__av(src="img/av-no-aside.svg", alt="")
+			.account-aside__name Евгений Федулов
+			.rating-line 
+				.stars
+					+svg('star-rating', 18,18)
+					+svg('star-rating', 18,18)
+					+svg('star-rating', 18,18)
+					+svg('star-rating', 18,18)
+					+svg('star-rating', 18,18)
+				mark 5.0
+
+		a.account-aside__item(href="account-profile.html" class={active: active === 'profile'})
+			+svg('acc-aside-1', 24,24)
+			|Мой профиль
+		.block-liner
+		a.account-aside__item(href="account-add.html" class={active: active === 'add'})
+			+svg('acc-aside-3', 24,24)
+			|Добавить объявление
+		a.account-aside__item(href="account-ads.html" class={active: active === 'ads'})
+			+svg('acc-aside-4', 24,24)
+			|Мои объявления
+			mark 5
+		.block-liner
+		a.account-aside__item(href="account-favorites.html" class={active: active === 'favorites'})
+			+svg('acc-aside-5', 24,24)
+			|Избранное		
+		a.account-aside__item(href="account-packets.html" class={active: active === 'packets'})
+			+svg('acc-aside-7', 24,24)
+			|Мои пакеты
+		a.account-aside__item(href="account-payments.html" class={active: active === 'payments'})
+			+svg('acc-aside-8', 24,24)
+			|История платежей
+		a.account-aside__item(href="account-recently.html" class={active: active === 'views'})
+			+svg('acc-aside-9', 24,24)
+			|Недавно просмотренные
+		.block-liner
+		a.account-aside__item(href="account-credits.html" class={active: active === 'credits'})
+			+svg('acc-aside-10', 24,24)
+			|Мои кредиты
+		a.account-aside__item(href="account-banners.html" class={active: active === 'banners'})
+			+svg('acc-aside-11', 24,24)
+			|Мои баннеры
+		a.account-aside__item(href="account-services.html" class={active: active === 'services'})
+			+svg('acc-aside-12', 24,24)
+			|Платные услуги
+		.block-liner
+		a.account-aside__item(href="account-profile.html" class={active: active === 'services'})
+			+svg('acc-aside-1', 24,24)
+			|Выйти

@@ -1,0 +1,81 @@
+if !account
+	section.subscribe-blue.page-section 
+		.container-fluid
+			.subscribe-blue__body
+				img(src="img/subscribe-blue-tg.svg", alt="")
+				div 
+					h3 Подпишитесь на нашу рассылку
+					p И узнавай о наших новинках, акциях и специальных предложениям первым. 
+				.subscribe-blue__form 
+					input(type="email" placeholder="Введите свой e-mail")
+					button.button-white(type="submit") Подписаться
+					small Нажимая на кнопку, Вы даете согласие на обработку персональных данных.
+
+footer.page-footer 
+	.container-fluid
+		.page-footer__menu.page-footer__item 
+			.page-footer__menu-section
+				.subtitle Навигация
+				a(href="#") Главная
+				a(href="#") Поиск услуг по категориям
+				a(href="#") Поиск по карте
+				a(href="#") Поиск в радиусе
+				a(href="#") Недавно добавленные
+				a(href="#") Недавно просмотренные
+			.page-footer__menu-section
+				.subtitle Информация
+				a(href="#") Новости
+				a(href="#") Поддержка
+				a(href="#") Отзывы
+				a(href="#") Оферта и правила
+				a(href="#") Документы специалистов
+				a(href="#") Вопросы и ответы (FAQ)
+			.page-footer__menu-section
+				.subtitle Разделы
+				a(href="#") Врачи и мастера
+				a(href="#") Клиники и салоны
+				a(href="#") Услуги красоты
+				a(href="#") Мероприятия
+				a(href="#") Карта косметики
+				a(href="#") Карта оборудования
+			.page-footer__menu-section
+				.subtitle Личный кабинет
+				a(href="#") Избранное
+				a(href="#") Мои сообщения
+				a(href="#") Мой профиль
+				a(href="#") Сохранённые поиски
+				a(href="#") Запросы специалистам
+				a(href="#") Инструкция по кабинету
+			.page-footer__subscribe 
+				p Подпишитесь на последние новости в телеграм канале
+				a.page-footer__subscribe-agree.button-primary(href="#") 
+					|Подписаться
+					+svg('button-subscribe-footer', 16, 16)
+
+		.page-footer__app.page-footer__item
+			.sots 
+				a(href="#"): img(src="img/ico-sots-footer-vk.svg", alt="")
+				a(href="#"): img(src="img/ico-sots-footer-tg.svg", alt="")
+				a(href="#"): img(src="img/ico-sots-footer-rutube.svg", alt="")
+			.page-footer__app-list 
+				a(href="#"): img(src="img/top.webp", alt="")
+				.dropdown 
+					.page-footer__app-btn.dropdown-toggle(type="button" data-toggle="dropdown" aria-expanded="false")
+						| Русский
+						+svg('arrow-menu', 16, 16)(class='dropdown-arrow')
+					.dropdown-menu
+						a.dropdown-item(href="#") Русский
+						a.dropdown-item(href="#") Нерусский
+				a.page-footer__app-btn(href="#"): img(src="img/app-rustore.svg", alt="")
+				a.page-footer__app-btn(href="#"): img(src="img/app-google.svg", alt="")
+				a.page-footer__app-btn(href="#"): img(src="img/app-huawei.svg", alt="")
+				a.page-footer__app-btn(href="#"): img(src="img/app-apple.svg", alt="")
+
+		.page-footer__rights.page-footer__item
+			span (с) ООО «ПрофМедГрупп» 2025 г. Все права защищены
+			.page-footer__rights-menu
+				a(href="#") О проекте
+				a(href="#") Правила
+				a(href="#") Политика конфиденциальности
+				a(href="#") Контакты
+			

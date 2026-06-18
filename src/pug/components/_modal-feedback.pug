@@ -1,0 +1,14 @@
+#modal-feedback.mdl
+	button(data-fancybox-close): +svg('close', 24, 24)
+
+	.title-20 Не нашли ответ? Напишите нам!
+
+	.form-group
+		label Выберите тему обращения
+		select.select-styled
+			option Технические проблемы
+			option Гуманитарные проблемы
+	input.form-control(placeholder='Введите имя')
+	input.form-control(type="email" placeholder='e-mail')
+	textarea.form-control(placeholder='Вопрос')
+	input.button-primary.button-big(type="submit" value='Отправить')

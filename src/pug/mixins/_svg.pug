@@ -1,0 +1,3 @@
+mixin svg(name, width, height)
+	svg&attributes(attributes)(width=width height=height)
+		use(href="img/icons/sprite.svg#" + name)

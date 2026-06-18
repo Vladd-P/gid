@@ -1,0 +1,41 @@
+:root {
+	--fontBody: 'golos', Arial, sans-serif;
+	--colorBody: #191D28;
+	--colorGrey1: #302D38;
+	--colorGrey2: #555463;
+	--colorGrey3: #747887;
+	--colorGrey4:#9EA5B2;
+	--colorGrey6: #D8D7DE;
+	--colorGrey7: #E9E8EC;
+	--colorGrey8: #EFEFF3;
+	--colorGrey9: #F5F7FA;
+	--colorGrey10: #FBFBFD;
+	--colorGrey11: #F5F5FF;
+	--colorRed: #EA3913;
+	--colorOrange: #F28D16;
+	--colorGreen: #06A847;
+	--colorPrimary: #4652FF;
+	--colorPrimaryHover: #814FF5;
+
+
+}
+
+$fontBody: var(--fontBody);
+
+$colorBody: var(--colorBody);
+$colorGrey1: var(--colorGrey1);
+$colorGrey2: var(--colorGrey2);
+$colorGrey3: var(--colorGrey3);
+$colorGrey4: var(--colorGrey4);
+$colorGrey6: var(--colorGrey6);
+$colorGrey7: var(--colorGrey7);
+$colorGrey8: var(--colorGrey8);
+$colorGrey9: var(--colorGrey9);
+$colorGrey10: var(--colorGrey10);
+$colorGrey11: var(--colorGrey11);
+$colorRed: var(--colorRed);
+$colorOrange: var(--colorOrange);
+$colorGreen: var(--colorGreen);
+$colorPrimary: var(--colorPrimary);
+$colorPrimaryHover: var(--colorPrimaryHover);
+

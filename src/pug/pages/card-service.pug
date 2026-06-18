@@ -1,0 +1,286 @@
+extends ../layouts/main
+
+block vars 
+	- var title = 'Карточка услуги'
+	- var swiper = true
+
+include ../mixins/_favorites
+include ../mixins/_card-comment
+
+block main
+	section.page-section.container-fluid
+		ul.brdcrumbs
+			li: a(href="/") Главная
+			li
+				+svg('arrow-brdcrumbs', 16, 16)
+				a(href="catalog-services.html") Услуги
+			li 
+				+svg('arrow-brdcrumbs', 16, 16)
+				|Комбинированная чистка лица
+		
+		.card-service-header
+			h1 Комбинированная чистка лица
+			.card-service-header__controls 
+				+favorites
+				button: +svg('add', 24, 24)
+				button: +svg('print', 24, 24)
+			.card-service-header__rating 
+				.card-service-header__rating-val 
+					+svg('star-rating', 12, 12)
+					|5.0
+				|25 отзывов
+				
+		.card-service 
+			main 
+				.card-service__gallery
+					.card-service__slider.swiper
+						.swiper-wrapper
+							img.swiper-slide(src="img/card-service-slider-1.webp", alt="" data-fancybox-img data-fancybox="card-service" data-src="img/card-service-slider-1.webp")
+							img.swiper-slide(src="img/card-service-slider-2.webp", alt="" data-fancybox-img data-fancybox="card-service" data-src="img/card-service-slider-2.webp")
+							img.swiper-slide(src="img/card-service-slider-3.webp", alt="" data-fancybox-img data-fancybox="card-service" data-src="img/card-service-slider-3.webp")
+							img.swiper-slide(src="img/card-service-slider-1.webp", alt="" data-fancybox-img data-fancybox="card-service" data-src="img/card-service-slider-1.webp")
+							img.swiper-slide(src="img/card-service-slider-2.webp", alt="" data-fancybox-img data-fancybox="card-service" data-src="img/card-service-slider-2.webp")
+							img.swiper-slide(src="img/card-service-slider-3.webp", alt="" data-fancybox-img data-fancybox="card-service" data-src="img/card-service-slider-3.webp")
+							img.swiper-slide(src="img/card-service-slider-1.webp", alt="" data-fancybox-img data-fancybox="card-service" data-src="img/card-service-slider-1.webp")
+							img.swiper-slide(src="img/card-service-slider-2.webp", alt="" data-fancybox-img data-fancybox="card-service" data-src="img/card-service-slider-2.webp")
+							img.swiper-slide(src="img/card-service-slider-3.webp", alt="" data-fancybox-img data-fancybox="card-service" data-src="img/card-service-slider-3.webp")
+						button.swiper-button-prev
+							span: +svg('arrow-comments', 20, 20)
+						button.swiper-button-next
+							span: +svg('arrow-comments', 20, 20)
+						.card-service__slider-pagination
+							.swiper-pagination
+
+					.card-service__slider-thumbs.swiper
+						.swiper-wrapper
+							.swiper-slide: img(src="img/card-service-slider-thumbs-1.webp", alt="")
+							.swiper-slide: img(src="img/card-service-slider-thumbs-2.webp", alt="")
+							.swiper-slide: img(src="img/card-service-slider-thumbs-3.webp", alt="")
+							.swiper-slide: img(src="img/card-service-slider-thumbs-4.webp", alt="")
+							.swiper-slide: img(src="img/card-service-slider-thumbs-5.webp", alt="")
+							.swiper-slide: img(src="img/card-service-slider-thumbs-6.webp", alt="")
+							.swiper-slide.card-service__slider-gallery(data-fancybox-img data-fancybox="card-service" data-src="img/card-service-slider-1.webp")
+								img(src="img/card-service-slider-thumbs-7.webp", alt="")
+								span
+
+				.card-details.page-block
+					h3 Подробности
+
+					.card-details__tile 
+						.card-details__tile-item 
+							.color-grey3 Место встречи:
+							.fw-500 В салоне
+						.card-details__tile-item 
+							.color-grey3 С кем работает:
+							.fw-500 Женщины
+						.card-details__tile-item 
+							.color-grey3 Кто оказывает услуги:
+							.fw-500 Женщина
+						.card-details__tile-item 
+							.color-grey3 Опыт работы:
+							.fw-500 1–3 года
+
+					.card-details__list
+						div 
+							span.color-grey3 Место встречи:
+							span.fw-500 В салоне							
+						div 
+							span.color-grey3 С кем работает:
+							span.fw-500 Женщины							
+						div 
+							span.color-grey3 Кто оказывает услуги:
+							span.fw-500 Женщина						
+						div 
+							span.color-grey3 Опыт работы:
+							span.fw-500 1–3 года							
+
+				.card-price.page-block
+					h3 Прайс-лист
+
+					.card-price__body 
+						table 
+							tr
+								td 
+									p Классический массаж лица
+									p.fsz-14 1 час
+								td.fw-500.text-nowrap.text-right 2 500 ₽
+							tr
+								td 
+									p Ультразвуковая чистка лица
+									p.fsz-14 1 час
+								td.fw-500.text-nowrap.text-right 2 500 ₽
+							tr
+								td 
+									p Комбинированная чистка лица
+									p.fsz-14 2 часа
+								td.fw-500.text-nowrap.text-right 3 000 ₽
+							tr
+								td 
+									p Комбинированная чистка лица
+									p.fsz-14 15 мин
+								td.fw-500.text-nowrap.text-right 600 ₽
+							tr
+								td 
+									p Пилинг лица молочной кислотой
+									p.fsz-14 45 мин
+								td.fw-500.text-nowrap.text-right 2 000 ₽
+							tr
+								td 
+									p Уход за лицом
+									p.fsz-14 1 час
+								td.fw-500.text-nowrap.text-right от 1 500 ₽
+
+						a.button-gray(href="#") Показать все услуги (18)
+
+				.page-block
+					h3 Список всех услуг объявлений
+
+					ul.card-service-list__body 
+						li.card-service-list__item LPG-массаж лица
+						li.card-service-list__item LPG-массаж тела
+						li.card-service-list__item RF-липолиз
+						li.card-service-list__item RF-лифтинг вокруг глаз
+						li.card-service-list__item RF-лифтинг лица
+						li.card-service-list__item.card-service-list__item--miss RF-лифтинг тела
+						li.card-service-list__item.card-service-list__item--miss SMAS-лифтинг
+						li.card-service-list__item Атравматичная чистка лица
+						li.card-service-list__item.card-service-list__item--miss Броссаж (брашинг)						
+						li.card-service-list__item LPG-массаж лица
+						li.card-service-list__item LPG-массаж тела
+						li.card-service-list__item RF-липолиз
+						li.card-service-list__item RF-лифтинг вокруг глаз
+						li.card-service-list__item RF-лифтинг лица
+						li.card-service-list__item.card-service-list__item--miss RF-лифтинг тела
+						li.card-service-list__item.card-service-list__item--miss SMAS-лифтинг
+						li.card-service-list__item Атравматичная чистка лица
+						li.card-service-list__item.card-service-list__item--miss Броссаж (брашинг)						
+						li.card-service-list__item LPG-массаж лица
+						li.card-service-list__item LPG-массаж тела
+						li.card-service-list__item RF-липолиз
+						li.card-service-list__item RF-лифтинг вокруг глаз
+						li.card-service-list__item RF-лифтинг лица
+						li.card-service-list__item.card-service-list__item--miss RF-лифтинг тела
+						li.card-service-list__item.card-service-list__item--miss SMAS-лифтинг
+						li.card-service-list__item Атравматичная чистка лица
+						li.card-service-list__item.card-service-list__item--miss Броссаж (брашинг)						
+
+				.text-block.page-block
+					h3 Описание
+
+					p 🌼Ecтeствeннoe омоложение лицa🌼.
+						br
+						|Мeня зовут Криcтина, я кoсметoлoг-эcтeтиcт c опытом работы бoлee 1 года.
+						br
+						|Пocле обучения в Первoм Профecсиoнaльнoм Инcтитуте Эcтeтики пpоcто влюбилась в cвoю прoфесcию🥰. Очeнь пpиятно видеть крaсивую, ухoженную кожу клиентов пoсле мoих прoцедуp!🫶🏻
+						br
+						|Выполняю классический массаж лица с элементами пластического, процедура проходит в комплексе с сыворотками и масками, средства подбираются индивидуально для каждого клиента, в зависимости от типа и состояния кожи🤍. Уже после первой процедуры Вы заметите результат, а пройдя полный курс вы помолодеете внешне на несколько лет!☺️
+						br
+						|Для тех клиентов, кому противопоказан массаж, сделаем уходовые процедуры, направленные на устранение несовершенств Вашей кожи, уберем отечность, пигментацию, выровняем тон кожи, проведем борьбу с акне и куперозом💆‍♀️
+						br
+						|И, конечно же, сделаем чистку лица: комбинированную, ультразвуковую, атравматичную💦, всесезонные пилинги.
+						br
+						|Процедуру чистки лица провожу аккуратно, у большинства клиентов покраснения исчезают уже на следующий день!😃
+						br
+						|Работаю исключительно на профессиональной космецевтике, производства Израиль, Россия, Корея👌
+					p Более детально можем обсудить все вопросы, достаточно просто написать мне или позвонить☺️. 
+						br
+						|Бесплатно проконсультирую Вас и дам рекомендации по домашнему уходу🤗.
+					p Жду Вас вблизи станций метро Автозаводская✅ Таганская✅ Марксистская
+
+				.card-location.view-map.page-block
+					h3 Расположение
+
+					.fw-500 
+						span.color-grey3 Адрес: Москва, Большой Дровяной пер., 8с1 
+						|Москва, Большой Дровяной пер., 8с1
+					
+					.card-location__info 
+						.contacts-metro.contacts-metro--purple
+							|Выборгская
+							span 
+								+svg('walk', 16,16)
+								|6- 10 мин.
+						.contacts-metro.contacts-metro--purple.mr-auto
+							|Площаль Ленина
+							span 
+								+svg('walk', 16,16)
+								|11- 15 мин.
+						a.card-location__link.link-blue(href="#") 
+							|Показать карту
+							+svg('arrow-card-location', 16, 16)
+					
+					a.view-map__body.view-map__body--card(href="#") 
+						.view-map__btn-white Показать на карте
+						span.view-map__zoom: +svg('view-map-zoom', 16, 16)
+
+				.page-block
+					h3 Отзывы
+
+					+card-comment
+					+card-comment
+					+card-comment
+
+					a.view-all(href="#") Читать все отзывы (15)
+
+				.card-status.page-block 
+					.card-status__values № 2935115267 · 2 февраля в 17:55 · 1286 просмотров (+2 сегодня)
+					button.card-status__complain.button-gray Пожаловаться
+
+			aside 
+				.service-aside-buy.card-aside-block
+					.service-aside-buy__cost от 1 500 ₽ за услугу
+					.service-aside-buy__discount
+						span.color-red Скидка 10% 
+						| новым клиентам
+					.service-aside-buy__btns
+						button.button-primary 
+							+svg('tel',22,22)
+							|Позвонить мастеру
+						button.button-bordered-blue 
+							+svg('comment', 24,24)
+							|Написать сообщение
+						button.button-bordered Заказать звонок
+
+				.card-info.card-aside-block
+					.aside-block__header.aside-block__header--service
+						div 
+							a.card-info__name.fsz-16.link-blue(href="#") Кристина Коновалова
+							p.m-0 На сайте с января 2024
+							.rating-line 
+								.stars
+									+svg('star-rating', 16,16)
+									+svg('star-rating', 16,16)
+									+svg('star-rating', 16,16)
+									+svg('star-rating', 16,16)
+									+svg('star-rating', 16,16)
+								mark 5.0
+								a.link-blue(href="#") 137 отзывов
+							button.card-info__comment.button-gray-color-primary Оставить отзыв
+						img.card-info__av(src="img/card-service-av.webp", alt="")
+
+					.card-info__address 
+						span Компания:
+						a.link-blue(href="#") ООО «ПрофМедГрупп»
+						span Регион:
+						p Московская область и Москва
+						span Адрес:
+						p Лескова 8, кв. 218
+
+					.card-info__controls
+						button.button-gray.button-40 2 объявления пользователя
+						button.button-gray.button-40 Подписаться на продавца
+						span.button-gray.button-40 Документы проверены
+
+				.card-aside-chat
+					.subtitle Спросить у исполнителя
+					.card-aside-chat__body 
+						.card-aside-chat__input 
+							input(type="text" placeholder="Введите что-нибудь")
+							button(type="submit"): +svg('aside-chat-send', 24, 24)
+						.card-aside-chat__messages 
+							.card-aside-chat__post Сколько времени займет?
+							.card-aside-chat__post Как к вам записаться?
+							.card-aside-chat__post Какие есть скидки?
+
+	include ../components/_last-vews
+

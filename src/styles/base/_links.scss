@@ -1,0 +1,16 @@
+@use '../includes/mixins' as *; 
+@use '../includes/variables' as *;
+
+.view-all {
+	@include flex-center;
+
+	background: $colorGrey8; min-height: 40px; font-weight: 500; font-size: rem(14); border-radius: 10px; padding: 10px; margin-top: 30px;
+}
+
+.link-blue {
+	color: $colorPrimary;
+
+	&:hover {
+		color: $colorRed;
+	}
+}

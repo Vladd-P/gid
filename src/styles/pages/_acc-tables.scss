@@ -1,0 +1,170 @@
+@use '../includes/mixins' as *; 
+@use '../includes/variables' as *;
+
+.acc-table {
+	width: 100%; border-collapse: separate; border-spacing: 0; font-size: rem(14);
+
+	th {
+		background: $colorGrey9; padding: 10px 0; font-weight: 500;
+
+		&:first-child {
+			border-radius: 8px 0 0 8px; padding-left: 20px;
+		}
+
+		&:last-child {
+			border-radius: 0 8px 8px 0; padding-right: 20px;
+		}
+
+		& + th {
+			padding-left: 30px;
+		}
+	}
+
+	td {
+		border-bottom: 1px solid $colorGrey7;padding: 24px 0;
+
+		&:first-child {
+			padding-left: 20px;
+		}
+
+		&:last-child {
+			padding-right: 20px;
+		}
+
+		& + td {
+			padding-left: 30px;
+		}
+	}
+
+	@include r1199 {
+		tr {
+			display: grid; grid-template-columns: 1fr max-content; gap: 0 10px; padding: 20px 15px; border-radius: 10px; border: 1px solid $colorGrey7;
+
+			&:first-child {
+				display: none;
+			}
+
+			& + tr {
+				margin-top: 10px;
+			}
+		}
+
+		td {
+			border: none; padding: 0;
+
+			&:first-child, &:last-child, & + td {
+				padding: 0;
+			}
+		}
+	}
+}
+
+.acc-table__id {
+	font-weight: 600;font-size: rem(16);
+
+	@include r1199 {
+		order: -1;
+	}
+}
+
+.acc-table__action {
+	@include r1199 {
+		grid-column: span 2; padding: 10px 0 !important;
+	}
+}
+
+.acc-table__date {
+	@include r1199 {
+		color: $colorGrey3; order: 1;
+	}
+}
+
+.acc-table__cost {
+	font-weight: 600;
+
+	@include r1199 {
+		order: -1; justify-self: end;
+	}	
+}
+
+.acc-table__status-cell {
+	grid-row: span 2;
+}
+
+.acc-table__status {
+	font-weight: 500; display: block; padding: 6px 10px; border-radius: 10px; width: fit-content; white-space: nowrap;
+}
+
+.acc-table__status--notpaid {
+	color: $colorOrange; background: #F28D161A;
+}
+
+.acc-table__status--paid {
+	color: $colorGreen; background: #35B00A1A;
+}
+
+.acc-table__status--working {
+	color: $colorPrimary; background: #1059E71A;
+}
+
+.acc-table__status--canceled {
+	color: $colorRed; background: #EA39131A;
+}
+
+.acc-table__views {
+	div {
+		display: flex; align-items: center; gap: 10px;
+	}
+
+	svg {
+		color: $colorGrey4;
+	}
+
+	@include r1199 {
+		div {
+			justify-content: flex-end;
+		}
+	}
+}
+
+.acc-table__plan {
+	font-weight: 600;
+}
+
+.acc-table__buttons {
+	display: flex; gap: 10;
+
+	svg {
+		cursor: pointer;
+	}
+}
+
+.acc-banners-header {
+	display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;
+
+	h1 {
+		margin: 0;
+	}
+}
+
+.acc-banners-header__add {
+	width: fit-content; padding: 0 15px;
+}
+
+ .acc-table.acc-table--banners {
+	@include r1199 {
+		border: 1px solid $colorGrey7; box-shadow: 0px 1px 4px 0px #181A2012; border-radius: 15px;
+
+		tr {
+			border: none; margin: 0; border-radius: 0; align-items: center;
+
+			& + tr + tr {
+				border-top: 1px solid $colorGrey7;
+			}
+		}	
+
+		.acc-table__plan {
+			grid-column: 1/-1; padding: 10px 0 20px;
+		}
+	}
+}

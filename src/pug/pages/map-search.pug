@@ -1,0 +1,120 @@
+extends ../layouts/main
+
+block vars 
+	- var title = 'Поиск на карте'
+	- var tomselect = true
+	- var yamaps = 'map-search.js'
+	- var noFooter = 'true'
+
+block main
+	section.map-search.container-fluid
+		.map-search__filters
+			button.map-search__filters-showing: +svg('showing', 20,20)
+
+			.map-search__filters-scroll
+				.w-100
+					.map-search__filters-subtitle Район
+					select.select-styled
+						option(value="" selected hidden) Выберите
+						option Железнодорожный
+						option еще один
+						option другой
+				.w-100
+					.map-search__filters-subtitle Врач
+					select.select-styled
+						option(value="" selected hidden) Выберите
+						option Акушер
+						option Акушер
+						option Акушер
+				.w-100
+					.map-search__filters-subtitle Пол
+					select.select-styled
+						option(value="" selected hidden) Выберите
+						option мужской
+						option женский
+				.w-100
+					.map-search__filters-subtitle Стаж
+					select.select-styled
+						option(value="" selected hidden) Выберите
+						option 1-3
+						option 3-5
+						option 5-10
+				label.checkbox-styled
+					input(type="checkbox")
+					figure: +svg('checkbox', 14,14)
+					|Вызов на дом
+				.w-100
+					.map-search__filters-subtitle Заболевание
+					select.select-styled
+						option(value="" selected hidden) Выберите
+						option Чума
+						option Насморк				
+				.w-100
+					.map-search__filters-subtitle Клиника
+					select.select-styled
+						option(value="" selected hidden) Выберите
+						option одна
+						option другая				
+				.w-100
+					.map-search__filters-subtitle Услуга
+					select.select-styled
+						option(value="" selected hidden) Выберите
+						option вылечить
+						option залечить
+				.object-types 
+					.object-types__item.object-types__item--green Частная с записью
+					.object-types__item.object-types__item--grey Частная без записи
+					.object-types__item.object-types__item--orange Государственная
+
+		#map-search-body
+			.map-search-item
+				button.map-search-item__close: +svg('close-map', 16,16)
+				.map-search-item__header 
+					img.map-search-item__logo(src="img/map-search-item.webp", alt="")
+					.map-search-item__info 
+						.fw-600.fsz-16 Клиника «MARICOM» на Дубенского
+						.map-search-item__feature 
+							+svg('map-marker',20,20)
+							span.color-grey1 ул. Дубенского, д. 4А
+						.map-search-item__feature 
+							+svg('tel',20,20)
+							a.fw-500(href="+74953246156") +7 (495) 324-61-56
+						.map-search-item__feature 
+							+svg('clock',19,19)
+							span.color-grey1 пн-пт 
+							|8:00 - 21:00
+					a.map-search-item__comments.button-bordered-blue(href="#") 253 отзыва
+
+				.map-search-item__doctor 
+					.stars
+						+svg('star-rating', 14, 14)
+						+svg('star-rating', 14, 14)
+						+svg('star-rating', 14, 14)
+						+svg('star-rating', 14, 14)
+						+svg('star-rating', 14, 14)
+					span.ml-auto.m-sm-0 Крамаренко И. А.
+					.map-search-item__doctor-spec лазерный хирург
+					.fw-500.ml-auto от 2500 ₽ 
+				.map-search-item__doctor 
+					.stars
+						+svg('star-rating', 14, 14)
+						+svg('star-rating', 14, 14)
+						+svg('star-rating', 14, 14)
+						+svg('star-rating', 14, 14)
+						+svg('star-rating', 14, 14)
+					span.ml-auto.m-sm-0 Коротаев А.В.
+					.map-search-item__doctor-spec проктолог
+					.fw-500.ml-auto от 2500 ₽ 
+				.map-search-item__doctor 
+					.stars
+						+svg('star-rating', 14, 14)
+						+svg('star-rating', 14, 14)
+						+svg('star-rating', 14, 14)
+						+svg('star-rating', 14, 14)
+						+svg('star-rating', 14, 14)
+					span.ml-auto.m-sm-0 Куят Л.В.
+					.map-search-item__doctor-spec гастроэнтеролог
+					.fw-500.ml-auto от 2500 ₽ 
+
+
+

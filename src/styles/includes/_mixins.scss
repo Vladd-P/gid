@@ -1,0 +1,142 @@
+@use '../includes/variables' as *;
+
+@function rem($n, $res: desc) {
+	@if $res == 'desc' {@return calc($n / 16) * 1rem;}
+	@if $res == 'mob' {@return calc($n / 14) * 1rem;}
+}
+
+@mixin column($align: flex-start) {
+	display: flex;
+	flex-direction: column;
+	align-items: $align;
+}
+
+@mixin flex-center($diretion: row) {
+	flex-direction: $diretion; align-items: center;justify-content: center;display: flex;
+}
+
+@mixin triangle($side, $color, $width, $length) {
+	@if $side == top {
+		border-top: $width solid $color; border-left: calc($length / 2) solid transparent; border-right: calc($length / 2) solid transparent;
+	}
+
+	@else if $side == right {
+		border-right: $width solid $color; border-top: calc($length / 2) solid transparent; border-bottom: calc($length / 2) solid transparent;
+	}
+
+	@else if $side == bottom {
+		border-bottom: $width solid $color; border-left: calc($length / 2) solid transparent; border-right: calc($length / 2) solid transparent;
+	}
+
+	@else if $side == left {
+		border-left: $width solid $color; border-top: calc($length / 2) solid transparent; border-bottom: calc($length / 2) solid transparent;
+	}
+}
+
+@mixin ell($lines) {
+	-webkit-line-clamp: $lines; -webkit-box-orient: vertical; display: -webkit-box;overflow: hidden; white-space: normal;
+}
+
+@mixin img-fit($pos: absolute, $fit: cover, $position: center center) {
+	position: $pos;width: 100%;object-position: $position; object-fit: $fit;display: block;
+
+	@if $pos == absolute {
+		left: 0;top: 0;height: 100%;
+	}
+}
+
+@mixin cicrle($diameter) {
+	width: $diameter; height: $diameter; border-radius: 50%;
+}
+
+@mixin container-width($width) {
+	@media (min-width: #{$width + 32}px){
+		padding-left: calc(50% - #{$width / 2}px); padding-right: calc(50% - #{$width / 2}px);
+  }
+}
+
+@mixin header {
+	font-weight: 500; text-transform: uppercase; font-size: rem(24); letter-spacing: -.24px; text-wrap: balance; line-height: 1;
+
+	@include rmin576 {
+		font-size: rem(36); letter-spacing: -.36px;
+	}
+
+	@include rmin992 {
+		font-size: rem(48); letter-spacing: -.48px;
+	}		
+}
+
+@mixin r1400 {
+	@media (max-width: 1400px){
+		 @content;
+	}
+}
+
+@mixin r1199 {
+	@media (max-width: 1199px){
+		 @content;
+	}
+}
+
+@mixin r991 {
+	@media (max-width: 991px){
+		 @content;
+	}
+}
+
+@mixin r767 {
+	@media (max-width: 767px){
+		 @content;
+	}
+}
+
+@mixin r575 {
+	@media (max-width: 575px){
+		 @content;
+	}
+}
+
+@mixin rmin576 {
+	@media (min-width: 576px){
+		 @content;
+	}
+}
+
+@mixin rmin768 {
+	@media (min-width: 768px){
+		 @content;
+	}
+}
+
+@mixin rmin992 {
+	@media (min-width: 992px){
+		 @content;
+	}
+}
+
+@mixin rmin1200 {
+	@media (min-width: 1200px){
+		 @content;
+	}
+}
+
+@mixin rmin1320 {
+	@media (min-width: 1320px){
+		 @content;
+	}
+}
+
+
+.flex-center {
+	@include flex-center()
+}
+
+.column {
+	@include column()
+}
+
+.img-fit {
+	@include img-fit()
+}
+

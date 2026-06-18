@@ -1,0 +1,316 @@
+extends ../layouts/main
+
+block vars 
+	- var title = 'Главная'
+	- var swiper = true
+	- var tomselect = true
+
+include ../mixins/_previews
+
+
+block main
+	section.main-banner.page-section
+		.container-fluid 
+			.main-banner__body
+				img.main-banner_bg(src="img/main-banner.webp", alt="")
+
+				.main-banner__title 
+					|Найдите косметолога в 
+					span.primary Санкт-Петербурге 
+					|из разных клиник по всей России
+				p В каталоге более 500 специалистов по разным услугам по всей России
+
+				.search-object
+					.search-object__tabs 
+						button.active(data-tabs="search-object" data-tab-target="search-object-service") Найти услугу
+						button(data-tabs="search-object" data-tab-target="search-object-doctor") Найти врача
+						button(data-tabs="search-object" data-tab-target="search-object-clinic") Найти клинику
+
+					.search-object__type.active(id="search-object-service" data-tabs-content="search-object")
+						.search-object__filters 
+							select.select-styled(data-placeholder="Регион")
+								option(value="" selected disabled)
+								option Московская область
+								option Лениградская область
+								option Курская область
+								option Белгородская область
+								option Рязанская область
+								option Калининградская область
+							select.select-styled(data-placeholder="Тип приема")
+								option(value="" selected disabled)
+								option в клинике 
+								option на дому 
+							select.select-styled(data-placeholder="Специализация")
+								option(value="" selected disabled)
+								option Клиника 
+								option Врач
+								option Специалист
+							select.select-styled(data-placeholder="Лечение")
+								option(value="" selected disabled)
+								option Дерматология 
+								option Дерматология 								
+								option Стоматология 								
+							select.select-styled(data-placeholder="Все услуги")
+								option(value="" selected disabled)
+								option Аппаратная косметология 
+								option Аппаратная косметология 								
+								option Диетология, спорт, тренировки 								
+								option Инъекционная косметология 								
+								option Лазерная хирургия 								
+								option Макияж и татуаж	
+							button.search-object__submit.button-primary(type="submit")
+								+svg('search-filter', 20,20)
+								|Найти
+
+					.search-object__type(id="search-object-doctor" data-tabs-content="search-object")
+						.search-object__filters
+							select.select-styled(multiple data-placeholder="Регион")
+								option(value="" selected disabled)
+								option Московская область
+								option Лениградская область
+								option Курская область
+								option Белгородская область
+								option Рязанская область
+								option Калининградская область
+							select.select-styled(data-placeholder="Тип приема")
+								option(value="" selected disabled)
+								option в клинике 
+								option на дому 
+							select.select-styled(data-placeholder="Специализация")
+								option(value="" selected disabled)
+								option Врач-стоматолог  
+								option Врач-диетолог
+								option Врач по спортивной медицине								
+							select.select-styled(multiple data-placeholder="Пол врача")
+								option(value="" selected disabled)
+								option мужчина 
+								option женщина
+							select.select-styled(data-placeholder="Популярные")
+								option(value="" selected disabled)
+								option по рейтингу 
+								option по отзывам
+								option по дате добавления
+							select.select-styled(data-placeholder="Стаж от __ и до __")
+								option(value="" selected disabled)
+								option от 0 до 60 лет 
+								option от 10 до 60 лет
+								option от 30 до 60 лет
+							button.search-object__submit.button-primary(type="submit")
+								+svg('search-filter', 20,20)
+								|Найти								
+
+					.search-object__type(id="search-object-clinic" data-tabs-content="search-object")
+						.search-object__filters 
+							select.select-styled(multiple data-placeholder="Регион")
+								option(value="" selected disabled)
+								option Московская область
+								option Лениградская область
+								option Курская область
+								option Белгородская область
+								option Рязанская область
+								option Калининградская область
+							select.select-styled(data-placeholder="Тип приема")
+								option(value="" selected disabled)
+								option в клинике 
+								option на дому 
+							select.select-styled(multiple data-placeholder="Специализация")
+								option(value="" selected disabled)
+								option Клиника 
+								option Врач
+								option Специалист							
+							select.select-styled(data-placeholder="Все услуги")
+								option(value="" selected disabled)
+								option Аппаратная косметология 
+								option Аппаратная косметология 								
+								option Диетология, спорт, тренировки 								
+								option Инъекционная косметология 								
+								option Лазерная хирургия 								
+								option Макияж и татуаж	
+							select.select-styled(data-placeholder="Популярные")
+								option(value="" selected disabled)
+								option по рейтингу 
+								option по отзывам
+								option по дате добавления								
+							button.search-object__submit.button-primary(type="submit")
+								+svg('search-filter', 20,20)
+								|Найти
+
+	section.main-catalog.page-section
+		.container-fluid
+			h2 Каталог услуг
+
+			.main-catalog__body 
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Аппаратная косметология
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Дерматология и косметологи
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Диетология, спорт, тренировки
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Инъекционная косметология
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Лазерная хирургия
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Макияж и татуаж
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Маникюр
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Мануальная терапия
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Массаж
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Педикюр
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Пилинг и уход за лицом
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Пирсинг
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Пластическая хирургия
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Прическа и уход за волосами
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Стоматологические услуги
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Трихология
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Эпиляция и шугаринг
+				a(href="#") 
+					figure: +svg('main-catalog', 40,40)
+					|Татуировки и тату-мастера
+
+	section.view-map.page-section
+		.container-fluid 
+			h2.text-center Адреса клиник на карте
+
+			a.view-map__body(href="#") 
+				.title-20 Найти клинику на карте
+				span.view-map__zoom: +svg('view-map-zoom', 16, 16)
+
+	section.main-facts.page-section
+		.container-fluid 
+			.main-facts__body
+				h2.text-center Факты о нас
+
+				.main-facts__numbers.numbers-increment
+					.main-facts__item 
+						figure: +svg('main-facts-1', 40,40)
+						div 
+							mark(data-counter='222') 0
+							p Клиник
+					.main-facts__item 
+						figure: +svg('main-facts-2', 40,40)
+						div 
+							mark(data-counter='180') 0
+							p предложений услуг
+					.main-facts__item 
+						figure: +svg('main-facts-3', 40,40)
+						div 
+							mark(data-counter='124') 0
+							p Мероприятий
+					.main-facts__item 
+						figure: +svg('main-facts-4', 40,40)
+						div 
+							mark(data-counter='454') 0
+							p Пользователей
+
+	section.page-section
+		.container-fluid 
+			h2 Новости и статьи
+
+			.slider-news.swiper.swiper--right
+				.swiper-wrapper 
+					+news({class: 'swiper-slide', img: 'main-news-1.webp', sticker: 'Новость', type: 'news', about: '21-23 мая 23-я Выставка оборудования и материалов для эстетической косметологии, парикмахерского сервиса'}) 
+					+news({class: 'swiper-slide', img: 'main-news-2.webp', sticker: 'Статья', type: 'news', about: '22 – 24 апреля 2025 пройдет 26-ая Международная выставка-форум эстетической и аппаратной'}) 
+					+news({class: 'swiper-slide', img: 'main-news-3.webp', sticker: 'Новость', type: 'news', about: '8-10 МАЯ 2025 г. 10.00-18.00 ВЫСТАВОЧНЫЙ ЦЕНТР TUYAP в Стамбуле-Турция Входит в ТОП-5'}) 
+					+news({class: 'swiper-slide', img: 'main-news-4.webp', sticker: 'Новость', type: 'news', about: '8-10 МАЯ 2025 г. 10.00-18.00 ВЫСТАВОЧНЫЙ ЦЕНТР TUYAP в Стамбуле-Турция Входит в'}) 
+					+news({class: 'swiper-slide', img: 'main-news-1.webp', sticker: 'Новость', type: 'news', about: '21-23 мая 23-я Выставка оборудования и материалов для эстетической косметологии, парикмахерского сервиса'}) 
+
+			a.view-all(href="#") Показать все
+
+	section.page-section
+		.container-fluid 
+			h2 Мероприятия
+
+			.slider-events.swiper.swiper--right
+				.swiper-wrapper
+					+news({class: 'preview-item--events swiper-slide', img: 'main-events-1.webp', sticker: 'Новосибирск', type: 'events', about: 'IV Сибирский лазерный конгресс С. В. Некрасовой'}) 				
+					+news({class: 'preview-item--events swiper-slide', img: 'main-events-2.webp', sticker: 'Москва', type: 'events', about: 'IV Сибирский лазерный конгресс С. В. Некрасовой'}) 				
+					+news({class: 'preview-item--events swiper-slide', img: 'main-events-3.webp', sticker: 'Казань', type: 'events', about: 'Ежегодный междисциплинарный курс «Физические основы лазерной медицины»'}) 				
+					+news({class: 'preview-item--events swiper-slide', img: 'main-events-4.webp', sticker: 'Новосибирск', type: 'events', about: 'IV Сибирский лазерный конгресс С. В. Некрасовой'})
+					+news({class: 'preview-item--events swiper-slide', img: 'main-events-1.webp', sticker: 'Новосибирск', type: 'events', about: 'IV Сибирский лазерный конгресс С. В. Некрасовой'})
+
+			a.view-all(href="#") Показать все
+
+	include ../components/_last-vews
+
+	section.comments.page-section 
+		.container-fluid
+			.comments__header
+				h2 Отзывы про нас
+				.comments__controls
+					a.comments__all.button-bordered(href="#") Читать все отзывы
+					button.swiper-button-prev: +svg('arrow-comments', 20, 20)
+					button.swiper-button-next: +svg('arrow-comments', 20, 20)
+
+			
+			.comments__swiper.swiper.swiper--right
+				.swiper-wrapper 
+					.comments__item.swiper-slide 
+						header 
+							.comments__item-user 
+								img(src="img/comments-1.webp", alt="")
+								|Смирнова Алина Анатольевна
+							.comments__item-rating 
+								+svg('star', 20,20)
+								|4.5
+						.comments__item__body Хорошая клиника, с медицинской лицензией, все косметологи с высшим медицинским образованием. Очень удобно, что в одном месте можно как аппаратные так и инъекционные процедуры сделать. Хочу писать оды «золотым ручкам» косметолога Алины Юрьевны, уже много лет являюсь её клиентом и клиентом клиники, безумно благодарна за то, что вы делаете меня и других женщин красивее и моложе.Делитесь «Молодильным яблочком» современного века.
+						time.comments__item-date февраль 2025 г.
+					.comments__item.swiper-slide 
+						header 
+							.comments__item-user 
+								img(src="img/comments-2.webp", alt="")
+								|Егорова Екатерина Васильевна
+							.comments__item-rating 
+								+svg('star', 20,20)
+								|4.5
+						.comments__item__body Долго искала к кому обратиться для проведения процедуры лазерной шлифовки. Начиталась в интернете про осложнения и тщательно выбирала врача. Выбор остановила на Гульназ Рафисовне и не пожалела. Грамотный и высококвалифицированный специалист, внимательный доктор. Все рассказала про процедуру, мои страхи сразу прошли. После процедуры тоже вела меня до полного восстановления. Ещё я давно не могла подобрать подходящий домашний уход и наконец то меня полностью устроили подобранные мне лично крема. Рекомендую!
+						time.comments__item-date февраль 2025 г.
+					.comments__item.swiper-slide 
+						header 
+							.comments__item-user 
+								img(src="img/comments-3.webp", alt="")
+								|Мухамедиярова Элина Мансуровна
+							.comments__item-rating 
+								+svg('star', 20,20)
+								|4.5
+						.comments__item__body Знакома с клиникой уже более 7 лет!!! Вежливые администраторы, профессиональные и чуткие врачи-косметологи! Очень благодарна косметологу/врачу-терапевту Люзии Артуровне за шикарную чистку лица для меня и дочери, и рекомендацию только нужных для меня косметологических процедур и уходовой косметики! Всегда узнает как мое самочувствие и реакция после процедур!
+						time.comments__item-date февраль 2025 г.
+					.comments__item.swiper-slide 
+						header 
+							.comments__item-user 
+								img(src="img/comments-1.webp", alt="")
+								|Смирнова Алина Анатольевна
+							.comments__item-rating 
+								+svg('star', 20,20)
+								|4.5
+						.comments__item__body Хорошая клиника, с медицинской лицензией, все косметологи с высшим медицинским образованием. Очень удобно, что в одном месте можно как аппаратные так и инъекционные процедуры сделать. Хочу писать оды «золотым ручкам» косметолога Алины Юрьевны, уже много лет являюсь её клиентом и клиентом клиники, безумно благодарна за то, что вы делаете меня и других женщин красивее и моложе.Делитесь «Молодильным яблочком» современного века.
+						time.comments__item-date февраль 2025 г.						
+
+					

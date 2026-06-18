@@ -1,0 +1,520 @@
+extends ../layouts/main
+
+block vars 
+	- var title = 'Аккаунт - добавить объявление'
+	- var tomselect = true
+	- var yamaps = 'acc-add-map.js'
+	- var account = true
+
+block main
+	section.account.container-fluid
+		+account-aside('add')
+
+		main 
+			h1 Добавить объявление
+
+			.account-main.account-main--block
+				.column.maw-600
+					.title-20 Категория
+					.form-group 
+						label Выбор категории
+						select.select-styled
+							option Стоматологические услуги
+							option Любые услуги						
+					.form-group 
+						label Выбор подкатегории
+						select.select-styled(data-placeholder="Выберите подкатегорию")
+							option(value="" selected disabled)
+							option Диагностика
+							option Имплантация зубов					
+					.form-group 
+						label Выбор подкатегории
+						select.select-styled(data-placeholder="Выберите подкатегорию")
+							option(value="" selected disabled)
+							option Диагностика
+							option Имплантация зубов					
+					.form-group 
+						label Выбор подкатегории
+						select.select-styled(data-placeholder="Выберите подкатегорию")
+							option(value="" selected disabled)
+							option Диагностика
+							option Имплантация зубов					
+					.form-group 
+						label Выбор подкатегории
+						select.select-styled(data-placeholder="Выберите подкатегорию")
+							option(value="" selected disabled)
+							option Диагностика
+							option Имплантация зубов	
+
+			.account-main.account-main--block
+				.column
+					.title-20 Название
+					.form-group-h 
+						label Название объявления
+						input.form-control(placeholder='Название')
+					.form-group-h 
+						label Вид объявления
+						select.select-styled
+							option Продаю своё
+							option Продаю чужое
+					.form-group-h 
+						label Кто принимает
+						select.select-styled
+							option врач
+							option акушер
+
+			.account-main.account-main--block
+				.column
+					.title-20 План	
+					.form-group-h.form-group-h--3
+						.subtitle План	
+						select.select-styled(data-placeholder="Выберите")
+							option(value="" selected disabled)
+							option item 1
+							option item 2
+						a.fsz-14.color-grey2(href="#")  Открыть описание пакетов
+			
+			.account-main.account-main--block
+				.column
+					.title-20 Об услуге
+					.acc-add-option 
+						.subtitle Тип услуги
+						.tags-select 
+							label
+								input(type="checkbox" checked)
+								|В клинике
+							label
+								input(type="checkbox")
+								|Онлайн
+							label
+								input(type="checkbox")
+								|На дому
+					.acc-add-option 
+						.subtitle С кем работает
+						.tags-select 
+							label
+								input(type="checkbox")
+								|С мужчиной
+							label
+								input(type="checkbox" checked)
+								|С женщиной
+					.acc-add-option 
+						.subtitle С кем работает
+						.tags-select 
+							label
+								input(type="checkbox" checked)
+								|Мужчина
+							label
+								input(type="checkbox")
+								|Женщина
+					.acc-add-option 
+						.subtitle Опыт работы
+						.tags-select 
+							label
+								input(type="checkbox")
+								|1 год
+							label
+								input(type="checkbox" checked)
+								|2 года
+							label
+								input(type="checkbox")
+								|3 года
+
+					.acc-add-option.acc-add-option--checkboxes
+						.subtitle Виды услуг
+						.acc-add-option__checkboxes 
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|LPG-массаж лица
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|LPG-массаж тела
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|RF-липолиз
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|RF-лифтинг вокруг глаз
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|RF-лифтинг лица
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|RF-лифтинг тела
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|SMAS-лифтинг
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Атравматичная чистка лица
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Броссаж (брашинг)
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Дарсонвализация
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Дезинкрустация
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Дермабразия лица
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Кавитация
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Карбоксиотерапия
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Криолиполиз
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Криосауна
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Криотерапия лица
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Лазерная блефаропластика
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Лазерное омоложение
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Лазерный липолиз
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Лазерный фототермолиз Фраксель (Fraxel)
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Микроигольчатый RF-лифтинг
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Микротоковая терапия
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Миостимуляция
+							a.acc-add-option__checkboxes-all.button-gray-color-primary(href="#") Показать все
+
+					.acc-add-option.acc-add-option--checkboxes
+						.subtitle Лечение заболеваний
+						.acc-add-option__checkboxes 
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Акне (угри)
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Актинический кератоз
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Актиномикоз
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Ассиметрия груди
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Астеатоз
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Атерома
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Болезнь Лане
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Бородавка
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Бромгидроз (неприятный запах пота)
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Веснушки
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Витилиго
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Возрастные изменения кожи
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Вросший волос
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Выпадение волос (алопеция)
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Герпетиформный дерматит Дюринга
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Гипергидроз
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Гиперпигментация кожи
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Гипертрихоз
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Гирсутизм
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Гравитационный птоз лица
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Дерматит
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Дерматофиброма (фиброма кожи)
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Микротоковая терапия
+							label.checkbox-styled
+								input(type="checkbox")
+								figure: +svg('checkbox', 14,14)
+								|Диффузная алопеция
+
+			.account-main.account-main--block
+				.column
+					.title-20 Дополнительные параметры
+					.tags-select 
+						label
+							input(type="checkbox" checked)
+							|Парковка
+						label
+							input(type="checkbox")
+							|Учебные материалы
+						label
+							input(type="checkbox")
+							|Место ожидания детей
+						label
+							input(type="checkbox")
+							|Оплата наличными
+						label
+							input(type="checkbox")
+							|Оплата картой
+						label
+							input(type="checkbox")
+							|Оплата онлайн
+
+			.account-main.account-main--block
+				.column
+					.title-20 Местоположение
+					.column
+						.form-group 
+							label Адрес
+							input.form-control(placeholder='Начните вводить адрес, а потом выберите из списка')
+							.acc-add-annotation.color-grey3.mt-1 Если вы хотите указать более точные координаты на карте, вы можете ввести страну, штат/регион, город и адрес и через запятые выполнить поиск, а затем перетащить маркер в нужное место на карте
+						.maw-300.form-group 
+							label Регион							
+							select.select-styled(data-placeholder="Выберите регион")
+								option(value="" selected disabled)
+								option region 1
+								option region 2 
+						.maw-300.form-group 
+							label Населённый пункт							
+							select.select-styled(data-placeholder="Выберите населенный пункт")
+								option(value="" selected disabled)
+								option city 1
+								option city 2 
+					#acc-add-map
+
+			.account-main.account-main--block
+				.column
+					div
+						.title-20.mb-2 Фотографии
+						.acc-add-annotation.color-grey2 Первое фото будет отображаться в результатах поиска, выберите наиболее удачное. Вы можете загрузить до 20 фотографий в формате JPG или PNG. Максимальный размер фото — 25mb.
+					label.acc-add-photos 
+						input(type="file")
+						figure: +svg('acc-add-photo', 32,32)
+						.fw-500 Загрузите фото или перетащите сюда файлы
+						.acc-add-annotation.color-grey3 Пожалуйста, загрузите максимум 12 фотографий, размер одного изображения: 10 МБ.
+					div
+						.title-20.mt-sm-2.mb-2 Видео
+						.acc-add-annotation.color-grey2 Можно добавить ссылку на видеоролик в Youtube, Rutube или Vimeo
+					.form-group-url 
+						figure: +svg('link', 20,20)
+						input(type="url" placeholder='Например https://www.youtube.com/watch…')
+
+			.acc-add-description.account-main.account-main--block
+				.column
+					.acc-add-description__header
+						.title-20 Описание
+						.flags.ml-auto
+							label
+								input(type="radio" name='acc-add-lang')
+								img(src="img/flag-ge.svg", alt="")
+							label
+								input(type="radio" name='acc-add-lang')
+								img(src="img/flag-uk.svg", alt="")
+							label
+								input(type="radio" name='acc-add-lang' checked)
+								img(src="img/flag-ru.svg", alt="")
+					div 
+						textarea.form-control(placeholder='Описание')
+						.acc-add-description__counter Символов 0 из 6500
+
+			.acc-add-description.account-main.account-main--block
+				.column
+					.title-20 Цена
+					.form-group-cost 
+						label Укажите цену
+						.form-group-cost__body 
+							input(type="number")
+							select.select-styled
+								option $
+								option ₾
+								option €
+
+			.acc-add-description.account-main.account-main--block
+				.column
+					.title-20 Контактная информация
+					.acc-add-contact 
+						.color-grey2 Телефон
+						.column 
+							input.form-control(type="tel" placeholder='+7 (___)-___-__-__')
+							div 
+								label.checkbox-styled
+									input(type="checkbox")
+									figure: +svg('checkbox', 14,14)
+									|Доступен в WhatsApp
+								label.checkbox-styled
+									input(type="checkbox")
+									figure: +svg('checkbox', 14,14)
+									|Доступен в Telegram
+					.acc-add-contact 
+						div Способ связи
+						div 
+							label.radio-styled
+								input(type="radio" name='acc-add-contact-link')
+								|Звонки и сообщения
+							label.radio-styled
+								input(type="radio" name='acc-add-contact-link')
+								|Только сообщения
+							label.radio-styled
+								input(type="radio" name='acc-add-contact-link')
+								|Только звонки
+					.acc-add-contact.acc-add-contact--big
+						div Авторизация
+						.column 
+							.form-group 
+								label E-mail
+								input.form-control(type="email" placeholder='Введите ваш e-mail')
+							.form-group 
+								label Пароль
+								input.form-control(type="password" placeholder='Введите пароль')
+							.acc-add-contact__remember 
+								label.checkbox-styled
+									input(type="checkbox")
+									figure: +svg('checkbox', 14,14)
+									|Запомнить пароль
+								a.link-blue.fsz-14.fw-500(href="#") Забыли пароль?
+							input.button-primary.button-big(type="submit" value='Войти')
+
+			.acc-add-packages.account-main.account-main--block
+				.column
+					.acc-add-packages__header
+						.title-20 Хотите продать быстрее? Добавьте пакет услуг:
+						p Ваше объявление будет чаще попадать на верхние строчки в поиске и рекомендациях.
+					.acc-add-packages__views 
+						.acc-add-packages__period
+							label
+								input(type="radio" name='acc-add-period' checked)
+								|На 1 день
+							label
+								input(type="radio" name='acc-add-period')
+								|На 7 дней
+						.acc-add-packages__views-options
+							label.radio-styled
+								input(type="radio" name='acc-add-views' checked)
+								.fw-600 Х2 просмотров
+								span 19
+							label.radio-styled
+								input(type="radio" name='acc-add-views')
+								.fw-600 Х5 просмотров
+								span 19
+							label.radio-styled
+								input(type="radio" name='acc-add-views')
+								.fw-600 Х9 просмотров
+								span 19
+							label.radio-styled
+								input(type="radio" name='acc-add-views')
+								.fw-600 Без продвижения
+								span 0
+					div 
+						.title-20 Заметный внешний вид
+						label.acc-add-packages-appearance.checkbox-switch-styled
+							input(type="checkbox")
+							figure
+							img.acc-add-packages-appearance__ico(src="img/packages-appearance-1.svg", alt="")
+							.acc-add-packages-appearance__about 
+								.fw-600
+									|Выделить цену цветом 
+									span.color-grey3 на 7 дней
+								.color-grey1.fsz-14 Привлечёт внимание к цене объявления
+							.acc-add-packages-appearance__number 39
+						label.acc-add-packages-appearance.checkbox-switch-styled
+							input(type="checkbox")
+							figure
+							img.acc-add-packages-appearance__ico(src="img/packages-appearance-2.svg", alt="")
+							.acc-add-packages-appearance__about 
+								.fw-600
+									|Премиум-объявление 
+									span.color-grey3 на 7 дней
+								.color-grey1.fsz-14 Большая карточка в результатах поиска
+							.acc-add-packages-appearance__number 39								
+
+					a.acc-add-packages__skip.button-gray-color-primary.button-big(href="#") Продолжить без услуг
+
+			a.acc-add-next.button-primary.button-big(href="#") Добавить объявление
+
+
+
+

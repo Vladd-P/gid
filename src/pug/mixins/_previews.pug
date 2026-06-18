@@ -1,0 +1,15 @@
+mixin news(options)
+	.preview-item(class= options.class) 
+		figure.preview-item__img 
+			img(src="img/" + options.img, alt="")
+			mark= options.sticker
+
+		.preview-item__info
+			time 20 февраля 2025
+			if options.type == 'news'
+				.preview-item__views 
+					|73
+					+svg('eye', 14, 14)
+
+		.preview-item__about= options.about
+

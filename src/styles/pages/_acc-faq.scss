@@ -1,0 +1,94 @@
+@use '../includes/mixins' as *; 
+@use '../includes/variables' as *;
+
+.faq {
+	background: $colorGrey9; border-radius: 12px;
+
+	.collapse-custom__btn {
+		padding: 15px 20px; display: flex; align-items: center; font-weight: 600; justify-content: space-between; gap: 10px;
+	}
+
+	.collapse-custom__caret {
+		color: $colorGrey3;
+	}
+
+	.collapse-custom__content-body {
+		padding: 0 20px 30px;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	ul {
+		margin: 0;padding-left: 1em;
+	}
+
+	&.open {
+		.collapse-custom__caret {
+			color: inherit;
+		}		
+	}
+	
+	& + & {
+		margin-top: 15px;
+	}
+}
+
+.faq-form {
+	max-width: 860px;
+
+	h2 {
+		margin-bottom: 1.07em;
+	}
+
+	&:not(:first-child) {
+		margin-top: 60px;
+	}
+
+	&:last-child {
+		margin-bottom: 60px;
+	}
+
+	@include r575 {
+		&:not(:first-child) {
+			margin-top: 30px;
+		}	
+
+		&:last-child {
+			margin-bottom: 30px;
+		}		
+	}
+}
+
+.faq-form__item {
+	display: grid; grid-template-columns: 330px 1fr; gap: 5px 30px; align-items: baseline;
+
+	.form-control, .ts-control {
+		height: 44px; padding-left: 16px !important;
+	}
+
+	textarea.form-control {
+		height: 200px;
+	}
+
+	& + & {
+		margin-top: 20px;
+	}
+
+	@include r991 {
+		grid-template-columns: 250px 1fr;
+	}
+
+	@include r767 {
+		grid-template-columns: 100%;
+	}
+}
+
+.faq-form__submit {
+	grid-column: 2/3; width: fit-content; min-width: 145px;
+
+	@include  r767 {
+		grid-column: initial;
+	}
+}

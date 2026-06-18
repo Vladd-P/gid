@@ -1,0 +1,520 @@
+@use '../includes/mixins' as *; 
+@use '../includes/variables' as *;
+
+.catalog__tel {
+	display: flex; align-items: center; gap: 8px; font-size: rem(16); font-weight: 500;
+
+	svg {
+		color: $colorGrey3;
+	}
+
+	&:hover {
+		svg {
+			color: $colorRed;
+		}
+	}
+}
+
+.catalog-list__item-subtitle {
+	font-weight: 500; margin-bottom: 5px;
+}
+
+.catalog-list__av {
+	position: relative; width: fit-content;
+
+	.catalog-list__controls {
+		position: absolute; border-radius: 10px; background: #fff;
+
+		svg {
+			width: 20px; height: 20px;
+		}
+	}
+}
+
+.catalog-list__av-link {
+	display: block; 
+
+	img {
+		display: block;  object-position: center center; object-fit: cover; border-radius: 10px; max-width: 100%;
+	}	
+}
+
+// list-clinics
+.catalog-list__item {
+	box-shadow: 0px 6px 25px 0px #201F251A; border-radius: 10px; padding: 20px; display: grid; gap: 20px 40px; grid-template-columns: max-content 1fr max-content; font-size: rem(14);
+
+	p {
+		margin: 0;
+	}
+
+	& + & {
+		margin-top: 20px;
+	}
+	
+	@include r1400 {
+		.account-main & {
+			grid-template-columns: 100%
+		}
+	}
+
+	@include r991 {
+		grid-template-columns: 100%
+	}
+}
+
+.catalog-list__av-clinic {
+	@include column;
+
+	align-items: center;
+
+	@include r1400 {
+		.account-main & {
+			align-items: flex-start; position: relative;
+
+			.catalog-list__controls {
+				position: absolute;top: 0;right: 0;
+			}
+		}
+	}	
+
+	@include r991 {
+		align-items: flex-start; position: relative;
+
+		.catalog-list__controls {
+			position: absolute;top: 0;right: 0;
+		}
+	}
+}
+
+.catalog-list__av-clinic-link {
+	@include flex-center;
+
+	width: 150px; height: 150px; border-radius: 10px; border: 1px solid $colorGrey7; margin-bottom: 15px;
+
+	img {
+		width: 120px;height: 120px;object-position: center center; object-fit: contain;
+	}
+}
+
+.catalog-list__item-comments {
+	margin: 0 auto; text-align: center;
+ 
+	p {
+		margin-top: 5px;
+	}
+
+	@include r1400 {
+		.account-main & {
+			margin: 0;
+		}
+	}	
+
+	@include r991 {
+		margin: 0;
+	}
+}
+
+.catalog-list__controls {
+	margin-top: auto; display: flex; gap: 10px;
+}
+
+.catalog-list__controls {
+	color: $colorGrey3;
+
+	button:hover {
+		color: $colorRed;
+	}
+}
+
+.catalog-list__about {
+	@include column;
+
+	gap: 10px; align-items: stretch;
+}
+
+.catalog-list__about--doctors {
+	gap: 16px;
+}
+
+.catalog-list__item-speciality {
+	color: $colorGrey2; margin-top: -5px;
+}
+
+.catalog__link-colour {
+	display: flex; align-items: center; gap: 5px; border-radius: 10px; justify-content: space-between;
+
+	&:hover, & {
+		color: $colorBody;
+	}
+}
+
+.catalog-list__item-status {
+	display: flex; align-items: center; gap: 5px; margin-top: 5px;
+}
+
+.catalog-list__item-counter {
+	@include flex-center;
+
+	background: #fff; border-radius: 10px; height: 24px;padding: 0 5px;font-weight: 500;
+}
+
+.catalog__link-colour--green {
+	padding: 10px 10px 10px 20px; background: #05AF601A;
+
+	.catalog-list__item-arrow, .catalog-list__item-status {
+		color: $colorGreen;
+	}
+}
+
+.catalog__link-colour--pink {
+	padding: 10px 10px 10px 20px; background: #EA39131A;
+
+	.catalog-list__item-arrow {
+		color: $colorRed;
+	}
+}
+
+.catalog__link-colour--grey {
+	background: $colorGrey11;padding: 8px 8px 8px 20px;
+}
+
+.catalog__link-colour--bordered {
+	padding: 15px 11px 15px 20px; background: #FFF9F7; border: 1px solid #93452533;
+
+	&, .catalog-list__item-arrow {
+		color: #934525;
+	}
+}
+
+.catalog__link-colour-features {
+	display: flex; flex-wrap: wrap; list-style-type: none;margin: 0;padding: 0;
+
+	li {
+		& + li {
+			&::before {
+				content:'•'; margin: 0 8px;
+			}
+		}
+	}
+}
+
+.catalog-list__contacts {
+	display: flex; flex-direction: column; align-items: flex-start; width: 320px; max-width: 100%;
+
+	.object-contacts {
+		padding-top: 10px; margin-top: auto;
+	}
+
+	.object-contacts__sots {
+		color: $colorPrimary;
+	}
+
+	@include r1400 {
+		.account-main & {
+			width: auto;
+		}
+	}	
+
+	@include r991 {
+		width: auto;
+	}
+}
+
+.catalog-list__contacts--clinics {
+	border-left: 1px solid $colorGrey7; padding-left: 40px; 
+
+	@include r1400 {
+		.account-main & {
+			padding: 20px 0 0;border-left: none; border-top: 1px solid $colorGrey7;
+		}
+	}	
+
+	@include r991 {
+		padding: 20px 0 0;border-left: none; border-top: 1px solid $colorGrey7;
+	}
+}
+
+.catalog-list__contacts-addr {
+	display: flex; align-items: center; gap: 5px;
+
+	svg {
+		color: $colorGrey3;
+	}
+}
+
+.catalog-list__schedule {
+	margin: 15px 0;
+}
+
+.catalog-list__schedule-item {
+	display: grid; grid-template-columns: 68px max-content;
+}
+
+.catalog-list__comment {
+	margin-top: 15px;width: 100%;
+}
+
+.catalog-list__time {
+	display: flex; align-items: center; gap: 5px; margin-top: 10px; color: $colorGrey3;
+}
+
+// tile clinics
+.catalog-tile__item {
+	@include column(stretch);
+
+	box-shadow: 0px 6px 25px 0px #201F251A; padding: 20px 20px 15px; border-radius: 10px; gap: 10px; font-size: rem(14);
+
+	.subtitle {
+		@include ell(3);
+	}
+
+	.catalog__link-colour--grey {
+		padding: 6px 6px 6px 15px;
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+.catalog-tile__item-link-img {
+	position: relative; height: 180px; display: block; max-width: 310px;margin: 0 auto 3px;width: 100%;
+
+	.favorites {
+		position: absolute; top: 10px;right: 10px;background: #fff; padding: 4px; border-radius: 10px;
+
+		svg {
+			width: 20px; height: 20px;
+		}
+	}
+}
+
+.catalog-tile__item-img {
+	display: block; height: 100%; width: 100%;object-position: center center; object-fit: cover; border-radius: 10px;
+}
+
+.catalog-tile__item-prem {
+	position: absolute;background: $colorGreen; color: #fff;height: 20px; font-size: rem(12);font-weight: 500;display: flex; align-items: center; gap: 5px; border-radius: 8px; padding: 0 8px;position: absolute; top: 10px;left: 10px;
+}
+
+.catalog-tile__item-speciality {
+	margin-top: -5px; font-size: rem(12); color: $colorGrey2;
+}
+
+.catalog-tile__item-feature {
+	display: flex; gap: 5px; align-items: flex-start;
+
+	svg {
+		color: $colorGrey3; margin-top: 3px;
+	}
+}
+
+.catalog-tile__item-comment {
+	height: 40px;
+}
+
+// list-doctors
+.catalog-list__av--doctors {
+	.catalog-list__av-link {
+		img {
+			width: 170px;height: 170px;
+		}
+	}
+
+	.catalog-list__controls {
+		left: 95px;bottom: 5px; padding: 6px 10px; 
+	}	
+}
+
+.catalog-list__item-doctors-comments {
+	margin-top: 15px; padding: 10px 15px; border-radius: 10px; border: 1px solid $colorGrey8; display: flex; align-items: center; justify-content: center; gap: 5px; min-width: 170px; width: fit-content;
+
+	mark {
+		font-weight: 500;
+	}
+
+	p {
+		margin-left: 4px;
+	}
+}
+
+.catalog-list__item-appointment-body {
+	display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, 160px);
+}
+
+.catalog-list__item-appointment-type {
+	@include column;
+
+	border: 1px solid $colorGrey7; padding: 10px 15px; gap: 2px; position: relative; border-radius: 10px;
+
+	figure {
+		@include flex-center;
+
+		width: 30px;height: 30px;border-radius: 50%; background: #4652FF0D;
+	}
+
+	mark {
+		font-weight: 600; font-size: rem(16);
+	}
+}
+
+.catalog-list__item-appointment-info {
+	position: absolute; top: 10px;right: 10px;
+}
+
+.catalog-list__contacts-block {
+	margin-top: auto; padding: 15px 20px; border-radius: 10px; background: $colorGrey9; width: 100%;
+
+	.subtitle {
+		font-size: rem(14); 
+	}
+
+	@include r575 {
+		padding: 15px;
+	}
+}
+
+.catalog-list__contacts-block-schedule {
+	display: flex; flex-wrap: wrap; gap: 0 10px; color: $colorGrey1; margin: 5px 0 10px;
+
+	mark {
+		font-weight: 500;
+	}
+}
+
+// tile doctors 
+.catalog-tile__item--doctors {
+	.catalog-tile__item-link-img {
+		height: 250px;
+	}
+}
+
+.catalog-tile__item-tags {
+	display: flex; flex-wrap: wrap; gap: 10px;
+
+	span {
+		background: $colorGrey8; padding: 4px 10px; border-radius: 5px;
+	}
+}
+
+// list services
+.catalog-list__item--services {
+	column-gap: 30px;
+}
+
+.catalog-list__av-services-link {
+	display: block; 
+
+	img {
+		display: block; width: 305px;height: 300px; object-position: center center; object-fit: cover; border-radius: 10px;
+	}	
+}
+
+.catalog-list__item--services {
+	.catalog-list__av-services-link {
+		img {
+			width: 305px; height: 300px;
+		}
+	}
+
+	.catalog-list__controls {
+		top: 10px;right: 10px; padding: 4px;
+	}
+
+	.catalog-list__about {
+		.subtitle {
+			font-weight: 500; margin-bottom: -5px;
+		}
+	}
+
+	.object-contacts {
+		padding-top: 0;
+	}
+
+	@include r1400 {
+		.account-main & {
+			.catalog-list__av-link {
+				img {
+					width: 250px; height: 250px;
+				}
+			}
+
+			.catalog-list__av-link {
+				img {
+					width: 305px; height: 300px;
+				}
+			}			
+		}
+	}	
+
+	@include r1199 {
+		.catalog-list__av-link {
+			img {
+				width: 250px; height: 250px;
+			}
+		}		
+	}
+
+	@include r991 {
+		.catalog-list__av-link {
+			img {
+				width: 305px; height: 300px;
+			}
+		}		
+	}
+}
+
+.catalog-list__about-info {
+	@include ell(4);
+
+	color: $colorGrey2; font-size: rem(16);
+}
+
+.catalog-list__contacts--services {
+	width: 330px; padding-left: 30px;border-left: 1px solid $colorGrey7; gap: 10px;
+
+	@include r1400 {
+		.account-main & {
+			padding-left: 0; border-left: none;
+		}
+	}	
+
+	@include r991 {
+		padding-left: 0; border-left: none;
+	}
+}
+
+.catalog-list__logo {
+	width: 60px; height: 60px; border-radius: 10px; object-position: center center; object-fit:  cover;
+}
+
+.catalog-list__contacts-info {
+	@include column;
+
+	gap: 5px;
+}
+
+.catalog-list__contacts-name {
+	font-size: rem(16); font-weight: 500;
+}
+
+// tile services
+.catalog-tile__item--services {
+	padding-top: 0;
+
+	.catalog-tile__item-link-img {
+		height: 250px; margin-bottom: 10px; gap: 5px; max-width: none;margin-left: -20px; margin-right: -20px;width: calc(100% + 40px);
+
+		img {
+			border-radius: 10px 10px 0 0; 
+		}
+	}
+
+	.subtitle {
+		font-weight: 500; font-size: rem(16);
+	}
+}
+
+.catalog-tile__item-cost {
+	font-weight: 600; font-size: rem(16);
+}

@@ -1,0 +1,58 @@
+extends ../layouts/main
+
+block vars 
+	- var title = 'Аккаунт - история платежей'
+	- var account = true
+
+block main
+	section.account.container-fluid
+		+account-aside('payments')
+
+		main 
+			h1 История платежей
+
+			.account-main
+				table.acc-table.acc-table--payment
+					tr
+						th ID
+						th Описание
+						th Дата заказа
+						th Способ оплаты
+						th Цена
+						th Статус
+					tr
+						td.acc-table__id #34890
+						td.acc-table__action Покупка пакета контактов в AU.GE
+						td.acc-table__date
+							span.d-xl-block 12.04.2024 
+							span.d-xl-block 11:07
+						td Сбербанк онлайн
+						td.acc-table__cost $18
+						td.acc-table__status-cell: span.acc-table__status.acc-table__status--notpaid Не оплачено
+					tr
+						td.acc-table__id #34889
+						td.acc-table__action Пополнение кошелька в AU.GE
+						td.acc-table__date
+							span.d-xl-block 12.04.2024 
+							span.d-xl-block 11:07
+						td ЮMoney
+						td.acc-table__cost $125
+						td.acc-table__status-cell: span.acc-table__status.acc-table__status--paid Оплачено
+					tr
+						td.acc-table__id #34889
+						td.acc-table__action Оплата услуг в AU.GE
+						td.acc-table__date
+							span.d-xl-block 12.04.2024 
+							span.d-xl-block 11:07
+						td Банковская карта
+						td.acc-table__cost $125
+						td.acc-table__status-cell: span.acc-table__status.acc-table__status--working В обработке
+					tr
+						td.acc-table__id #34889
+						td.acc-table__action Пополнение кошельк в AU.GE
+						td.acc-table__date
+							span.d-xl-block 12.04.2024 
+							span.d-xl-block 11:07
+						td Банковский перевод
+						td.acc-table__cost $125
+						td.acc-table__status-cell: span.acc-table__status.acc-table__status--canceled Отменено

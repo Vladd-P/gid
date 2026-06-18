@@ -1,0 +1,328 @@
+include ../mixins/_favorites
+
+mixin catalog-list-item
+	.catalog-list__item
+		.catalog-list__av-clinic
+			a.catalog-list__av-clinic-link(href="card-clinic.html"): img(src="img/catalog-list-item-clinic.webp", alt="") 
+			.catalog-list__item-clinic-comments
+				.stars-bg
+					span: +svg('star-rating', 14, 14)
+					span: +svg('star-rating', 14, 14)
+					span: +svg('star-rating', 14, 14)
+					span: +svg('star-rating', 14, 14)
+					span: +svg('star-rating', 14, 14)
+				p 37 отзывов
+			.catalog-list__controls
+				+favorites 
+				button: +svg('share', 24, 24)
+
+		.catalog-list__about 
+			a.title-20(href="#") Медицина и Красота на Новослободской
+			.catalog-list__item-speciality Гинеколог, акушер, врач УЗИ
+			a.catalog__link-colour.catalog__link-colour--green(href="#")
+				div 
+					ul.catalog__link-colour-features
+						li Многопрофильный медицинский центр
+						li Лицензия ЛО-77-01-019984 
+					.catalog-list__item-status
+						+svg('status-ok', 20,20)
+						|Документы проверены
+				+svg('arrow-catalog-link-colour', 24, 24)(class="catalog-list__item-arrow") 
+			.services-cost 
+				.services-cost__item 
+					span Удаление сосудистых звездочек
+					mark от 2500 ₽
+				.services-cost__item 
+					span Профессиональная чистка лица
+					mark от 5000 ₽
+				.services-cost__item 
+					span Ультразвуковая чистка Skin Master
+					mark от 7000 ₽
+			a.catalog__link-colour.catalog__link-colour--grey(href="#")
+				div 
+					p Показать весь прайс-лист
+				.catalog-list__item-counter 41						
+			a.catalog__link-colour.catalog__link-colour--pink(href="#")
+				div 
+					p Посмотреть всех врачей клинки
+				+svg('arrow-catalog-link-colour', 24, 24)(class="catalog-list__item-arrow") 						
+
+		.catalog-list__contacts.catalog-list__contacts--clinics
+			.catalog-list__contacts-addr
+				+svg('map-marker', 16,16)
+				|Москва: ул. Новослободская: д.3
+			.contacts-metro.contacts-metro--purple
+				|Маяковская
+				span 
+					+svg('walk', 16,16)
+					|20 м
+			.contacts-metro.contacts-metro--grey
+				|Менделеевская
+				span 
+					+svg('walk', 16,16)
+					|320 м
+			.contacts-metro.contacts-metro--green
+				|Достоевская
+				span 
+					+svg('walk', 16,16)
+					|950 м
+			.catalog-list__schedule
+				.catalog-list__schedule-item 
+					span пн-пт
+					mark 8:00 - 21:00
+				.catalog-list__schedule-item 
+					span сб
+					mark 8:00 - 21:00
+				.catalog-list__schedule-item 
+					span вс
+					mark 8:00 - 21:00
+			a.catalog__tel(href="tel:+74953246156") 
+				+svg('tel', 20,20)
+				|+7 (495) 324-61-56
+			a.catalog-list__comment.button-bordered-blue(href="#") Написать сообщение
+			small.catalog-list__time 
+				+svg('clock', 16,16)
+				|Клиника перезвонит через 10 минут
+			.object-contacts 
+				a(href="mailto:medkrasotunov24.ru") medkrasotunov24.ru
+				.object-contacts__sots 
+					a(href="#"): +svg('object-contacts-whatsapp', 24,24)
+					a(href="#"): +svg('object-contacts-tg', 24,24)
+					a(href="#"): +svg('object-contacts-vk', 24,24)
+
+mixin catalog-tile-item(options)
+	.catalog-tile__item
+		a.catalog-tile__item-link-img(href="card-clinic.html") 
+			img.catalog-tile__item-img(src="img/" + options.img, alt="")
+			+favorites
+			if options.premium 
+				.catalog-tile__item-prem 
+					+svg('premium',14,14)
+					|Премиум объявление
+
+		.rating-line 
+			.stars
+				+svg('star-rating', 14, 14)
+				+svg('star-rating', 14, 14)
+				+svg('star-rating', 14, 14)
+				+svg('star-rating', 14, 14)
+				+svg('star-rating', 14, 14)
+			span 137 отзывов
+		
+		.subtitle Клиника Медицина и Красота на Новослободской
+		.catalog-tile__item-speciality Гинеколог, акушер, врач УЗИ
+
+		a.catalog__link-colour.catalog__link-colour--grey(href="#")
+			div 
+				p Всего услуг
+			.catalog-list__item-counter 41
+
+		.catalog-tile__item-feature 
+			+svg('clock', 16,16)
+			div пн-пт span 8:00 - 21:00, span сб 9:00 - 20:00
+		.catalog-tile__item-feature
+			+svg('map-marker', 16,16)
+			|Москва: ул. Новослободская: д.3
+		a.catalog__tel(href="tel:+74953246156") 
+			+svg('tel', 20,20)
+			|+7 (495) 324-61-56
+
+		a.catalog-tile__item-comment.button-bordered-blue(href="#") Написать сообщение
+
+mixin catalog-list-item-doctors
+	.catalog-list__item
+		div
+			.catalog-list__av.catalog-list__av--doctors
+				a.catalog-list__av-link(href="card-doctor.html")
+					img(src="img/catalog-doctor.webp", alt="") 
+				.catalog-list__controls
+					+favorites 
+					button: +svg('share', 24, 24)
+			.catalog-list__item-doctors-comments
+				.stars-bg
+					span: +svg('star-rating', 14, 14)
+				mark 5.0
+				p 37 отзывов
+
+		.catalog-list__about.catalog-list__about--doctors 
+			a.title-20(href="#") Чижова Мария Андреевна
+			.catalog-list__item-speciality Гинеколог, акушер, врач УЗИ		
+			a.catalog__link-colour.catalog__link-colour--green(href="#")
+				div 
+					ul.catalog__link-colour-features
+						li.fw-500 Стаж 18 лет
+						li кандидат наук
+					.catalog-list__item-status
+						+svg('status-ok', 20,20)
+						|Документы проверены
+				+svg('arrow-catalog-link-colour', 24, 24)(class="catalog-list__item-arrow") 		
+			a.catalog__link-colour.catalog__link-colour--bordered(href="#")
+				div 
+					p Посмотреть всех врачей клинки
+				+svg('arrow-catalog-link-colour', 24, 24)(class="catalog-list__item-arrow")
+			.catalog-list__item-appointment
+				.catalog-list__item-subtitle Тип приёма
+				.catalog-list__item-appointment-body
+					.catalog-list__item-appointment-type
+						figure: +svg('appointment-type-1',20,20)
+						p На дому
+						mark Бесплатно
+						button.catalog-list__item-appointment-info(data-toggle="tooltip" title="Текст подсказки"): +svg('info', 16, 16)
+					.catalog-list__item-appointment-type
+						figure: +svg('appointment-type-2',20,20)
+						p Онлайн
+						mark от 2500 ₽
+						button.catalog-list__item-appointment-info(data-toggle="tooltip" title="Текст подсказки"): +svg('info', 16, 16)
+					.catalog-list__item-appointment-type
+						figure: +svg('appointment-type-3',20,20)
+						p В клинике
+						mark от 3900 ₽
+						button.catalog-list__item-appointment-info(data-toggle="tooltip" title="Текст подсказки"): +svg('info', 16, 16)
+
+		.catalog-list__contacts
+			.catalog-list__item-subtitle Место приема
+			select.select-styled-addr
+				option(data-name="Клиника «СMD» на Солдатской" data-addr='ул. Солдатская, д. 184') Клиника «СMD» на Солдатской ул. Солдатская, д. 184
+				option(data-name="Клиника «СMD» на Офицерской" data-addr='ул. Офицерская, д. 1') Клиника «СMD» на Офицерской ул. Офицерская, д. 1
+				option(data-name="Клиника «СMD» на Солдатской" data-addr='ул. Солдатская, д. 184') Клиника «СMD» на Солдатской ул. Солдатская, д. 184
+				option(data-name="Клиника «СMD» на Офицерской" data-addr='ул. Офицерская, д. 1') Клиника «СMD» на Офицерской ул. Офицерская, д. 1
+			.contacts-metro.contacts-metro--red
+				|Лефортово
+				span 
+					+svg('walk', 16,16)
+					|20 м
+			.contacts-metro.contacts-metro--blue
+				|Бауманская
+				span 
+					+svg('walk', 16,16)
+					|320 м
+			.contacts-metro.contacts-metro--yellow
+				|Авиамоторская
+				span 
+					+svg('walk', 16,16)
+					|950 м
+			.catalog-list__contacts-block
+				.subtitle Расписание
+				.catalog-list__contacts-block-schedule
+					div 
+						span ПН:
+						mark 12:00 – 18:00
+					div 
+						span ПТ:
+						mark 14:00 – 18:00
+				a.button-primary(href="#") Написать сообщение
+				small.catalog-list__time 
+					+svg('clock', 16,16)
+					|Ближайшее время приема: Сегодня в 12:30
+				.object-contacts 
+					a(href="mailto:medkrasotunov24.ru") medkrasotunov24.ru
+					.object-contacts__sots 
+						a(href="#"): +svg('object-contacts-whatsapp', 24,24)
+						a(href="#"): +svg('object-contacts-tg', 24,24)
+						a(href="#"): +svg('object-contacts-vk', 24,24)
+
+mixin catalog-tile-item-doctors
+	.catalog-tile__item.catalog-tile__item--doctors
+		a.catalog-tile__item-link-img(href="card-doctor.html") 
+			img.catalog-tile__item-img(src="img/catalog-doctor.webp" alt="")
+			+favorites
+
+		.rating-line 
+			.stars
+				+svg('star-rating', 14, 14)
+				+svg('star-rating', 14, 14)
+				+svg('star-rating', 14, 14)
+				+svg('star-rating', 14, 14)
+				+svg('star-rating', 14, 14)
+			span 137 отзывов
+		
+		.subtitle Чижова Мария Андреевна
+		.catalog-tile__item-speciality Гинеколог, акушер, врач УЗИ
+
+		.catalog-tile__item-tags 
+			span В клинике
+			span На дому
+			span Онлайн
+
+		.catalog-tile__item-feature
+			+svg('map-marker', 16,16)
+			p
+				|Москва: ул. Солдатская, 
+				span.text-nowrap д. 184
+		
+		p Всего 8 услуг
+
+		a.catalog-tile__item-comment.button-bordered-blue(href="#") Написать сообщение
+
+mixin catalog-list-item-services(options)
+	.catalog-list__item.catalog-list__item--services
+		.catalog-list__av
+			a.catalog-list__av-link(href="card-service.html")
+				img(src="img/" + options.img, alt="") 
+			.catalog-list__controls
+				+favorites 
+
+		.catalog-list__about
+			.subtitle= options.title
+			.title-20 от 1 500 ₽
+			.services-cost 
+				.services-cost__item 
+					span Удаление сосудистых звездочек
+					mark от 2500 ₽
+				.services-cost__item 
+					span Профессиональная чистка лица
+					mark от 5000 ₽
+				.services-cost__item 
+					span Ультразвуковая чистка Skin Master
+					mark от 7000 ₽
+			a.catalog__link-colour.catalog__link-colour--grey(href="#")
+				div 
+					p Показать весь прайс-лист
+				.catalog-list__item-counter 41	
+			.catalog-list__about-info Дорогие девушки и прекрасные женщины! Мы в поисках моделей для выполнения косметологических процедур, а также пополнения профессионального портфолио салона! Нам требуются модели на следующие виды косметологических услуг: чистка лица (механическая, ультразвуковая, лифтинг
+
+		.catalog-list__contacts.catalog-list__contacts--services
+			img.catalog-list__logo(src="img/" + options.logo, alt="")
+			.catalog-list__contacts-info
+				.catalog-list__contacts-name= options.name
+				.rating-line
+					.stars
+						span: +svg('star-rating', 14, 14)
+						span: +svg('star-rating', 14, 14)
+						span: +svg('star-rating', 14, 14)
+						span: +svg('star-rating', 14, 14)
+						span: +svg('star-rating', 14, 14)
+					p 37 отзывов
+				.color-grey1= options.type
+			.fsz-16.fw-500= options.city
+			.fw-500 Место приема
+			select.select-styled-addr
+				option(data-name="Клиника «СMD» на Солдатской" data-addr='ул. Солдатская, д. 184') Клиника «СMD» на Солдатской ул. Солдатская, д. 184
+				option(data-name="Клиника «СMD» на Офицерской" data-addr='ул. Офицерская, д. 1') Клиника «СMD» на Офицерской ул. Офицерская, д. 1
+				option(data-name="Клиника «СMD» на Солдатской" data-addr='ул. Солдатская, д. 184') Клиника «СMD» на Солдатской ул. Солдатская, д. 184
+				option(data-name="Клиника «СMD» на Офицерской" data-addr='ул. Офицерская, д. 1') Клиника «СMD» на Офицерской ул. Офицерская, д. 1
+			.object-contacts 
+				a(href="mailto:medkrasotunov24.ru") medkrasotunov24.ru
+				.object-contacts__sots 
+					a(href="#"): +svg('object-contacts-whatsapp', 24,24)
+					a(href="#"): +svg('object-contacts-tg', 24,24)
+					a(href="#"): +svg('object-contacts-vk', 24,24)
+
+mixin catalog-tile-item-services(options)
+	.catalog-tile__item.catalog-tile__item--services
+		a.catalog-tile__item-link-img(href="card-service.html") 
+			img.catalog-tile__item-img(src="img/" + options.img alt="")
+			+favorites
+		.subtitle= options.title
+		.catalog-tile__item-cost от 1 500 ₽
+		p= options.name
+		p Всего 23 услуги
+		.catalog-tile__item-feature
+			+svg('map-marker', 16,16)
+			p
+				|Москва: ул. Новослободская, 
+				span.text-nowrap д. 3
+
+
+
+

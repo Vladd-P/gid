@@ -1,0 +1,109 @@
+extends ../layouts/main
+
+block vars 
+	- var title = 'Аккаунт - профиль'
+	- var tomselect = true
+	- var inputmask = true
+	- var account = true
+
+block main
+	section.account.container-fluid
+		+account-aside('profile')
+
+		main 
+			h1 Мой профиль
+
+			.account-main
+				.tabs-common
+					button.active(data-tabs='acc-profile' data-tab-target='acc-profile-1') Настройки профиля
+					button(data-tabs='acc-profile' data-tab-target='acc-profile-2') Настройки учетной записи
+
+				#acc-profile-1.active(data-tabs-content='acc-profile')
+					.acc-profile
+						.column
+							.acc-profile__user 
+								figure.acc-profile__av 
+									img(src="img/acc-profile-av.webp", alt="")
+									button.acc-profile__av-edit: +svg('edit', 16,16)
+								div 
+									.title-20 Евгений Федулов
+									.color-grey3 Частное лицо
+							.form-group 
+								label E-mail
+								input.form-control(type="email" placeholder='Введите E-mail')
+							div 
+								label.checkbox-switch-styled
+									|Показывать свой электронный адрес
+									input(type="checkbox")
+									figure
+								label.checkbox-switch-styled
+									|Подписаться на рассылку
+									input(type="checkbox" checked)
+									figure
+
+						.column 
+							.form-group 
+								label Индивидуальная страница
+								.input-link 
+									input.form-control(type="url" placeholder='Введите адрес страницы')
+									a.link-blue(href=""): +svg('arrow-link', 24,24)
+							.form-group 
+								label Предпочтительный язык
+								select.select-styled
+									option Русский
+									option Нерусский
+						
+						.column: input.button-primary(type="submit" value='Сохранить изменения')
+
+					.block-liner.block-liner--big
+
+					.acc-profile
+						.column 
+							.fsz-20.fw-600 Сменить пароль
+							.form-group
+								label Текущий пароль
+								input.form-control(type="password")
+							.form-group
+								label Новый пароль
+								input.form-control(type="password")
+							.form-group
+								label Повторите пароль
+								input.form-control(type="password")
+							.column: input.button-primary(type="submit" value='Изменить пароль')
+
+				#acc-profile-2(data-tabs-content='acc-profile')
+					.acc-profile
+						.column
+							.form-group 
+								label Имя
+								input.form-control(placeholder='Введите имя')
+							.form-group 
+								label Телефон
+								input.form-control(type="tel" placeholder='+7 (___)-___-__-__')
+							div
+								label.checkbox-styled
+									input(type="checkbox")
+									figure: +svg('checkbox', 14,14)
+									|Доступен в WhatsApp
+								label.checkbox-styled
+									input(type="checkbox")
+									figure: +svg('checkbox', 14,14)
+									|Доступен в Telegram
+
+						.column
+							.acc-profile__2-cols 
+								.form-group 
+									label Пол
+									select.select-styled
+										option Мужской
+										option Женский
+									mark Не будет отображаться в профиле
+								.form-group
+									label Дата рождения
+									input.form-control(type="date")
+
+						.column: input.button-primary.w-100(type="submit" value='Сохранить')
+
+								
+
+

@@ -1,0 +1,37 @@
+@use './base/fonts';
+@use './base/common';
+@use './base/global';
+@use './base/links';
+@use './base/buttons';
+@use './base/plugins';
+@use './base/text';
+@use './base/colors';
+
+@use './components/topline';
+@use './components/header';
+@use './components/footer';
+@use './components/nav';
+@use './components/previews';
+@use './components/last-vews';
+@use './components/catalog-items';
+@use './components/pgnt';
+@use './components/cards-common';
+@use './components/account-common';
+@use './components/modals';
+
+@use './pages/index';
+@use './pages/catalog';
+@use './pages/news';
+@use './pages/card-service';
+@use './pages/card-clinic';
+@use './pages/map-search';
+@use './pages/acc-profile';
+@use './pages/acc-add';
+@use './pages/acc-tables';
+@use './pages/acc-packets';
+@use './pages/acc-credits';
+@use './pages/acc-faq';
+@use './pages/acc-ads';
+
+
+

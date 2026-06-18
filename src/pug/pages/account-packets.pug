@@ -1,0 +1,46 @@
+extends ../layouts/main
+
+block vars 
+	- var title = 'Аккаунт - мои пакеты'
+	- var swiper = true
+	- var account = true
+
+mixin packet(options)
+	label.swiper-slide
+		input(type="checkbox")
+		.subtitle= options.name
+		.fsz-14 Бесплатное объявление. Включает в себя автоматическое продление. В этом разделе ежемесячно доступно 3 бесплатных объявления.
+		.acc-packets-slider__number= options.number
+		ul
+			li 
+				+svg('checkbox-packets', 24,24)
+				|30 дней
+			li 
+				+svg('checkbox-packets', 24,24)
+				|10 фото
+			li 
+				+svg('checkbox-packets', 24,24)
+				|1 видео
+
+block main
+	section.account.container-fluid
+		+account-aside('packets')
+
+		main
+			h1 Мои пакеты
+
+			.acc-packets.account-main
+				.title-20 Выберите/купите новый пакет
+
+				.acc-packets-slider
+					.swiper 
+						.swiper-wrapper 
+							+packet({name:'Недвижимость', number: '0'})
+							+packet({name:'Транспорт', number: '15'})
+							+packet({name:'Недвижимость', number: '25'})
+							+packet({name:'Недвижимость', number: '0'})
+
+					button.swiper-button-prev: +svg('arrow-comments', 20, 20)
+					button.swiper-button-next: +svg('arrow-comments', 20, 20)
+
+				.acc-packets__next: a.button-primary(href="#") Продолжить

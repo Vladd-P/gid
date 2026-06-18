@@ -1,0 +1,72 @@
+@use '../includes/mixins' as *; 
+@use '../includes/variables' as *;
+
+%btn {
+	@include flex-center; 
+	
+	height: 45px; border-radius: 10px; font-weight: 500; transition: .3s; padding: 0 20px; gap: 10px; white-space: nowrap; flex-shrink: 0
+}
+
+.button-primary {
+	@extend %btn;
+
+	color: #fff; background: $colorPrimary;
+
+	&:hover {
+		background: $colorPrimaryHover; color: #fff;
+	}
+}
+
+.button-gray {
+	@extend %btn;
+
+	background: $colorGrey9;
+}
+
+.button-gray-color-primary {
+	@extend %btn;
+
+	background: #4652FF0D; color: $colorPrimary;
+}
+
+.button-bordered {
+	@extend %btn;
+
+	border: 1px solid $colorGrey6;
+
+	&:hover {
+		background: $colorGrey7; border-radius: 60px; color: $colorBody;
+	}
+
+	&:active {
+		background: $colorRed; color: #fff;
+	}
+}
+
+.button-bordered-blue {
+	@extend %btn;
+
+	border: 1px solid $colorPrimary; color: $colorPrimary;
+
+	&:hover {
+		color: #fff; background: $colorPrimary
+	}
+}
+
+.button-white {
+	@extend %btn;
+
+	background: #fff; color: $colorPrimary;
+}
+
+.button-40 {
+	height: 40px;
+}
+
+.button-big {
+	height: 50px;
+
+	@include r575 {
+		height: 48px;
+	}
+}

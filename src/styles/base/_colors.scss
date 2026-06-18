@@ -1,0 +1,26 @@
+@use '../includes/mixins' as *; 
+@use '../includes/variables' as *;
+
+.primary {
+	color: $colorPrimary !important;
+}
+
+.color-red {
+	color: $colorRed !important;
+}
+
+.color-green {
+	color: $colorGreen !important;
+}
+
+.color-grey1 {
+	color: $colorGrey1 !important;
+}
+
+.color-grey2 {
+	color: $colorGrey2 !important;
+}
+
+.color-grey3 {
+	color: $colorGrey3 !important;
+}

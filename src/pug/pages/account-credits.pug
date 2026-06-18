@@ -1,0 +1,40 @@
+extends ../layouts/main
+
+block vars 
+	- var title = 'Аккаунт - мои кредиты'
+	- var swiper = true
+	- var account = true
+
+block main
+	section.account.container-fluid
+		+account-aside('credits')
+
+		main
+			h1 Мои кредиты
+
+			.acc-credits.account-main
+				p В качестве альтернативы денежным платежам наш сайт предлагает вам кредиты с оплатой по мере использования. После приобретения кредитного пакета вы сможете оплачивать различные услуги на нашем сайте.
+				p Кредиты действительны в течение Бессрочный с даты покупки.
+			.acc-credits__slider-wrapper
+				.acc-credits__slider.swiper.swiper--right 
+					.swiper-wrapper 
+						.swiper-slide 
+							.subtitle 5 Кредитов
+							mark 5
+							.acc-credits__about (₾1/Кредиты)
+						.swiper-slide 
+							.subtitle 5 Кредитов
+							mark 5
+							.acc-credits__about (₾1/Кредиты)
+						.swiper-slide 
+							.subtitle 5444 Кредитов
+							mark 5
+							.acc-credits__about (₾1/Кредиты)
+						.swiper-slide 
+							.subtitle 5 Кредитов
+							mark 5
+							.acc-credits__about (₾1/Кредиты)
+						.swiper-slide 
+							.subtitle 5 Кредитов
+							mark 5
+							.acc-credits__about (₾1/Кредиты)

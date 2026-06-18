@@ -1,0 +1,50 @@
+@use '../includes/mixins' as *; 
+@use '../includes/variables' as *;
+
+.preview-item {
+	&.swiper-slide {
+		width: 305px;
+	}
+}
+
+.preview-item__img {
+	position: relative; margin-bottom: 15px;
+
+	img {
+		display: block; width: 100%; height: 220px;object-position: center center; object-fit: cover; border-radius: 20px;
+	}
+
+	mark {
+		@include flex-center;
+
+		position: absolute; top: 10px; left: 10px; color: #fff; font-weight: 500; font-size: rem(14); padding: 0 10px; background: linear-gradient(90.63deg, #6E34F5 0%, #8615EA 100%); height: 1.86em; border-radius: 10px;
+	}
+}
+
+.preview-item__info {
+	display: flex; justify-content: space-between; margin-bottom: 10px; color: $colorGrey3;
+}
+
+.preview-item__views {
+	display: flex; align-items: center; gap: 5px;
+}
+
+.preview-item__about {
+	@include ell(3);
+
+	font-weight: 500;
+}
+
+.preview-item--events {
+	border: 1px solid $colorGrey7; border-radius: 20px;padding: 15px;
+
+	.preview-item__img {
+		mark {
+			background: #343843E5;
+		}
+	}
+
+	.preview-item__about {
+		@include ell(3);
+	}
+}

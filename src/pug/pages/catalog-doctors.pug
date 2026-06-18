@@ -1,0 +1,73 @@
+extends ../layouts/main
+
+block vars 
+	- var title = 'Каталог врачей'
+	- var tomselect = true
+
+include ../mixins/_catalog-items
+
+
+block main
+	section.view-map.page-section
+		.container-fluid 
+			h1 Врачи
+
+			a.view-map__body(href="#") 
+				.title-20 Посмотреть на карте
+
+	section.catalog.page-section
+		.container-fluid 
+			.catalog__controls
+				.catalog__filters 
+					button.button-primary
+						+svg('filters', 24, 24)
+						|Фильтры
+					select.select-styled(data-placeholder="Регион")
+						option(value="" selected disabled)
+						option Московская область
+						option Лениградская область
+						option Курская область
+						option Белгородская область
+						option Рязанская область
+						option Калининградская область
+					select.select-styled(data-placeholder="Тип приема")
+						option(value="" selected disabled)
+						option в клинике 
+						option на дому 
+					select.select-styled(data-placeholder="Специализация")
+						option(value="" selected disabled)
+						option Клиника 
+						option Врач
+						option Специалист
+					select.select-styled(data-placeholder="Все услуги")
+						option(value="" selected disabled)
+						option Аппаратная косметология 
+						option Аппаратная косметология 								
+						option Диетология, спорт, тренировки 								
+						option Инъекционная косметология 								
+						option Лазерная хирургия 								
+						option Макияж и татуаж
+					select.select-styled(data-placeholder="Сортировать по")
+						option(value="" selected disabled)
+						option Вверх 
+						option Вниз 
+
+				.catalog__view 
+					button.active(data-tabs="catalog-view" data-tab-target="catalog-list"): +svg('view-list', 20,20)
+					button(data-tabs="catalog-view" data-tab-target="catalog-tile"): +svg('view-tile', 20,20)
+					a(href="#"): +svg('map-marker', 20,20)
+			
+			#catalog-list.active(data-tabs-content="catalog-view")
+				+catalog-list-item-doctors
+				+catalog-list-item-doctors
+				+catalog-list-item-doctors
+
+			#catalog-tile.items-grid(data-tabs-content="catalog-view")
+				+catalog-tile-item-doctors
+				+catalog-tile-item-doctors
+				+catalog-tile-item-doctors
+				+catalog-tile-item-doctors
+				+catalog-tile-item-doctors
+
+			include ../components/_pgnt
+

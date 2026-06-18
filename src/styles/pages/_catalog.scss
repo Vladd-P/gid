@@ -1,0 +1,110 @@
+@use '../includes/mixins' as *; 
+@use '../includes/variables' as *;
+
+.catalog {
+	&.page-section {
+		margin-top: 30px;
+	}
+
+	@include r767 {
+		&.page-section {
+			margin-top: 20px;
+		}		
+	}
+}
+
+.catalog__controls {
+	display: flex;  gap: 10px 30px; align-items: center; flex-wrap: wrap; margin-bottom: 30px;
+ 
+	@include r1400 {
+		margin-right: -15px; padding-right: 15px;
+	}
+
+	@include r767 {
+		margin-bottom: 20px;
+	}
+}
+
+.catalog__controls--account {
+	flex-direction: column;
+}
+
+.catalog__controls--services {
+	.catalog__filters {
+		max-width: 1043px;
+	}
+
+	@include r1199 {
+		.catalog__filters {
+			display: grid; grid-template-columns: repeat(3, 1fr); max-width: none;
+		}
+	}
+
+	@include r767 {
+		.catalog__filters {
+			display: grid; grid-template-columns: 1fr 1fr;
+		}
+	}	
+}
+
+.catalog__filters {
+	display: flex; gap: 10px; max-width: 912px; width: 100%;
+
+	.button-primary, .ts-control {
+		height: 40px; 
+	}
+
+	.button-primary {
+		padding-right: 15px;padding-left: 15px;
+	}
+
+	.ts-control:not(.rtl) {
+		padding-left: 12px !important; min-width: 145px;
+	}
+
+	@include r991 {
+		display: grid; grid-template-columns: repeat(3, 1fr);
+	}
+
+	@include r767 {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.catalog__filters--account {
+	grid-template-columns: repeat(auto-fill, 150px); display: grid; max-width: none;
+}
+
+.catalog__view {
+	display: flex; gap: 10px; color: $colorGrey3; margin-left: auto;
+
+	*:hover, *.active {
+		color: $colorPrimary;
+	}
+}
+
+.services-list {
+	display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px 20px; margin-bottom: 30px;
+
+	@include r991 {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@include r575 {
+		grid-template-columns: 1fr;
+	}
+}
+
+.services-list_item {
+	display: grid; grid-template-columns: 1fr max-content; gap: 15px; align-items: center; border: 1px solid $colorGrey7; padding: 10px 10px 10px 20px; border-radius: 10px;
+
+	p {
+		margin: 0;
+	}
+
+	mark {
+		@include flex-center;
+
+		color: $colorGrey1; font-weight: 500;font-size: rem(14); padding: 5px; height: 36px;min-width: 52px; background: $colorGrey9; border-radius: 10px;
+	}
+}

@@ -1,0 +1,58 @@
+#modal-login.mdl
+	button(data-fancybox-close): +svg('close', 24, 24)
+
+	h2 Вход
+
+	input.form-control(placeholder='Телефон или почта')
+	input.form-control(type="password" placeholder='Введите пароль')
+	.modal-login__remember 
+		label.checkbox-styled
+			input(type="checkbox")
+			figure: +svg('checkbox', 14,14)
+			.fsz-16 Запомнить пароль
+		a.link-blue(href="#") Забыли пароль?
+	input.button-primary.button-big(type="submit" value='Войти')
+
+	.modal-login__liner: span или через социальные сети 
+	.modal-login__sots 
+		a(href="#"): img(src="img/sots-vk.svg", alt="")
+		a(href="#"): img(src="img/sots-ok.svg", alt="")
+	.modal-login__reg 
+		|Нет аккаунта на AU.GE?
+		a.link-blue(href="#modal-reg" data-fancybox-switch) Зарегистрироваться
+
+#modal-reg.mdl
+	button(data-fancybox-close): +svg('close', 24, 24)
+
+	h2 Регистрация	
+
+	.modal-reg__type 
+		p Тип учетной записи
+		label.radio-styled
+			input(type="radio" name='modal-reg' checked)
+			|Частное лицо
+		label.radio-styled
+			input(type="radio" name='modal-reg')
+			|Компания
+		label.radio-styled
+			input(type="radio" name='modal-reg')
+			|Магазин
+	
+	.modal-reg__fields 
+		nput.form-control(placeholder='Телефон или почта')
+		input.form-control(type="password" placeholder='Введите пароль')
+		ul
+			li минимум 8 символов
+			li большая буква
+			li маленькая буква
+			li цифра
+		input.form-control(type="password" placeholder='Повторите пароль')
+
+	label.modal-reg__politics.checkbox-styled
+		input(type="checkbox")
+		figure: +svg('checkbox', 14,14)
+		|Я принимаю условия
+		a.link-blue(href="#") Пользовательского соглашения
+
+	input.button-primary.button-big(type="submit" value='Зарегистрироваться')
+

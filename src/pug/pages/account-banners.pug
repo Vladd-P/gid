@@ -1,0 +1,64 @@
+extends ../layouts/main
+
+block vars 
+	- var title = 'Аккаунт - мои баннеры'
+	- var account = true
+
+block main
+	section.account.container-fluid
+		+account-aside('banners')
+
+		main 
+			.acc-banners-header
+				h1 Мои баннеры
+				button.acc-banners-header__add.button-primary 
+					+svg('add-button',20,20)
+					|Добавить
+
+			.account-main
+				table.acc-table.acc-table--banners
+					tr
+						th Название
+						th Просмотры
+						th План
+						th Статус
+						th Действия	
+					tr.removable-element
+						td.fw-600.fsz-16 Header Banner HTML
+						td.acc-table__views 
+							div 
+								+svg('eye',16,16)
+								|6320
+						td.acc-table__plan Header Banner 
+						td: span.acc-table__status.acc-table__status--paid Активно
+						td.acc-table__buttons 
+							div
+								+svg('edit-table',28,28)
+								+svg('reload',28,28)
+								+svg('remove',28,28)(class='removable-element__button')
+					tr.removable-element
+						td.fw-600.fsz-16 In Grid HTML
+						td.acc-table__views 
+							div 
+								+svg('eye',16,16)
+								|6320
+						td.acc-table__plan Header Banner 
+						td: span.acc-table__status.acc-table__status--paid Активно
+						td.acc-table__buttons 
+							div
+								+svg('edit-table',28,28)
+								+svg('reload',28,28)
+								+svg('remove',28,28)(class='removable-element__button')
+					tr.removable-element
+						td.fw-600.fsz-16 Header Banner HTML
+						td.acc-table__views 
+							div 
+								+svg('eye',16,16)
+								|6320
+						td.acc-table__plan Header Banner 
+						td: span.acc-table__status.acc-table__status--paid Активно
+						td.acc-table__buttons 
+							div
+								+svg('edit-table',28,28)
+								+svg('reload',28,28)
+								+svg('remove',28,28)(class='removable-element__button')

@@ -1,0 +1,54 @@
+div.topline
+	.topline__body.container-fluid
+		a.topline__city(href="#") 
+			img(src="img/ico-map-marker.svg", alt="")
+			|Санкт-Петербург
+		
+		.topline__menu 
+			a(href="#") О нас
+			.dropdown
+				.dropdown-toggle(type="button" data-toggle="dropdown" aria-expanded="false")
+					| Пациенту
+					+svg('arrow-menu', 16, 16)(class='dropdown-arrow')
+				.dropdown-menu
+					a.dropdown-item(href="#") Действие
+					a.dropdown-item(href="#") Другое действие
+					a.dropdown-item(href="#") Что-то еще здесь
+			.dropdown
+				.dropdown-toggle(type="button" data-toggle="dropdown" aria-expanded="false")
+					| Врачу и клинике
+					+svg('arrow-menu', 16, 16)(class='dropdown-arrow')
+				.dropdown-menu
+					a.dropdown-item(href="#") Действие
+					a.dropdown-item(href="#") Другое действие
+					a.dropdown-item(href="#") Что-то еще здесь
+			.dropdown
+				.dropdown-toggle(type="button" data-toggle="dropdown" aria-expanded="false")
+					| Партнерам
+					+svg('arrow-menu', 16, 16)(class='dropdown-arrow')
+				.dropdown-menu
+					a.dropdown-item(href="#") Действие
+					a.dropdown-item(href="#") Другое действие
+					a.dropdown-item(href="#") Что-то еще здесь
+			.dropdown
+				.dropdown-toggle(type="button" data-toggle="dropdown" aria-expanded="false")
+					| Сервис
+					+svg('arrow-menu', 16, 16)(class='dropdown-arrow')
+				.dropdown-menu
+					a.dropdown-item(href="#") Действие
+					a.dropdown-item(href="#") Другое действие
+					a.dropdown-item(href="#") Что-то еще здесь
+			a(href="#") Контакты
+
+		.topline__lang.dropdown 
+			.dropdown-toggle(type="button" data-toggle="dropdown" aria-expanded="false")
+				| RU
+				+svg('arrow-menu', 16, 16)(class='dropdown-arrow')
+			.dropdown-menu
+				a.dropdown-item(href="#") RU
+				a.dropdown-item(href="#") ENG
+
+		.sots 
+			a(href="#"): img(src="img/ico-sots-whatsapp.svg", alt="")
+			a(href="#"): img(src="img/ico-sots-tg.svg", alt="")
+			a(href="#"): img(src="img/ico-sots-vk.svg", alt="")

@@ -1,0 +1,57 @@
+header.page-header.container-fluid
+	a.page-header__logo(href="/"): img(src="img/logo.svg", alt="")
+
+	.page-header__categories.dropdown.d-none.d-lg-flex
+		button.button-primary.dropdown-toggle(type="button" data-toggle="dropdown" aria-expanded="false")
+			+svg('categories-all', 20, 20)
+			|Все категории
+		.dropdown-menu
+			.menu-limiter
+				.dropdown-item.submenu
+					|Аппаратная косметология
+					+svg('arrow-menu', 16, 16)(class='dropdown-arrow')
+				.dropdown-menu
+					a.dropdown-item(href="#") Маникюр
+					a.dropdown-item(href="#") Маникюр
+					a.dropdown-item(href="#") Маникюр
+					a.dropdown-item(href="#") Маникюр
+					a.dropdown-item(href="#") Маникюр
+
+				a.dropdown-item(href="#") Дерматология и косметологи
+				a.dropdown-item(href="#") Диетология, спорт, тренировки
+				a.dropdown-item(href="#") Инъекционная косметология
+				a.dropdown-item(href="#") Лазерная хирургия
+				a.dropdown-item(href="#") Макияж и татуаж
+				a.dropdown-item(href="#") Маникюр
+				a.dropdown-item(href="#") Мануальная терапия
+				a.dropdown-item(href="#") Массаж
+				a.dropdown-item(href="#") Педикюр
+				a.dropdown-item(href="#") Пилинг и уход за лицом
+				a.dropdown-item(href="#") Пирсинг
+				a.dropdown-item(href="#") Пластическая хирургия
+				a.dropdown-item(href="#") Прическа и уход за волосами
+				a.dropdown-item(href="#") Стоматологические услуги
+				a.dropdown-item(href="#") Трихология
+				a.dropdown-item(href="#") Эпиляция и шугаринг
+				a.dropdown-item(href="#") Татуировки и тату-мастера
+
+	.page-header__search.selecting-value.d-none.d-md-block
+		.page-header__search-body
+			input.selecting-value__view(type="search" placeholder='Наберите для примера Иванов')
+			button(type="submit"): img(src="img/search.svg", alt="")
+		.dropdown
+			button.dropdown-toggle.d-none(type="button" data-toggle="dropdown" aria-expanded="false")
+			.dropdown-menu 
+				.dropdown-item(data-selecting-value="Иванов") Иванов
+
+	.page-header__icons
+		button.d-none.d-lg-flex(data-fancybox data-src="#modal-login"): +svg('moon', 24, 24)
+		button(data-fancybox data-src="#modal-feedback")
+			+svg('favorites', 24, 24)
+			mark 5
+
+	a.page-header__login.button-gray(href="account-profile.html") 
+		+svg('user', 20, 20)
+		span Личный кабинет
+
+	button.c-hamburger.c-hamburger--htx: span

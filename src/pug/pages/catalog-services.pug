@@ -1,0 +1,98 @@
+extends ../layouts/main
+
+block vars 
+	- var title = 'Каталог услуг'
+	- var tomselect = true
+
+include ../mixins/_catalog-items
+
+mixin services-list-item(name)
+	.services-list_item
+		p= name
+		mark 1279
+
+block main
+	section.view-map.page-section
+		.container-fluid 
+			h1 Услуги
+			
+			.services-list
+				+services-list-item('Дерматологические услуги')
+				+services-list-item('Косметологические услуги')
+				+services-list-item('Мануальная терапия')
+				+services-list-item('Массаж')
+				+services-list-item('Процедуры')
+				+services-list-item('Андрологические услуги')
+				+services-list-item('Анестезия')
+				+services-list-item('Трихология')
+				+services-list-item('Анестезия')
+				+services-list-item('ЛФК')
+				+services-list-item('Физиотерапия')
+				+services-list-item('Флебология')
+
+
+
+			a.view-map__body(href="#") 
+				.title-20 Посмотреть на карте
+
+	section.catalog.page-section
+		.container-fluid 
+			.catalog__controls.catalog__controls--services
+				.catalog__filters
+					button.button-primary
+						+svg('filters', 24, 24)
+						|Фильтры
+					select.select-styled(data-placeholder="Регион")
+						option(value="" selected disabled)
+						option Московская область
+						option Лениградская область
+						option Курская область
+						option Белгородская область
+						option Рязанская область
+						option Калининградская область
+					select.select-styled(data-placeholder="Тип приема")
+						option(value="" selected disabled)
+						option в клинике 
+						option на дому 
+					select.select-styled(data-placeholder="Специализация")
+						option(value="" selected disabled)
+						option Клиника 
+						option Врач
+						option Специалист
+					select.select-styled(data-placeholder="Лечение")
+						option(value="" selected disabled)
+						option Клиника 
+						option Врач
+						option Специалист
+					select.select-styled(data-placeholder="Все услуги")
+						option(value="" selected disabled)
+						option Аппаратная косметология 
+						option Аппаратная косметология 								
+						option Диетология, спорт, тренировки 								
+						option Инъекционная косметология 								
+						option Лазерная хирургия 								
+						option Макияж и татуаж
+					select.select-styled(data-placeholder="Сортировать по")
+						option(value="" selected disabled)
+						option Вверх 
+						option Вниз 
+
+				.catalog__view 
+					button.active(data-tabs="catalog-view" data-tab-target="catalog-list"): +svg('view-list', 20,20)
+					button(data-tabs="catalog-view" data-tab-target="catalog-tile"): +svg('view-tile', 20,20)
+					a(href="#"): +svg('map-marker', 20,20)
+			
+			#catalog-list.active(data-tabs-content="catalog-view")
+				+catalog-list-item-services({img: 'catalog-services-1.webp', title: 'Косметолог: чистка лица, уходы и массаж лица', logo: 'catalog-services-logo-1.webp', name: 'MARICOM SPA BEAUTY', type: 'Компания', city: 'г. Пятигорск'})
+				+catalog-list-item-services({img: 'catalog-services-2.webp', title: 'Лифтинг и чистка лица, косметолог', logo: 'catalog-services-logo-2.webp', name: 'Чижова Мария Андреевна', type: 'Частный врач', city: 'г. Ессентуки'})
+
+			#catalog-tile.items-grid(data-tabs-content="catalog-view")
+				+catalog-tile-item-services({img: 'catalog-services-1.webp', title: 'Чистка лица, пилинг, косметолог', name: 'Чижова Мария Андреевна'})
+				+catalog-tile-item-services({img: 'catalog-services-2.webp', title: 'Косметолог инъекционист', name: 'ПрофМедГрупп'})
+				+catalog-tile-item-services({img: 'catalog-services-3.webp', title: 'Чистка лица, пилинг, косметолог', name: 'Чижова Мария Андреевна'})
+				+catalog-tile-item-services({img: 'catalog-services-4.webp', title: 'Косметолог инъекционист', name: 'ПрофМедГрупп'})
+				+catalog-tile-item-services({img: 'catalog-services-1.webp', title: 'Чистка лица, пилинг, косметолог', name: 'Чижова Мария Андреевна'})
+
+
+			include ../components/_pgnt
+

@@ -1,0 +1,243 @@
+extends ../layouts/main
+
+block vars 
+	- var title = 'Карточка клиники'
+	- var swiper = true
+	- var tomselect = true	
+	- var yamaps = 'aside-map.js'
+
+include ../mixins/_favorites
+include ../mixins/_card-comment
+
+block main
+	section.page-section.container-fluid
+		ul.brdcrumbs
+			li: a(href="/") Главная
+			li
+				+svg('arrow-brdcrumbs', 16, 16)
+				a(href="catalog-services.html") Услуги
+			li 
+				+svg('arrow-brdcrumbs', 16, 16)
+				|ПрофМедГрупп
+
+		.card-main
+			aside
+				.card-info.card-aside-block
+					.aside-block__header
+						img.card-info__clinic-av(src="img/card-clinic-av.webp", alt="")
+						.card-info__name ПрофМедГрупп
+						.rating-line 
+							.stars
+								+svg('star-rating', 16,16)
+								+svg('star-rating', 16,16)
+								+svg('star-rating', 16,16)
+								+svg('star-rating', 16,16)
+								+svg('star-rating', 16,16)
+							mark 5.0
+							a.link-blue(href="#") 25 отзывов
+						p.card-info__numbers 1 объявление / 5 врачей
+						button.card-info__comment.button-gray-color-primary Оставить отзыв
+
+					.card-info__address 
+						span Компания:
+						a.link-blue(href="#") ООО «ПрофМедГрупп»
+						span Регион:
+						p Московская область и Москва
+						span Адрес:
+						p Лескова 8, кв. 218	
+
+					.card-info__controls
+						span.button-gray.button-40 
+							+svg('verified-ok',16,16)
+							|Телефон подтвержден
+						span.button-gray.button-40 
+							+svg('verified-ok',16,16)
+							|Документы проверены
+						.collapse-custom 
+							.collapse-custom__content 
+								button.button-gray.button-40.w-100 2 объявления пользователя
+							.collapse-custom__btn.collapse-custom__btn--switch.link-blue
+								span Показать еще 2
+								span Скрыть
+
+					.card-info__feedback 
+						button.button-primary Показать номер
+						button.button-bordered-blue Написать 
+						button.button-gray.w-100 Подписаться
+
+					.card-info__answer
+						+svg('clock', 16,16)
+						|Отвечает около часа
+					
+					.card-info__contacts
+						a(href="mailto:medkrasotunov24.ru") medkrasotunov24.ru
+						.card-info__sots 
+							a(href="#"): img(src="img/ico-sots-whatsapp.svg", alt="")
+							a(href="#"): img(src="img/ico-sots-tg.svg", alt="")
+							a(href="#"): img(src="img/ico-sots-vk.svg", alt="")
+
+				.card-clinic-features.card-aside-block
+					.aside-block__header
+						p.color-grey2.m-0 Официальное название:
+						p.m-0 ООО «Многопрофильная клиника Медпрайм»
+					ul.card-clinic-features__list 
+						li 
+							+svg('card-clinic-features-1', 24,24)
+							span Гостевая парковка
+						li 
+							+svg('card-clinic-features-2', 24,24)
+							span ДМС, наличные, банковская карта
+						li 
+							+svg('card-clinic-features-3', 24,24)
+							span Дети и взрослые
+						li 
+							+svg('card-clinic-features-4', 24,24)
+							span Официальный сайт
+						li 
+							+svg('card-clinic-features-5', 24,24)
+							span Лицензия
+
+					.card-aside-block__feedback 
+						textarea(placeholder='Сообщение')
+						input.button-white(type="submit" value='Связаться с клиникой')
+
+				.card-clinic-address.card-aside-block
+					.fw-600 Адрес клиники
+					.card-clinic-address__line 
+						span Регион:
+						span Московская область и Москва
+					.card-clinic-address__line 
+						span Город:
+						span Москва
+					.card-clinic-address__line 
+						span Адрес:
+						span 
+							|Изумрудная улица, 
+							span.text-nowrap дом 189
+					#aside-map
+					
+			main 
+				.card-clinic.card-block
+					.card-timeschedule
+						+svg('calendar',24,24)
+						div 
+							p.color-grey3.m-0 Режим приема:
+							p.fw-500.m-0 пн-пт 8:00 – 21:00; сб 8:00 – 20:00; вс 10:00 – 19:00; 
+					
+					.subtitle Специализация клиники:
+					.card-tags
+						span.active Дерматолог
+						span Косметолог
+						span Трихолог
+						span Дермановенеролог
+						span Косметолог-дерматолог	
+
+					.card-clinic__slider 
+						.subtitle Фотографии клиники ПрофМедГрупп
+						.card-slider-wrapper
+							.card-slider.swiper
+								.swiper-wrapper 
+									.swiper-slide: img(src="img/card-clinic-slide-1.webp", alt="" data-fancybox-img data-fancybox="card-clinic" data-src="img/card-clinic-slide-1.webp")
+									.swiper-slide: img(src="img/card-clinic-slide-2.webp", alt="" data-fancybox-img data-fancybox="card-clinic" data-src="img/card-clinic-slide-2.webp")
+									.swiper-slide: img(src="img/card-clinic-slide-3.webp", alt="" data-fancybox-img data-fancybox="card-clinic" data-src="img/card-clinic-slide-3.webp")
+									.swiper-slide: img(src="img/card-clinic-slide-4.webp", alt="" data-fancybox-img data-fancybox="card-clinic" data-src="img/card-clinic-slide-4.webp")
+									.swiper-slide: img(src="img/card-clinic-slide-5.webp", alt="" data-fancybox-img data-fancybox="card-clinic" data-src="img/card-clinic-slide-5.webp")
+									.swiper-slide: img(src="img/card-clinic-slide-6.webp", alt="" data-fancybox-img data-fancybox="card-clinic" data-src="img/card-clinic-slide-6.webp")
+									.swiper-slide.swiper-slide--more(data-slides=7)
+										img(src="img/card-clinic-slide-4.webp", alt="" data-fancybox-img data-fancybox="card-clinic" data-src="img/card-clinic-slide-4.webp")
+										span
+									.swiper-slide.d-none: img(src="img/card-clinic-slide-1.webp", alt="" data-fancybox-img data-fancybox="card-clinic" data-src="img/card-clinic-slide-1.webp")
+									.swiper-slide.d-none: img(src="img/card-clinic-slide-2.webp", alt="" data-fancybox-img data-fancybox="card-clinic" data-src="img/card-clinic-slide-2.webp")
+									.swiper-slide.d-none: img(src="img/card-clinic-slide-3.webp", alt="" data-fancybox-img data-fancybox="card-clinic" data-src="img/card-clinic-slide-3.webp")
+							button.swiper-button-prev: +svg('arrow-comments', 20, 20)
+							button.swiper-button-next: +svg('arrow-comments', 20, 20)
+
+					div
+						.subtitle Описание
+						.card-text-collapse.collapse-custom 
+							.collapse-custom__content 
+								|Клиника «Медпрайм» города Москвы оснащена современным оборудованием, в числе которого ультразвуковые, эндоскопические аппараты. Налажено сотрудничество с ведущими лабораториями столицы, специализирующимися на проведении исследований. В клинике «Медпрайм» работают квалифицированные врачи наиболее востребованных специальностей. Медицинские услуги предоставляются физическим и юридическим лицам.
+							.collapse-custom__btn.collapse-custom__btn--switch.link-blue
+								span Читать полностью
+								span Скрыть	
+								+svg('arrow-collapse', 16,16)(class="collapse-custom__caret")
+
+					.block-liner.m-0
+
+					div
+						.subtitle Услуги
+						.card-text-collapse.collapse-custom 
+							.collapse-custom__content 
+								|В клинике «Медпрайм» ведут прием терапевты, кардиологи, неврологи, гастроэнтерологи, эндокринологи, гинекологи, урологи, хирурги, офтальмологи, отоларингологи, дерматовенерологи и др. В основные направления деятельности входит: диагностика (лабораторная, инструментальная, функциональная), вакцинация, реабилитация после перенесенных заболеваний и хирургических вмешательств, проведение профилактических осмотров и диспансеризации, организация медицинского обслуживания на предприятиях и в организациях, медицинское сопровождение спортсменов, 
+							.collapse-custom__btn.collapse-custom__btn--switch.link-blue
+								span Читать полностью
+								span Скрыть	
+								+svg('arrow-collapse', 16,16)(class="collapse-custom__caret")
+
+					.card-clinic__route 
+						div 
+							.subtitle Проезд
+							p До клиники «Медпрайм» едут автобус №123, 196, 297, м1, м16н.
+							p Ближайшая остановка – «1-ая городская больница»
+						div 
+							.subtitle Парковка
+							p Имеется открытая бесплатная парковка для посетителей клиники.
+							p Для допуска на парковку необходжимо предварительно позвонить клинику.
+
+					.card-clinic__swiper-sert 
+						.subtitle Лицензии и сертификаты клиник
+						.card-slider-wrapper
+							.cert-slider.swiper
+								.swiper-wrapper
+									.swiper-slide 
+										img(src="img/card-clinic-sert-1.webp", alt="" data-fancybox-img data-fancybox="card-clinic-cert" data-src="img/card-clinic-sert-1.webp")
+										p № ЛО41-01162-50/00555048 от 20 февраля 2020
+									.swiper-slide 
+										img(src="img/card-clinic-sert-2.webp", alt="" data-fancybox-img data-fancybox="card-clinic-cert" data-src="img/card-clinic-sert-2.webp")
+										p № ЛО41-01162-50/00555048 от 20 февраля 2020
+									.swiper-slide 
+										img(src="img/card-clinic-sert-3.webp", alt="" data-fancybox-img data-fancybox="card-clinic-cert" data-src="img/card-clinic-sert-3.webp")
+										p № ЛО41-01162-50/00555048 от 20 февраля 2020
+									.swiper-slide 
+										img(src="img/card-clinic-sert-4.webp", alt="" data-fancybox-img data-fancybox="card-clinic-cert" data-src="img/card-clinic-sert-4.webp")
+										p № ЛО41-01162-50/00555048 от 20 февраля 2020
+									.swiper-slide 
+										img(src="img/card-clinic-sert-1.webp", alt="" data-fancybox-img data-fancybox="card-clinic-cert" data-src="img/card-clinic-sert-1.webp")
+										p № ЛО41-01162-50/00555048 от 20 февраля 2020
+							button.swiper-button-prev: +svg('arrow-comments', 20, 20)
+							button.swiper-button-next: +svg('arrow-comments', 20, 20)
+
+				.tabs-common 
+					button.active(data-tabs='card-doctor-tabs' data-tab-target='card-doctor-tabs-services') Объявления
+					button(data-tabs='card-doctor-tabs' data-tab-target='card-doctor-tabs-comments') Отзывы
+
+				.card-list-filter 
+					select.card-list-filter__select.select-styled
+						option Популярные
+						option Непопулярные
+					a(href="#"): +svg('map-marker', 20,20)
+
+				#card-doctor-tabs-services.active(data-tabs-content='card-doctor-tabs')
+					.card-list-service
+						figure.card-list-service__img
+							a(href="#"): img(src="img/card-list-service-1.webp", alt="")
+							+favorites
+						.card-list-service__title Комбинированная чистка лица лазером (глубокая)
+						.card-list-service__cost 5 900 ₽
+						.card-list-service__about Аппаратная косметология, Московская область и Москва, Лескова 8, кв. 218
+					.card-list-service
+						figure.card-list-service__img
+							a(href="#"): img(src="img/card-list-service-2.webp", alt="")
+							+favorites
+						.card-list-service__title Биоревитализация препаратом Novacutan YBio (2 мл)
+						.card-list-service__cost 5 900 ₽
+						.card-list-service__about Аппаратная косметология, Московская область и Москва, Лескова 8, кв. 218
+
+				#card-doctor-tabs-comments(data-tabs-content='card-doctor-tabs')
+					+card-comment
+					+card-comment
+					+card-comment
+
+	include ../components/_last-vews
+
+						

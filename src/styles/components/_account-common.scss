@@ -1,0 +1,276 @@
+@use '../includes/mixins' as *; 
+@use '../includes/variables' as *;
+
+.maw-600 {
+	max-width: 600px;
+}
+
+.maw-300	 {
+	max-width: 300px;
+}
+
+.account-page {
+	background: $colorGrey10; 
+
+	@include r991 {
+		background: #fff;
+	}
+}
+
+.account {
+	display: grid; grid-template-columns: max-content 1fr; gap: 30px; margin-bottom: 25px;
+
+	h1 {
+		margin-bottom: 20px; font-size: clamp(1.5rem, 1.3171rem + 0.7805vw, 2rem);
+	}
+
+	main {
+		min-width: 0;
+	}
+
+	@include r991 {
+		display: block;
+	}
+}
+
+.account-aside {
+	border: 1px solid $colorGrey7; background: #fff; width: 280px; padding: 30px 20px 10px; border-radius: 12px;
+
+	.rating-line {
+		font-size: rem(16);
+	}
+
+	.block-liner {
+		margin: 10px 0;
+	}
+
+	.menu-open & {
+		transform: none; 
+	}	
+
+	@include r991 {
+		background: #fff; position: fixed; left: 0;top: 0; width: 500px; max-width: 100%; height: 100dvh; z-index: 101; transition: .4s; transform: translateX(-100%);  overflow: hidden auto; border-radius: 0; border: none;padding: 30px 20px 10px;
+	}
+}
+
+.account-aside__header {
+	@include column(center);
+
+	gap: 10px; margin-bottom: 20px;
+}
+
+.account-aside__av {
+	width: 100px; height: 100px; border-radius: 50%; border: 5px solid $colorGrey7;
+
+	img {
+		object-position: center center; object-fit: cover; width: 100%; height: 100%;
+	}
+}
+
+.account-aside__name {
+	font-weight: 600; font-size: rem(20); text-align: center;
+}
+
+.account-aside__item {
+	display: flex; align-items: center; gap: 10px; font-weight: 500; font-size: rem(14); padding: 10px 15px; border-radius: 10px;
+
+	svg {
+		transition: .3s; color: $colorGrey4; 
+	}
+
+	mark {
+		margin-left: auto; flex-shrink: 0; display: flex; align-items: center; height: 20px;padding: 0 6px; color: #fff; background: $colorRed; font-weight: 500;font-size: rem(14); border-radius: 20px;
+	}
+
+	&.active {
+		background: #F6EDFB;
+
+		svg {
+			color: $colorPrimary;
+		}
+	}
+}
+
+.account-main {
+	background: #fff; border: 1px solid $colorGrey7; border-radius: 15px; box-shadow: 0px 1px 4px 0px #181A2012; padding: 30px 30px;
+
+	.tabs-common {
+		overflow: auto hidden; white-space: nowrap; scrollbar-width: none; font-size: rem(20); color: $colorGrey4;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		[data-tabs] {
+			margin: 0; display: flex; align-items: center; gap: 10px;
+
+			mark {
+				color: #fff; background: $colorPrimary; padding: 3px 6px; border-radius: 20px; font-weight: 600; font-size: rem(12); line-height: 1.17;
+
+				&.gray {
+					background: $colorGrey4;
+				}
+			}
+		}
+
+		.active {
+			color: $colorBody;
+		}		
+	}
+
+	@include r991 {
+		&:not(.account-main--block) {
+			border: none; box-shadow: none; padding: 0;
+		}
+	}
+
+	@include r575 {
+		.tabs-common {
+			font-size: rem(16); padding-bottom: 12px;
+		}
+	}
+}
+
+.account-main--block {
+	> .column {
+		gap: 20px; align-items: stretch;
+
+		.column {
+			gap: 15px; align-items: stretch;
+		}
+	}
+
+	& + & {
+		margin-top: 20px;
+	}
+
+	@include r575 {
+		padding: 20px;
+	}
+}
+
+.menu-bottom {
+	position: sticky; bottom: 0; height: 60px; justify-content: center; align-items: center; background: #fff;box-shadow: 0px 4px 30px 0px #0000001A, 0px 1px 3px 0px #0000000D; border-radius: 12px 12px 0 0; font-weight: 500; font-size: rem(10); color: $colorGrey2; display: none;
+
+	a {
+		@include column(center);
+
+		width: 75px; gap: 4px;
+
+		&.active {
+			svg {
+				color: $colorPrimary;
+			}
+		}
+	}
+
+	figure {
+		position: relative;
+	}
+
+	svg {
+		color: $colorGrey4;
+	}
+
+	mark {
+		position: absolute; top: -3px;right: -7px; background: $colorRed; color: #fff; font-weight: 500; font-size: rem(12); padding: 2px 6px;border-radius: 50%;
+	}
+
+	@include r991 {
+		display: flex;
+	}
+}
+
+.form-group-h {
+	display: grid; grid-template-columns: 200px 1fr; align-items: center; gap: 6px 20px; max-width: 563px;
+
+	label {
+		color: $colorGrey2;
+	}
+
+	.form-control {
+		height: 44px;padding: 0 16px;
+	}
+
+	.ts-control {
+		height: 44px; padding-left: 16px;
+	}
+
+	@include r575 {
+		grid-template-columns: 100%;
+	}
+}
+
+.form-group-h--3 {
+	grid-template-columns: 200px 1fr max-content; row-gap: 10px; max-width: 633px;
+
+	@include r767 {
+		grid-template-columns: 100%;
+	}
+}
+
+.form-group-url {
+	display: grid; grid-template-columns: max-content 1fr; height: 48px; border: 1px dashed $colorPrimary; border-radius: 10px;
+
+	figure {
+		@include flex-center; 
+
+		width: 38px; background: #1059E71A;
+	}
+
+	input {
+		border: none; width: 100%;padding: 0 15px;
+	}
+
+	@include r575 {
+		height: 44px;
+
+		figure {
+			width: 44px;
+		}
+	}
+}
+
+.form-group-cost {
+	max-width: 268px;
+
+	label {
+		font-weight: 500; margin-bottom: 6px;
+	}
+
+	@include r575 {
+		max-width: none;
+	}
+}
+
+.form-group-cost__body {
+	height: 48px; border: 1px solid $colorGrey7; border-radius: 10px; display: grid; grid-template-columns: 1fr max-content;
+
+	input {
+		border: none; border-right: 1px solid $colorGrey7; padding: 0 15px; width: 100%;
+	}
+
+	.ts-control {
+		border: none; background: transparent; height: 100%; 
+
+		input {
+			display: none !important;
+		}
+	}
+
+	@include r575 {
+		height: 44px; 
+	}
+}
+
+.items-grid-account {
+	grid-template-columns: repeat(3, 1fr); gap: 20px; display: grid;
+
+	@include r1199 {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@include r575 {
+		grid-template-columns: 1fr;
+	}
+}

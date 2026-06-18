@@ -1,0 +1,84 @@
+@use '../includes/mixins' as *; 
+@use '../includes/variables' as *;
+
+.card-clinic {
+	@include column(stretch);
+
+	gap: 25px;
+
+	.card-slider-wrapper {
+		margin-bottom: 0;
+	}
+
+	@include r575 {
+		gap: 20px;
+	}
+}
+
+.card-timeschedule {
+	padding: 15px 20px; border-radius: 10px; background: $colorGrey9; display: flex; align-items: flex-start; gap: 15px;
+}
+
+.card-clinic__slider {
+	.subtitle {
+		margin-bottom: 10px;
+	}
+
+	.swiper-slide--more {
+		span {
+			background: rgba($color: #000000, $alpha: .5);
+		}
+	}
+}
+
+.card-clinic__route {
+	border: 1px solid $colorGrey7; border-radius: 20px; padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 30px;
+
+	.subtitle {
+		margin-bottom: 10px;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	@include r575 {
+		grid-template-columns: 100%;
+	}
+}
+
+.card-clinic__swiper-sert {
+	.subtitle {
+		margin-bottom: 20px;
+	}
+
+	.swiper-slide {
+		width: 199px;
+
+		img {
+			display: block; width: 100%; height: 262px; object-position: center center; object-fit: cover; border-radius: 10px; margin-bottom: 10px;
+		}
+
+		p {
+			margin: 0; text-align: center; font-size: rem(12); text-wrap: balance;
+		}
+	}
+
+	.swiper-button-prev, .swiper-button-next {
+		top: 131px;
+	}
+
+	@include r575 {
+		.swiper-slide {
+			width: 143px;
+
+			img {
+				height: 200px;
+			}
+		}
+
+		.swiper-button-prev, .swiper-button-next {
+			top: 100px;
+		}		
+	}
+}

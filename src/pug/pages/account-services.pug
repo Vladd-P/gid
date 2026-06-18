@@ -1,0 +1,63 @@
+extends ../layouts/main
+
+block vars 
+	- var title = 'Аккаунт - платные услуги'
+	- var swiper = true
+	- var account = true
+
+block main
+	section.account.container-fluid
+		+account-aside('credits')
+
+		main
+			h1 Платные услуги
+
+			.account-main
+				.acc-add-packages__views 
+					.acc-add-packages__period
+						label
+							input(type="radio" name='acc-add-period' checked)
+							|На 1 день
+						label
+							input(type="radio" name='acc-add-period')
+							|На 7 дней
+					.acc-add-packages__views-options
+						label.radio-styled
+							input(type="radio" name='acc-add-views' checked)
+							.fw-600 Х2 просмотров
+							span 19
+						label.radio-styled
+							input(type="radio" name='acc-add-views')
+							.fw-600 Х5 просмотров
+							span 19
+						label.radio-styled
+							input(type="radio" name='acc-add-views')
+							.fw-600 Х9 просмотров
+							span 19
+						label.radio-styled
+							input(type="radio" name='acc-add-views')
+							.fw-600 Без продвижения
+							span 0
+
+				.title-20.mt-4.pt-2 Заметный внешний вид
+				label.acc-add-packages-appearance.checkbox-switch-styled
+					input(type="checkbox")
+					figure
+					img.acc-add-packages-appearance__ico(src="img/packages-appearance-1.svg", alt="")
+					.acc-add-packages-appearance__about 
+						.fw-600
+							|Выделить цену цветом 
+							span.color-grey3 на 7 дней
+						.color-grey1.fsz-14 Привлечёт внимание к цене объявления
+					.acc-add-packages-appearance__number 39
+				label.acc-add-packages-appearance.checkbox-switch-styled
+					input(type="checkbox")
+					figure
+					img.acc-add-packages-appearance__ico(src="img/packages-appearance-2.svg", alt="")
+					.acc-add-packages-appearance__about 
+						.fw-600
+							|Премиум-объявление 
+							span.color-grey3 на 7 дней
+						.color-grey1.fsz-14 Большая карточка в результатах поиска
+					.acc-add-packages-appearance__number 39	
+

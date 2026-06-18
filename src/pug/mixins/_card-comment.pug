@@ -1,0 +1,23 @@
+mixin card-comment
+	.card-comment 
+		.card-comment__header 
+			img.card-comment__av(src="img/card-comment.webp", alt="")
+			div
+				.fw-500 Дарья Медведева
+				ul.card-comment__status 
+					li Сделка состоялась
+					li Косметолог-эстетист
+			div
+				.stars
+					+svg('star', 20,20)
+					+svg('star', 20,20)
+					+svg('star', 20,20)
+					+svg('star', 20,20)
+					+svg('star', 20,20)
+				.color-grey2.fsz-14.mt-1 2 февраля 2025 г.
+		.collapse-custom
+			.collapse-custom__content Кристина очень внимательный и заботливый мастер, очень располагает к себе, после процедуры обязательно напишет и спросит как чувствует себя кожа, проконсультирует. Мы делаем процедуру пилинга, так как после родов я стала как прыщавый подросток, Кристина каждый раз зовет меня забежать на маску, массаж, чтобы помочь мне справится с моей проблемой, и мы почти победили...
+			.collapse-custom__btn 
+				span Показать целиком
+				span Скрыть
+				+svg('arrow-collapse', 16,16)(class="collapse-custom__caret")

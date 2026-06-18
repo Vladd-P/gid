@@ -1,0 +1,158 @@
+@use '../includes/mixins' as *; 
+@use '../includes/variables' as *;
+
+.ads-category__controls {
+	margin: 30px 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+}
+
+.acc-ads-item {
+	display: grid; grid-template-columns: max-content max-content 1fr 190px max-content; gap: 0 15px; align-items: start; border-radius: 10px; padding: 20px; box-shadow: 0px 1px 4px 0px #181A2012; background: #fff;
+
+	& + & {
+		margin-top: 10px;
+	}
+
+	@include r1199 {
+		grid-template-columns: max-content max-content 1fr 100px max-content;
+	}
+
+	@include r767 {
+		grid-template-columns: max-content 1fr; margin-left: -15px; margin-right: -15px;
+	}
+}
+
+.acc-ads-item__img {
+	border-radius: 15px; overflow: hidden; position: relative; margin-right: 5px;
+
+	&::before {
+		content: ''; position: absolute; left: 0;top: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(25, 35, 44, 0) 50%, #19232C 100%);
+	}
+
+	img {
+		width: 200px;height: 150px; object-position: center center; object-fit: cover;
+	}
+
+	@include r1199 {
+		margin-right: 0;
+	}
+
+	@include r767 {
+		img {
+			width: 150px;
+		}
+	}
+}
+
+.acc-ads-item__about {
+	@include column;
+
+	gap: 5px;
+}
+
+.acc-ads-item__name {
+	font-weight: 600; font-size: clamp(1rem, 0.9143rem + 0.3756vw, 1.25rem);
+}
+
+.acc-ads-item__plan {
+	font-size: rem(14); display: flex; align-items: baseline; gap: .3em;
+
+	span {
+		color: $colorGrey3;
+	}
+
+	p {
+		margin: 0; font-weight: 600;
+	}
+
+	@include r767 {
+		span {
+			font-size: rem(12);
+		}
+	}
+}
+
+.acc-ads-item__controls {
+	@include column;
+
+	gap: 10px;
+
+	.dropdown-toggle {
+		@include flex-center;
+
+		width: 28px; height: 28px; border-radius: 6px; background: $colorGrey8;
+	}
+
+	@include r767 {
+		grid-column: 1/-1; flex-direction: row; justify-content: space-between; margin-top: 20px;
+	}
+}
+
+.acc-ads-item__controls-item {
+	display: flex; gap: 8px; align-items: center;
+}
+
+.acc-ads-item__manage {
+	grid-column: 2/-1; margin-top: 20px; border-top: 1px solid $colorGrey7; padding-top: 20px; display: grid; align-items: end; gap: 10px; grid-template-columns: 1fr max-content max-content;	
+
+	@include r767 {
+		grid-column: 1/-1; margin-top: 15px;padding-top: 15px; display: block;
+	}
+}
+
+.acc-ads-item__active {
+	max-width: 300px;
+
+	@include r767 {
+		max-width: none;
+	}
+}
+
+.acc-ads-item__active-progress {
+	margin: 4px 0; background: rgba($color: #06A847, $alpha: .2); height: 2px;
+
+	span {
+		display: block; height: 100%; background: $colorGreen;
+	}
+}
+
+.acc-ads-item__active-date {
+	color: $colorGrey3; font-size: rem(12); display: flex; justify-content: space-between;
+}
+
+.acc-ads-item__buttons {
+	display: flex; gap: 10px; font-size: rem(14);
+
+	.collapse {
+		grid-column: 1/-1;
+	}
+
+	.acc-ads-item__controls {
+		margin: 0; gap: 50px; justify-content: flex-start;
+	}
+
+	@include r767 {
+		display: grid; grid-template-columns: 1fr 1fr; margin-top: 10px;
+	}
+}
+
+.acc-ads-item__up {
+	@include r767 {
+		order: 1; grid-column: 1/-1;
+	}
+}
+
+.acc-ads-sort  {
+	position: relative;
+
+	.ts-control {
+		background: transparent; padding-left: 30px !important; height: 36px;
+	}
+
+	@include r575 {
+		width: 100%;
+	}
+}
+
+.acc-ads-sort__ico {
+	position: absolute; top: 50%; left: 12px; transform: translateY(-50%);
+}

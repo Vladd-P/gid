@@ -1,0 +1,26 @@
+@use '../includes/mixins' as *; 
+@use '../includes/variables' as *;
+
+.page-nav {
+	font-weight: 500; font-size: rem(18); line-height: 1.33; padding-top: 13px; padding-bottom: 13px; display: flex; gap: 30px; 
+
+	@include r1199 {
+		font-size: rem(15); gap: 20px; justify-content: space-between;
+	}
+
+	@include r991 {
+		background: #fff; position: fixed; left: 0;top: 0; width: 500px; max-width: 100%; height: 100dvh; z-index: 1; transition: .4s; transform: translateX(-100%); padding: 50px 20px; overflow: hidden auto; font-size: rem(18); flex-direction: column; justify-content: flex-start; align-items: flex-start;
+
+		.menu-open & {
+			transform: none; 
+		}
+	}
+}
+
+.menu-motile__close {
+	display: none; cursor: pointer;
+
+	@include r991 {
+		display: block; position: absolute; top: 20px;right: 20px;
+	}
+}
